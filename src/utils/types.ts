@@ -10,3 +10,4 @@ export type StrictUnCurry<P extends any[],R> = (...arg:P)=> R;
 
 export type Unary = (arg: any) => any
 
+export type Obj<T> =  Record<string | number, T>
