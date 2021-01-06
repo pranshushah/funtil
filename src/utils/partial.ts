@@ -1,4 +1,8 @@
-export function partial<T1 extends any[], T2 extends any[], R>(
+export function partial<
+  T1 extends readonly any[],
+  T2 extends readonly any[],
+  R
+>(
   fn: (...args: [...T1, ...T2]) => R,
   ...intialArgs: T1
 ): (...afterargs: T2) => R {
