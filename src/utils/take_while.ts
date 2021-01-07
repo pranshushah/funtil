@@ -1,3 +1,5 @@
+import { partial2 } from './internals/partial2';
+
 export function take_while<T>(predicate_fn: (arg: T) => boolean, xs: T[]): T[];
 export function take_while(
   predicate_fn: (arg: string) => boolean,
@@ -6,11 +8,20 @@ export function take_while(
 
 export function take_while<T>(
   predicate_fn: (arg: T | string) => boolean,
-  xs: T[] | string
+  xs?: T[] | string
 ) {
-  let last_index = 0;
-  while (last_index < xs.length && predicate_fn(xs[last_index])) {
-    last_index++;
-  }
-  return xs.slice(0, last_index + 1);
+  return partial2(
+    function main(
+      predicate_fn: (arg: T | string) => boolean,
+      xs: T[] | string
+    ) {
+      let last_index = 0;
+      while (last_index < xs.length && predicate_fn(xs[last_index])) {
+        last_index++;
+      }
+      return xs.slice(0, last_index + 1);
+    },
+    predicate_fn,
+    xs
+  );
 }

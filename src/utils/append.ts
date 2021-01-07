@@ -1,4 +1,3 @@
-import { T } from 'ts-toolbelt';
 import { concat } from './concat';
 import { partial2 } from './internals/partial2';
 
