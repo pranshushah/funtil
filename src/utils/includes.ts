@@ -1,6 +1,6 @@
 import deep_equal from 'fast-deep-equal';
 import { partial2 } from './internals/partial2';
-export function contains<T>(target: T, source?: T[]) {
+export function includes<T>(target: T, source?: T[]) {
   return partial2(
     function main_contains(target: T, source: T[]) {
       let ret_val: boolean = false;
@@ -9,7 +9,8 @@ export function contains<T>(target: T, source?: T[]) {
         typeof target === 'boolean' ||
         typeof target === 'number' ||
         typeof target === 'string' ||
-        typeof target === 'undefined'
+        typeof target === 'undefined' ||
+        target === null
       ) {
         ret_val = source.includes(target);
       } else {
