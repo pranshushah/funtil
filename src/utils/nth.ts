@@ -1,11 +1,20 @@
+import { L } from 'ts-toolbelt';
 import { partial2 } from './internals/partial2';
 
-export function nth<T>(n: number, xs: T[]): T | undefined;
-export function nth(n: number, xs: string): string;
+export function nth<T extends any[]>(
+  n: number,
+  xs: T
+): L.UnionOf<T> | undefined;
+export function nth<T extends any[]>(
+  n: number
+): (xs: T) => L.UnionOf<T> | undefined;
 
-export function nth<T>(n: number, xs?: T[] | string) {
+export function nth(n: number, xs: string): string;
+export function nth(n: number): (xs: string) => string;
+
+export function nth<T extends any[]>(n: number, xs?: T | string) {
   return partial2(
-    function main(n: number, xs: T[] | string) {
+    function main(n: number, xs: T | string) {
       const index = Math.abs(n);
       if (Array.isArray(xs)) {
         return xs[index];

@@ -1,9 +1,13 @@
 import { partial2 } from './internals/partial2';
 
-export function take_last<T>(
+export function take_last<T extends any[]>(
   number_elements_you_want_from_behind: number,
-  xs: T[]
-): T[];
+  xs: T
+): T;
+
+export function take_last<T extends any[]>(
+  number_elements_you_want_from_behind: number
+): (xs: T) => T;
 
 export function take_last<T>(
   number_elements_you_want_from_behind: number,
@@ -11,13 +15,17 @@ export function take_last<T>(
 ): string;
 
 export function take_last<T>(
+  number_elements_you_want_from_behind: number
+): (xs: string) => string;
+
+export function take_last<T extends any[]>(
   number_elements_you_want_from_behind: number,
-  xs?: T[] | string
+  xs?: T | string
 ) {
   return partial2(
     function main(
       number_elements_you_want_from_behind: number,
-      xs: T[] | string
+      xs: T | string
     ) {
       let first_index: number;
       if (

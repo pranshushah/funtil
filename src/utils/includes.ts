@@ -1,5 +1,9 @@
 import deep_equal from 'fast-deep-equal';
 import { partial2 } from './internals/partial2';
+
+export function includes<T = any>(target: T, source: T[]): boolean;
+export function includes<T = any>(target: T): (source: T[]) => boolean;
+
 export function includes<T = any>(target: T, source?: T[]) {
   return partial2(
     function main_contains(target: T, source: T[]) {

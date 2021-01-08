@@ -3,6 +3,15 @@ import { partial2 } from './internals/partial2';
 
 export function index_by<T, K extends string | number = string>(
   fn: (a: T) => K,
+  list: readonly T[]
+): { [key in K]: T };
+
+export function index_by<T, K extends string | number = string>(
+  fn: (a: T) => K
+): (list: readonly T[]) => { [key in K]: T };
+
+export function index_by<T, K extends string | number = string>(
+  fn: (a: T) => K,
   list?: readonly T[]
 ) {
   return partial2(

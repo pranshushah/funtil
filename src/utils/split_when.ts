@@ -1,6 +1,10 @@
 import { partial2 } from './internals/partial2';
 
-export function split_when<T>(pred_fn: (arg: T) => boolean, list: T[]): T[][];
+export function split_when<T>(
+  pred_fn: (arg: T) => boolean,
+  list: readonly T[]
+): T[][];
+
 export function split_when<T>(
   pred_fn: (arg: T) => boolean
 ): (list: readonly T[]) => T[][];

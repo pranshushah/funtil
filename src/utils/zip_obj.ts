@@ -1,6 +1,9 @@
 import { partial2 } from './internals/partial2';
 import { Obj } from './types';
 
+export function zip_obj<T>(keys: (string | number)[], values: T[]): Obj<T>;
+export function zip_obj<T>(keys: (string | number)[]): (values: T[]) => Obj<T>;
+
 export function zip_obj<T>(keys: (string | number)[], values?: T[]) {
   return partial2(
     function main(keys: (string | number)[], values: T[]) {

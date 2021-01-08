@@ -1,5 +1,15 @@
 import { O } from 'ts-toolbelt';
 import { partial2 } from './internals/partial2';
+
+export function partial_props<T extends O.Object, T1 extends Partial<T>, R>(
+  fn: (x: T) => R,
+  intial_object_args: T1
+): (later_object_args: O.Exclude<T, T1>) => R;
+
+export function partial_props<T extends O.Object, T1 extends Partial<T>, R>(
+  fn: (x: T) => R
+): (intial_object_args: T1) => (later_object_args: O.Exclude<T, T1>) => R;
+
 export function partial_props<T extends O.Object, T1 extends Partial<T>, R>(
   fn: (x: T) => R,
   intial_object_args?: T1

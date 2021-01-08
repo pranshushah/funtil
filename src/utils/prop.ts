@@ -3,6 +3,15 @@ import { partial2 } from './internals/partial2';
 
 export function prop<T extends O.Object, K extends keyof T>(
   obj: T,
+  key: K
+): T[K];
+
+export function prop<T extends O.Object, K extends keyof T>(
+  obj: T
+): (key: K) => T[K];
+
+export function prop<T extends O.Object, K extends keyof T>(
+  obj: T,
   key?: K
 ): T[K] | ((key: K) => T[K]) {
   return partial2(

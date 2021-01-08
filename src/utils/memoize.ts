@@ -1,4 +1,8 @@
 import { partial2 } from './internals/partial2';
+export function memoize<T = undefined, R = void>(fn: (x?: T) => R, arg: T): R;
+export function memoize<T = undefined, R = void>(
+  fn: (x?: T) => R
+): (arg: T) => R;
 
 export function memoize<T = undefined, R = void>(fn: (x?: T) => R, arg?: T) {
   return partial2(

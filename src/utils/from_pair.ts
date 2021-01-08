@@ -8,5 +8,5 @@ export function from_pair<T>(arr: [string | number, T][]) {
     acc[selected_key] = selected_val;
     return acc;
   }
-  return reduce(reducer_fn, arr, return_obj);
+  return reduce(reducer_fn, return_obj, arr);
 }

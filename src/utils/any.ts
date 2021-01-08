@@ -1,4 +1,12 @@
 import { partial2 } from './internals/partial2';
+export function any<T>(
+  predicate: (arg: T) => boolean,
+  arr: readonly T[]
+): boolean;
+
+export function any<T>(
+  predicate: (arg: T) => boolean
+): (arr: readonly T[]) => boolean;
 
 export function any<T>(predicate: (arg: T) => boolean, arr?: readonly T[]) {
   return partial2(

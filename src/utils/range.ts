@@ -1,4 +1,6 @@
 import { partial2 } from './internals/partial2';
+export function range(from: number, to: number): number[];
+export function range(from: number): (to: number) => number[];
 
 export function range(from: number, to?: number) {
   return partial2(

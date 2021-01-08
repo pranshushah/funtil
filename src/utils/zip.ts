@@ -1,8 +1,11 @@
 import { partial2 } from './internals/partial2';
 
-export function zip<T, G>(arr1: T[], arr2: G[]) {
+export function zip<T, G>(arr1: T[], arr2: G[]): [T, G][];
+export function zip<T, G>(arr1: T[]): (arr2: G[]) => [T, G][];
+
+export function zip<T, G>(arr1: T[], arr2?: G[]) {
   return partial2(
-    function main() {
+    function main(arr1: T[], arr2: G[]) {
       let zipped: [T, G][] = [];
       let copiedArr1 = [...arr1];
       let copiedArr2 = [...arr2];
