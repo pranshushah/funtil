@@ -17,6 +17,9 @@ export type Binary = (arg1:any,arg2:any) => any
 
 export type Obj<T> =  Record<string | number, T>
 
+export type Any_Obj = { [key in string|number]: any }
+
+
 
 export type MergeAll<Os extends readonly object[]> =
     O.MergeAll<{}, Os, "deep", 1> extends infer M
