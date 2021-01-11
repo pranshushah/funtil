@@ -4,10 +4,10 @@ import { partial2 } from './internals/partial2';
 export function dissoc<T extends object, K extends keyof T>(
   key: K,
   obj: T
-): O.Omit<T, K>;
+): Omit<T, K>;
 export function dissoc<T extends object, K extends keyof T>(
   key: K
-): (obj: T) => O.Omit<T, K>;
+): (obj: T) => Omit<T, K>;
 
 export function dissoc<T extends object, K extends keyof T>(key: K, obj?: T) {
   return partial2(
