@@ -2,19 +2,11 @@ import { partial2 } from './internals/partial2';
 import { is_null } from './is_null';
 import { is_undefined } from './is_undefined';
 
-export function default_to<T1 = any, T2 = any>(
-  default_val: T1,
-  check_val: T2
-): T1 | T2;
+export function default_to<T1, T2>(default_val: T1, check_val: T2): T1 | T2;
 
-export function default_to<T1 = any, T2 = any>(
-  default_val: T1
-): (check_val: T2) => T1 | T2;
+export function default_to<T1, T2>(default_val: T1): (check_val: T2) => T1 | T2;
 
-export function default_to<T1 = any, T2 = any>(
-  default_val: T1,
-  check_val?: T2
-) {
+export function default_to<T1, T2>(default_val: T1, check_val?: T2) {
   return partial2(
     function main(default_val: T1, check_val: T2) {
       // @ts-ignore
