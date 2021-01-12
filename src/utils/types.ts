@@ -21,6 +21,9 @@ export type Any_Obj = { [key in string|number]: any }
 
 export type Pick_by<U,T> = U extends unknown ? Partial<T>:U 
 
+export type Ord = string | number | boolean | Date
+
+
 export type MergeAll<Os extends readonly object[]> =
     O.MergeAll<{}, Os, "deep", 1> extends infer M
     ? {} extends M    // nothing merged => bcs no `as const`
