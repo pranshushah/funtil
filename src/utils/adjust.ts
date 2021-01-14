@@ -1,5 +1,12 @@
 import { partial3 } from './internals/partial3';
 
+/**
+ * @description this function minupulates element of array at given index and it also take arguments in partial form.
+ * @param index the index that you want to minupulate
+ * @param fn function that is called with element at given index
+ * @param arr array you want to minupulate to
+ * @returns new copy of array with function applied at given index
+ */
 export function adjust<T>(
   index: number,
   fn: (arg: T) => T,
@@ -17,7 +24,6 @@ export function adjust(
   <T>(fn: (arg: T) => T, arr: readonly T[]): T[];
   <T>(fn: (arg: T) => T): (arr: readonly T[]) => T[];
 };
-
 export function adjust<T>(
   index: number,
   fn?: (arg: T) => T,

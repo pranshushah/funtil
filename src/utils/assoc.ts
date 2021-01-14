@@ -1,5 +1,10 @@
 import { partial3 } from './internals/partial3';
 
+/**
+ * @description takes key,value and object and returns object that includes given key and pair
+ * @returns new object with all properties of old object and new key,value pair we pass
+ */
+
 export function assoc<T, U extends object, K extends string | number>(
   prop: K,
   val: T,
