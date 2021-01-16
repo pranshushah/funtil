@@ -2,6 +2,10 @@ import { partial3 } from './internals/partial3';
 import { equals } from './math/equals';
 import { Any_Obj } from './types';
 
+/**
+ * @description takes key and 2 objects and checks whether given key has same value in object.
+ */
+
 export function eq_props(
   key: string | number,
   o1: Any_Obj,

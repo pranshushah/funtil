@@ -1,4 +1,7 @@
 import { partial2 } from './internals/partial2';
+/**
+ * @description returns the last index for which predication function returns true. returns -1 if predication function does not return true for any value in array,also works with partial argument.
+ */
 
 export function find_last_index<T>(
   predicate_fn: (arg: T, index: number, arr: readonly T[]) => boolean,

@@ -1,5 +1,7 @@
 import { partial2 } from './internals/partial2';
-
+/**
+ * @description takes two elements and checks whether both of them are equal or not. it uses Object.is to check equality,also works with partial form
+ */
 export function identical(x1: any, x2: any): boolean;
 export function identical(x1: any): (x2: any) => boolean;
 

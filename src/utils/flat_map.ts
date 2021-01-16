@@ -1,5 +1,7 @@
 import { partial2 } from './internals/partial2';
-
+/**
+ * @description partial form of array.flatMap
+ */
 export function flat_map<
   T,
   R extends (val: T, index?: number, arr?: T[]) => any

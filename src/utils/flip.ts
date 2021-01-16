@@ -1,3 +1,6 @@
+/**
+ * @description returns a function that invokes the function with first two arguments fipped
+ */
 export function flip<T1, T2, T3 extends any[], R>(
   fn: (args2: T2, args1: T1, ...args: T3) => R
 ): (args1: T1, args2: T2, ...args: T3) => R {

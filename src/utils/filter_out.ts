@@ -2,6 +2,9 @@ import { filter } from './filter';
 import { complement } from './complement';
 import { partial2 } from './internals/partial2';
 
+/**
+ * @description returns an array of all elements for which predicate function returns false,also works with partial argument.
+ */
 export function filter_out<T>(
   predicate_fn: (arg: T, index: number, arr: readonly T[]) => boolean,
   arr: readonly T[]
