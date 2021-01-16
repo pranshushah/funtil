@@ -1,6 +1,10 @@
 import { L } from 'ts-toolbelt';
 import { partial2 } from './internals/partial2';
 
+/**
+ * @description drops elements from front until predcation function returns false and returns copy of that array.
+ */
+
 export function drop_while<T extends any[]>(
   predicate_fn: (arg: L.UnionOf<T>) => boolean,
   xs: T
