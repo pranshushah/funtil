@@ -1,6 +1,9 @@
 import { partial2 } from './internals/partial2';
 import { equals } from './math/equals';
 
+/**
+ * @description returns last index of given element in array.returns -1 if no element is found.uses ```F.equals``` , also works with partial form.
+ */
 export function last_index_of<T>(item: T, arr: readonly T[]): number;
 export function last_index_of<T>(item: T): (arr: readonly T[]) => number;
 

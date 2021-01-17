@@ -1,5 +1,8 @@
 import { partial2 } from './internals/partial2';
 import { Ord } from './types';
+/**
+ * @description returns minimum value of two values. works with string,number,date and boolean.also works with partial form.
+ */
 export function min<T extends Ord>(x1: T, x2: T): T;
 export function min<T extends Ord>(x1: T): (x2: T) => T;
 

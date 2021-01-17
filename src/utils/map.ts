@@ -1,5 +1,8 @@
 import { partial2 } from './internals/partial2';
 
+/**
+ * @description same as es6 {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map|Array.map()}. also works with partial form.
+ */
 export function map<
   T,
   R extends (val: T, index: number, arr: readonly T[]) => any
