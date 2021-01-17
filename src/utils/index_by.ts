@@ -16,7 +16,6 @@ export function index_by<T, K extends string | number = string>(
 ) {
   return partial2(
     function main(fn: (a: T) => K, list: readonly T[]) {
-      // doing this because otherwiase it will thorw error "Variable 'ret_obj' is used before being assigned"
       let ret_obj = {} as { [key in K]: T };
 
       function generate_obj(val: T) {

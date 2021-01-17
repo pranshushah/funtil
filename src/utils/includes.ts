@@ -1,7 +1,7 @@
-import deep_equal from 'fast-deep-equal';
+import { equals } from './math/equals';
 import { partial2 } from './internals/partial2';
 /**
- * @description
+ * @description it checks whether given element is in array or not. it uses F.equals,also works with partial form.
  */
 export function includes<T = any>(target: T, source: T[]): boolean;
 export function includes<T = any>(target: T): (source: T[]) => boolean;
@@ -21,7 +21,7 @@ export function includes<T = any>(target: T, source?: T[]) {
         ret_val = source.includes(target);
       } else {
         for (let index = 0; index < source.length; index) {
-          if (deep_equal(target, source[index])) {
+          if (equals(target, source[index])) {
             ret_val = true;
             break;
           }

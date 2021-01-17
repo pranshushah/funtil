@@ -1,6 +1,9 @@
 import { for_each } from './for_each';
 import { partial2 } from './internals/partial2';
 
+/**
+ * @description creates a new array with separator we passed in argument, also works in partial form.
+ */
 export function intersperse<T>(x: T, xs: readonly T[]): T[];
 export function intersperse<T>(x: T): (xs: readonly T[]) => T[];
 export function intersperse<T>(x: T, xs?: readonly T[]) {

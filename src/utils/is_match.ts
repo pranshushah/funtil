@@ -1,6 +1,9 @@
 import equals from 'fast-deep-equal';
 import { partial2 } from './internals/partial2';
 
+/**
+ * @description Tells you if the keys and values in matcher are present in obj.
+ */
 export function is_match<T extends Record<string | number, any>>(
   matcher: Partial<T>,
   obj: T

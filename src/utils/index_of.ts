@@ -1,6 +1,9 @@
 import { partial2 } from './internals/partial2';
 import { equals } from './math/equals';
 
+/**
+ * @description takes and element and array and finds index of that element in array.it uses F.equals,also works with partial form
+ */
 export function index_of<T>(item: T, arr: readonly T[]): number;
 export function index_of<T>(item: T): (arr: readonly T[]) => number;
 
