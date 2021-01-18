@@ -1,5 +1,8 @@
 import { partial3 } from './internals/partial3';
 
+/**
+ * @description same as ```Array.splice(start,delete_count)``` but does not mutate original array and returns new copy; ; also works in partial form.
+ */
 export function remove<T>(start: number, delete_count: number, arr: T[]): T[];
 export function remove<T>(
   start: number,
