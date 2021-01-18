@@ -1,5 +1,8 @@
 import { partial2 } from './internals/partial2';
 
+/**
+ * @returns first an array of n elements from front.
+ */
 export function take<T extends readonly any[]>(
   number_of_elements_you_want: number,
   xs: readonly T[]

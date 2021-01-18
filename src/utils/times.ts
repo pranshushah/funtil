@@ -1,7 +1,11 @@
 import { partial2 } from './internals/partial2';
 
+/**
+ * @description Calls an input function n times, returning an array containing the results of those function calls.
+ */
 export function times<T>(fn: (arg: number) => T, n: number): T[];
 export function times<T>(fn: (arg: number) => T): (n: number) => T[];
+
 export function times<T>(fn: (arg: number) => T, n?: number) {
   return partial2(
     function main(fn: (arg: number) => T, n: number) {

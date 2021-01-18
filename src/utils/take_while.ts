@@ -1,6 +1,9 @@
 import { L } from 'ts-toolbelt';
 import { partial2 } from './internals/partial2';
 
+/**
+ * @description takes a function and an array returns new array containing values from given array from start till predication function returns false.
+ */
 export function take_while<T extends any[]>(
   predicate_fn: (arg: L.UnionOf<T>) => boolean,
   xs: T
