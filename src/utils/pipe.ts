@@ -4,7 +4,9 @@ import { Unary } from './types';
 type Pipe<T1 extends F.Function, T2 extends L.List<Unary>> = (
   ...args: Parameters<T1>
 ) => ReturnType<L.Last<T2>>;
-
+/**
+ * @description it is same as F.compose but order of exection of function is left-right;also works with partial form.
+ */
 export function pipe<T1 extends F.Function, T2 extends L.List<Unary>>(
   fn1: T1,
   ...fns: T2

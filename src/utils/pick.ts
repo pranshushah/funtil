@@ -1,6 +1,9 @@
 import { partial2 } from './internals/partial2';
 import { Any_Obj } from './types';
 
+/**
+ * @description Returns a partial copy of an object containing only the keys specified. If the key does not exist, the property is ignored;also works with partial form.
+ */
 export function pick<O extends Any_Obj, K extends keyof O>(
   keys: K[],
   obj: O

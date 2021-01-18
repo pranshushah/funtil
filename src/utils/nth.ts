@@ -1,6 +1,9 @@
 import { L } from 'ts-toolbelt';
 import { partial2 } from './internals/partial2';
 
+/**
+ * @description returns value of nth index of array or string.
+ */
 export function nth<T extends any[]>(
   n: number,
   xs: T

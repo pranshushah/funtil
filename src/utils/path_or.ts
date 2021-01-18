@@ -14,6 +14,9 @@ export function path_or<T extends Any_Obj, K extends keyof T, D>(
   paths_list: K[]
 ): (obj: T) => D | T[K] | undefined;
 
+/**
+ * @description takes a default value,path as an array and object and checks whether given path exist in object, if it does it returns the value at that path otherwise returns default value;also works with partial form.
+ */
 export function path_or<T extends Any_Obj, K extends keyof T, D>(
   defaut_val: D,
   paths_list: K[]

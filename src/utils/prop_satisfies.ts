@@ -1,5 +1,8 @@
 import { partial3 } from './internals/partial3';
 
+/**
+ * @description Returns ```true``` if the specified object property satisfies the given predicate; ```false``` otherwise; also works with partial form.
+ */
 export function prop_satisfies<T extends object, K extends keyof T>(
   pre: (arg: T[K]) => boolean,
   key: K,

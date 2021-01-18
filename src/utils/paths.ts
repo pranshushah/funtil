@@ -2,6 +2,9 @@ import { partial2 } from './internals/partial2';
 import { map } from './map';
 import { Any_Obj } from './types';
 
+/**
+ * @description same as ```F.path``` but here it takes an array of path array ,object and returns array of value if values at given path does not exist at given path it returns ```undefined```;also works with partial form.
+ */
 export function paths<T extends Any_Obj, K extends keyof T>(
   paths_list: K[][],
   obj: T

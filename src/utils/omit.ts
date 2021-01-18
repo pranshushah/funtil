@@ -1,6 +1,9 @@
 import { for_each } from './for_each';
 import { partial2 } from './internals/partial2';
 
+/**
+ * @description deletes given array of keys from object and returns new copy of object; also works with partial form.
+ */
 export function omit<O extends object, K extends keyof O>(
   delete_keys: K[],
   obj: O
