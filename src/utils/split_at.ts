@@ -1,6 +1,9 @@
 import { partial2 } from './internals/partial2';
 import { slice } from './slice';
 
+/**
+ * @description Splits a given list or string at a given index; also works with partial form.
+ */
 export function split_at<T extends readonly any[]>(index: number, xs: T): T[];
 export function split_at<T extends readonly any[]>(
   index: number

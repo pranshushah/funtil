@@ -5,6 +5,9 @@ export function split_every<T>(n: number): (list: readonly T[]) => T[][];
 export function split_every(n: number, list: string): string[];
 export function split_every(n: number): (list: string) => string[];
 
+/**
+ * @description Splits a collection into slices of the specified length; also works with partial form.
+ */
 export function split_every<T extends string | any[]>(n: number, list?: T) {
   return partial2(
     function main(n: number, list: T) {

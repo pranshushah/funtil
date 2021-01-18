@@ -1,5 +1,8 @@
 import { partial2 } from './internals/partial2';
 
+/**
+ * Takes an array and a predication function and splits the array when predication function reuturns true; also works with partial form.
+ */
 export function split_when<T>(
   pred_fn: (arg: T) => boolean,
   list: readonly T[]

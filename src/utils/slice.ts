@@ -1,5 +1,8 @@
 import { partial3 } from './internals/partial3';
 
+/**
+ * @description wrapper around {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice|Array.slice()}; also works with partial form.
+ */
 export function slice<T extends readonly any[]>(
   from_index: number,
   to_index: number,

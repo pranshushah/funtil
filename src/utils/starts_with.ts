@@ -1,7 +1,10 @@
-import equals from 'fast-deep-equal';
+import { equals } from './math/equals';
 import { partial2 } from './internals/partial2';
 import { take } from './take';
 
+/**
+ * @description checks if given array has prefix we passed, also works with partial form.
+ */
 export function starts_with<T extends readonly any[]>(
   prefix: T,
   xs: T
