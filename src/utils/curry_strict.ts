@@ -6,7 +6,7 @@ import { StrictCurry, Head } from './types';
  * @param arity number of arguments it will take
  */
 
-export function curry<P extends any[], R>(
+export function strict_curry<P extends any[], R>(
   fn: (...args: P) => R,
   arity = fn.length
 ): StrictCurry<P, R> {
