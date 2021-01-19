@@ -1,5 +1,8 @@
 import { partial2 } from '../internals/partial2';
 
+/**
+ * @description takes two number and adds them.
+ */
 export function add(x: number): (y: number) => number;
 export function add(x: number, y: number): number;
 

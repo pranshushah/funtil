@@ -1,3 +1,6 @@
+/**
+ * @description partial form for function that takes 2 argument.
+ */
 export function partial2<R, T1, T2 = T1>(
   fn: (x: T1, y: T2) => R,
   arg1: T1,

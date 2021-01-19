@@ -1,5 +1,8 @@
 import { partial2 } from './partial2';
 
+/**
+ * @description partial form for function that takes 3 arguments.
+ */
 export function partial3<R, T1, T2 = T1, T3 = T2>(
   fn: (x: T1, y: T2, z: T3) => R,
   arg1: T1,

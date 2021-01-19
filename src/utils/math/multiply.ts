@@ -1,5 +1,8 @@
 import { partial2 } from '../internals/partial2';
 
+/**
+ * @description mulitplies two number.
+ */
 export function multiply(x: number, y: number): number;
 export function multiply(x: number): (y: number) => number;
 

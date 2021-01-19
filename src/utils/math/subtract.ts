@@ -1,14 +1,14 @@
 import { partial2 } from '../internals/partial2';
 
-export function subtract(x: number): (y: number) => number;
-export function subtract(x: number, y: number): number;
+export function subtract(y: number): (x: number) => number;
+export function subtract(y: number, x: number): number;
 
-export function subtract(x: number, y?: number) {
+export function subtract(y: number, x?: number) {
   return partial2(
-    function main(x: number, y: number) {
+    function main(y: number, x: number) {
       return x - y;
     },
-    x,
-    y
+    y,
+    x
   );
 }

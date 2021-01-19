@@ -1,5 +1,8 @@
 import { partial2 } from '../internals/partial2';
 
+/**
+ * @description takes two number y and x returns x%y
+ */
 export function mod(y: number, x: number): number;
 export function mod(y: number): (x: number) => number;
 
