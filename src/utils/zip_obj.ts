@@ -1,6 +1,9 @@
 import { partial2 } from './internals/partial2';
 import { Obj } from './types';
 
+/**
+ * @description takes an array of keys and values and makes object out of it.
+ */
 export function zip_obj<T>(keys: (string | number)[], values: T[]): Obj<T>;
 export function zip_obj<T>(keys: (string | number)[]): (values: T[]) => Obj<T>;
 
