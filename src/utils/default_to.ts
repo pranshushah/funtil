@@ -13,7 +13,11 @@ export function default_to<T1, T2>(default_val: T1, check_val?: T2) {
   return partial2(
     function main(default_val: T1, check_val: T2) {
       // @ts-ignore
-      if (is_undefined(check_val) || is_null(check_val) || isNaN(check_val)) {
+      if (
+        is_undefined(check_val) ||
+        is_null(check_val) ||
+        check_val !== check_val
+      ) {
         return default_val;
       } else {
         return check_val;
