@@ -4,9 +4,9 @@ import { Obj } from './types';
  * @description takes array of tuple of [key,value] and maps that tuples into object.
  * @param arr  array of tuple of [key,value]
  */
-export function from_pair<T>(arr: [string | number, T][]) {
-  let return_obj: Obj<T> = {};
-  function reducer_fn(acc: Obj<T>, current_val: [string | number, T]) {
+export function from_pair<T>(arr: [string | number, any][]) {
+  let return_obj: Obj<any> = {};
+  function reducer_fn(acc: Obj<any>, current_val: [string | number, T]) {
     const selected_key = current_val[0];
     const selected_val = current_val[1];
     acc[selected_key] = selected_val;

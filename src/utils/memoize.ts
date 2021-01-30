@@ -1,26 +1,19 @@
-import { partial2 } from './internals/partial2';
-export function memoize<T = undefined, R = void>(fn: (x?: T) => R, arg: T): R;
-export function memoize<T = undefined, R = void>(
-  fn: (x?: T) => R
-): (arg: T) => R;
+/**
+ * @description it takes a function and returns memoized version of that function. argument are cached using `JSON.stringify`.
+ * @param fn : function you want to memoize
+ * @param arg : argument for that function.
+ */
 
-export function memoize<T = undefined, R = void>(fn: (x?: T) => R, arg?: T) {
-  return partial2(
-    function main(fn: (x?: T) => R, arg: T) {
-      const cache = new Map<T | undefined, R>();
-      if (arg) {
-        if (!cache.has(arg)) {
-          cache.set(arg, fn(arg));
-        }
-        return cache.get(arg) as R;
-      } else {
-        if (!cache.has(undefined)) {
-          cache.set(undefined, fn());
-        }
-        return cache.get(undefined) as R;
-      }
-    },
-    fn,
-    arg
-  );
+export function memoize<T = undefined, R = void>(fn: (x: T) => R) {
+  return function(arg: T) {
+    const cache = new Map<string | undefined, R>();
+    const arg_stringify = JSON.stringify(arg);
+    if (!cache.has(arg_stringify)) {
+      const ret_val = fn(arg);
+      cache.set(arg_stringify, ret_val);
+      return ret_val;
+    } else {
+      return cache.get(arg_stringify) as R;
+    }
+  };
 }
