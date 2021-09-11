@@ -1,5 +1,5 @@
 /**
- * @description returns the function that will call supplied function with only first argument.
+ * @description returns the function that will call the supplied function with only first argument we passed.
  */
 export function unary<T extends any[], R>(
   fn: (arg: T, ...args: readonly any[]) => R
