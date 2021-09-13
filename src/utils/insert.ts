@@ -5,20 +5,20 @@ import { partial3 } from './internals/partial3';
  */
 export function insert<T>(
   insert_index: number,
-  elements: T,
+  element: T,
   arr: readonly T[]
 ): T[];
 
 export function insert<T>(
   insert_index: number,
-  elements: T
+  element: T
 ): (arr: readonly T[]) => T[];
 
 export function insert(
   insert_index: number
 ): {
-  <T>(elements: T, arr: readonly T[]): T[];
-  <T>(elements: T): (arr: readonly T[]) => T[];
+  <T>(element: T, arr: readonly T[]): T[];
+  <T>(element: T): (arr: readonly T[]) => T[];
 };
 
 export function insert<T>(
