@@ -22,10 +22,10 @@ export function is_match<T extends Record<string | number, any>>(
       if (obj === null || matcher === null) {
         return false;
       } else {
-        let keys = Object.keys(obj);
+        let keys = Object.keys(matcher);
         let result = true;
-        for (let key in keys) {
-          if (!equals(obj[key], matcher[key]) || !(key in obj)) {
+        for (const key of keys) {
+          if (!(equals(obj[key], matcher[key]) && key in obj)) {
             result = false;
             break;
           }
