@@ -11,8 +11,8 @@ export function where<T extends Record<string | number, any>>(
 ): T[];
 
 export function where<T extends Record<string | number, any>>(
-  matcher: Partial<T>
-): (list: T[]) => T[];
+  matcher: T
+): (list: Partial<T>[] | Record<string | number, any>) => T[];
 
 export function where<T extends Record<string | number, any>>(
   matcher: Partial<T>,
