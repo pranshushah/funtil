@@ -3,16 +3,19 @@ import { partial2 } from './internals/partial2';
 /**
  * @description merges two object if key exists in both object it takes key-val of first pair.also works in partial form
  */
-export function merge<T1 extends object, T2 extends object>(
+export function merge_left<T1 extends object, T2 extends object>(
   o1: T1,
   o2: T2
 ): Merge<T1, T2>;
 
-export function merge<T1 extends object, T2 extends object>(
+export function merge_left<T1 extends object>(
   o1: T1
-): (o2: T2) => Merge<T1, T2>;
+): <T2 extends object>(o2: T2) => Merge<T1, T2>;
 
-export function merge<T1 extends object, T2 extends object>(o1: T1, o2?: T2) {
+export function merge_left<T1 extends object, T2 extends object>(
+  o1: T1,
+  o2?: T2
+) {
   return partial2(
     function main(o1: T1, o2: T2) {
       return { ...o2, ...o1 } as Merge<T1, T2>;

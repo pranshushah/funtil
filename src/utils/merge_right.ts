@@ -9,9 +9,9 @@ export function merge_right<T1 extends object, T2 extends object>(
   o2: T2
 ): Merge<T2, T1>;
 
-export function merge_right<T1 extends object, T2 extends object>(
+export function merge_right<T1 extends object>(
   o1: T1
-): (o2: T2) => Merge<T2, T1>;
+): <T2 extends object>(o2: T2) => Merge<T2, T1>;
 
 export function merge_right<T1 extends object, T2 extends object>(
   o1: T1,
