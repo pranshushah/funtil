@@ -16,7 +16,7 @@ export function zip_with<T1, T2, R>(
 
 export function zip_with<T1, T2, R>(
   fn: (arg1: T1, arg2: T2) => R
-): { (list1: T1[], list2: T2[]): R[]; (list2: T2[]): (list1: T1[]) => R[] };
+): { (list1: T1[], list2: T2[]): R[]; (list1: T1[]): (list2: T2[]) => R[] };
 
 export function zip_with<T1, T2, R>(
   fn: (arg1: T1, arg2: T2) => R,
