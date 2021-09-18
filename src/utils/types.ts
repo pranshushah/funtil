@@ -23,6 +23,10 @@ export type Pick_by<U,T> = U extends unknown ? Partial<T>:U
 
 export type Ord = string | number | boolean | Date
 
+type Prev = [never, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+]
+
+export type DeepKeys<T,D extends number = 3> = [D] extends [never]?never: T extends Any_Obj ?{[K in keyof T]-?:K extends string|number?`${K}`|DeepKeys<T[K],Prev[D]>:never}[keyof T]:never 
 
 export type MergeAll<Os extends readonly object[]> =
     O.MergeAll<{}, Os, "deep", 1> extends infer M
