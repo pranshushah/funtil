@@ -18,7 +18,7 @@ export function pick<O extends Any_Obj, K extends keyof O>(keys: K[], obj?: O) {
     function main(keys: K[], obj: O) {
       let copy_obj = { ...obj };
       let result = {} as Pick<O, K>;
-      for (let key in keys) {
+      for (const key of keys) {
         if (copy_obj[key] !== undefined) {
           // @ts-ignore
           result[key] = copy_obj[key];

@@ -1,37 +1,42 @@
-import { O } from 'ts-toolbelt';
 import { partial3 } from './internals/partial3';
+import { Any_Obj } from './types';
 
 /**
- * @description add new key-val pair in object and returns new copy of object.also works with partial form.
+ * @description add new key-val pair in object and returns new copy of object(Note: it creates shallow copy).also works with partial form.
  */
-export function prop_set<T extends O.Object, R extends O.Keys<T>>(
-  key: R,
+export function prop_set<T extends Any_Obj, K extends Any_Obj>(
   obj: T,
-  val: T[R]
-): T;
+  key: keyof K,
+  val: K[keyof K]
+): T & K;
 
-export function prop_set<T extends O.Object, R extends O.Keys<T>>(
-  key: R
-): { (obj: T, val: T[R]): T; (obj: T): (val: T[R]) => T };
-
-export function prop_set<T extends O.Object, R extends O.Keys<T>>(
-  key: R,
+export function prop_set<T extends Any_Obj>(
   obj: T
-): (val: T[R]) => T;
+): {
+  <K extends Any_Obj>(key: keyof K, val: K[keyof K]): T & K;
+  <K extends Any_Obj>(key: keyof K): (val: K[keyof K]) => T & K;
+};
 
-export function prop_set<T extends O.Object, R extends O.Keys<T>>(
-  key: R,
-  obj?: T,
-  val?: T[R]
+export function prop_set<T extends Any_Obj, K extends Any_Obj>(
+  obj: T,
+  key: keyof K
+): (val: K[keyof K]) => T & K;
+
+export function prop_set<T extends Any_Obj, K extends Any_Obj>(
+  obj: T,
+  key?: keyof K,
+  val?: K[keyof K]
 ) {
   return partial3(
-    function main(key: R, obj: T, val: T[R]) {
-      const ret = { ...obj };
+    function main(obj: T, key: keyof K, val: K[keyof K]) {
+      //@ts-ignore
+      let ret: T & K = { ...obj };
+      //@ts-ignore
       ret[key] = val;
       return ret;
     },
-    key,
     obj,
+    key,
     val
   );
 }

@@ -4,21 +4,16 @@ import { partial2 } from './internals/partial2';
 /**
  * @description returns value of given key in the object we passed. also works with partial form.
  */
-export function prop<T extends O.Object, K extends keyof T>(
-  obj: T,
-  key: K
-): T[K];
+export function prop<T extends O.Object>(obj: T, key: keyof T): T[keyof T];
 
-export function prop<T extends O.Object, K extends keyof T>(
-  obj: T
-): (key: K) => T[K];
+export function prop<T extends O.Object>(obj: T): (key: keyof T) => T[keyof T];
 
-export function prop<T extends O.Object, K extends keyof T>(
+export function prop<T extends O.Object>(
   obj: T,
-  key?: K
-): T[K] | ((key: K) => T[K]) {
+  key?: keyof T
+): T[keyof T] | ((key: keyof T) => T[keyof T]) {
   return partial2(
-    function main(obj: T, key: K) {
+    function main(obj: T, key: keyof T) {
       return obj[key];
     },
     obj,
