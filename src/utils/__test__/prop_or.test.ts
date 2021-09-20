@@ -8,12 +8,12 @@ it('should 3 args', () => {
 });
 
 it('should work with 2 args', () => {
-  let keyGetter = prop_or(33, { id: '11', author: 'pranshu' });
+  let keyGetter = prop_or('33', { id: '11', author: 'pranshu' });
   let result = keyGetter('author');
   expect(result).toBe('pranshu');
   keyGetter = prop_or('mit', { id: '11', author: 'pranshu' });
   result = keyGetter('author');
-  expect(result).toBe('mit');
+  expect(result).toBe('pranshu');
 });
 
 it('should work with 1 args', () => {

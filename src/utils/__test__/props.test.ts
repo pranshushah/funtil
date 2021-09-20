@@ -11,7 +11,7 @@ it('should work with 2 args', () => {
 it('should work with 1 arg', () => {
   let tododDetailsGetter = props({
     id: 22,
-    todo: 'writin test',
+    todo: 'writing tests',
     author: 'pranshu',
   });
   let result = tododDetailsGetter(['todo']);

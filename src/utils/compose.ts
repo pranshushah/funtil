@@ -36,10 +36,10 @@ export function compose<V extends any[], T1, T2, T3, T4, T5>(
 ): (...args: V) => T5;
 
 export function compose<V extends any[]>(...fns: any[]) {
-  return function composed(...result: V) {
+  return function composed(...args: V) {
     // copy the array of functions
     var list = [...fns];
-    var retValue = list.pop()(...result);
+    var retValue = list.pop()(...args);
     while (list.length > 0) {
       // take the last function off the end of the list
       // and execute it
