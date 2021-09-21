@@ -3,10 +3,11 @@
  */
 export function reverse<T>(xs: T[] | string) {
   if (typeof xs === 'string') {
-    return xs
-      .split('')
-      .reverse()
-      .join('');
+    let reversed = '';
+    for (const character of xs) {
+      reversed = character + reversed;
+    }
+    return reversed;
   } else {
     return xs.reverse();
   }

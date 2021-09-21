@@ -16,7 +16,7 @@ export function range(from: number, to?: number) {
       }
       let n = from;
       let result: number[] = [];
-      while (n < from) {
+      while (n < to) {
         result.push(n);
         n++;
       }
