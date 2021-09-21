@@ -1,9 +1,10 @@
 import { partial2 } from './internals/partial2';
 import { slice } from './slice';
 export function split_every<T>(n: number, list: readonly T[]): T[][];
-export function split_every<T>(n: number): (list: readonly T[]) => T[][];
+export function split_every<T>(
+  n: number
+): { (list: readonly T[]): T[][]; (list: string): string[] };
 export function split_every(n: number, list: string): string[];
-export function split_every(n: number): (list: string) => string[];
 
 /**
  * @description Splits a collection into slices of the specified length; also works with partial form.

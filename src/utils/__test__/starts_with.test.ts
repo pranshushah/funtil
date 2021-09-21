@@ -17,5 +17,5 @@ it('should work with 1 args ', () => {
   let arrayStartChecker = starts_with([1, 2, 3]);
   expect(arrayStartChecker([1, 2, 3, 4, 5])).toBe(true);
   expect(stringStartChecker('prnshu')).toBe(false);
-  expect([1, 3, 4, 5]).toBe(false);
+  expect(arrayStartChecker([1, 3, 4, 5])).toBe(false);
 });

@@ -5,11 +5,10 @@ import { slice } from './slice';
  * @description Splits a given list or string at a given index; also works with partial form.
  */
 export function split_at<T extends readonly any[]>(index: number, xs: T): T[];
-export function split_at<T extends readonly any[]>(
+export function split_at(
   index: number
-): (xs: T) => T[];
+): { <T extends readonly any[]>(xs: T): T[]; (xs: string): string[] };
 export function split_at(index: number, xs: string): string[];
-export function split_at(index: number): (xs: string) => string[];
 
 export function split_at<T extends readonly any[]>(
   index: number,

@@ -18,13 +18,21 @@ export function split_when<T>(
 ) {
   return partial2(
     function main(pred_fn: (arg: T) => boolean, list: readonly T[]) {
-      var pre = [];
+      var pre: T[] = [];
       let index = 0;
-      while (index < list.length && !pred_fn(list[index])) {
-        pre.push(list[index]);
+      let result: T[][] = [];
+      while (index < list.length) {
+        if (pred_fn(list[index])) {
+          pre.push(list[index]);
+          result.push(pre);
+          pre = [];
+        } else {
+          pre.push(list[index]);
+        }
         index++;
       }
-      return [pre, list.slice(index)];
+      if (pre.length > 0) result.push(pre);
+      return result;
     },
     pred_fn,
     list
