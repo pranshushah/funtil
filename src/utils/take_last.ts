@@ -8,18 +8,14 @@ export function take_last<T extends any[]>(
   xs: T
 ): T;
 
-export function take_last<T extends any[]>(
-  number_elements_you_want_from_behind: number
-): (xs: T) => T;
-
 export function take_last<T>(
   number_elements_you_want_from_behind: number,
   xs: string
 ): string;
 
-export function take_last<T>(
+export function take_last(
   number_elements_you_want_from_behind: number
-): (xs: string) => string;
+): { <T extends any[]>(xs: T): T; (xs: string): string };
 
 export function take_last<T extends any[]>(
   number_elements_you_want_from_behind: number,

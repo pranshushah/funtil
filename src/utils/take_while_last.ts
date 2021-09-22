@@ -35,7 +35,7 @@ export function take_while_last<T extends any[]>(
       while (last_index >= 0 && predicate_fn(xs[last_index])) {
         last_index--;
       }
-      return xs.slice(last_index + 1, xs.length);
+      return xs.slice(last_index, xs.length);
     },
     predicate_fn,
     xs
