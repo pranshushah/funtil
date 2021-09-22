@@ -1,25 +1,28 @@
+import { Tail } from 'List/_api';
 import { partial2 } from './internals/partial2';
+import { OvarloadedParameters } from './types';
 
 /**
- * @description tryCatch takes two functions, a tryer and a catcher. The returned function evaluates the tryer; if it does not throw, it simply returns the result. If the tryer does throw, the returned function evaluates the catcher function and returns its result.
+ * @description tryCatch takes two functions, a tryer and a catcher. The returned function evaluates the tryer; if it does not throw error, it simply returns the result. If the tryer does throw error, the returned function evaluates the catcher function and returns its result.
  * @returns function that takes tuple of array arguments for tryer and catcher.
  */
 export function try_catch<
   F extends (...args: any[]) => any,
-  F1 extends (x: unknown, ...args: Parameters<F>) => any
+  F1 extends (x: Error, ...args: any[]) => any
 >(
   tryer: F,
   catcher: F1
-): (args: [Parameters<F>, Parameters<F1>]) => ReturnType<F1> | ReturnType<F>;
-
-export function try_catch<
-  F extends (...args: any[]) => any,
-  F1 extends (x: unknown, ...args: Parameters<F>) => any
->(
-  tryer: F
 ): (
+  args: [OvarloadedParameters<F>, Tail<OvarloadedParameters<F1>>]
+) => ReturnType<F1> | ReturnType<F>;
+
+export function try_catch<F extends (...args: any[]) => any>(
+  tryer: F
+): <F1 extends (x: Error, ...args: any[]) => any>(
   catcher: F1
-) => (args: [Parameters<F>, Parameters<F1>]) => ReturnType<F1> | ReturnType<F>;
+) => (
+  args: [OvarloadedParameters<F>, Tail<OvarloadedParameters<F1>>]
+) => ReturnType<F1> | ReturnType<F>;
 
 export function try_catch<
   F extends (...args: any[]) => any,

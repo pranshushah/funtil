@@ -5,18 +5,14 @@ import { partial2 } from './internals/partial2';
  */
 export function take<T extends readonly any[]>(
   number_of_elements_you_want: number,
-  xs: readonly T[]
-): T[];
-
-export function take<T extends readonly any[]>(
-  number_of_elements_you_want: number
-): (xs: readonly T[]) => T[];
+  xs: T
+): T;
 
 export function take(number_of_elements_you_want: number, xs: string): string;
 
 export function take(
   number_of_elements_you_want: number
-): (xs: string) => string;
+): { <T extends readonly any[]>(xs: T): T; (xs: string): string };
 
 export function take<T extends readonly any[]>(
   number_of_elements_you_want: number,
