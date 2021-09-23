@@ -1,10 +1,12 @@
+import { OvarloadedParameters, OverloadedReturnType, Head } from './types';
+
 /**
  * @description returns the function that will call the supplied function with only first argument we passed.
  */
-export function unary<T extends any[], R>(
-  fn: (arg: T, ...args: readonly any[]) => R
-): (arg: T) => R {
-  return function one(arg: T) {
+export function unary<T extends (...args: any[]) => any>(
+  fn: T
+): (arg: Head<OvarloadedParameters<T>>) => OverloadedReturnType<T> {
+  return function one(arg: Head<OvarloadedParameters<T>>) {
     return fn(arg);
   };
 }

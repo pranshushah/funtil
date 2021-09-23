@@ -32,6 +32,11 @@ export type OvarloadedParameters<T> = T extends { (...args: infer P1) : any; (..
 T extends { (...args: infer P1) : any; (...args: infer P2) : any } ? P1|P2  :
 T extends (...args: infer P) => any ? P : any
 
+export type OverloadedReturnType<T> = 
+    T extends { (...args: any[]) : infer R; (...args: any[]) : infer R; (...args: any[]) : infer R ; (...args: any[]) : infer R } ? R  :
+    T extends { (...args: any[]) : infer R; (...args: any[]) : infer R; (...args: any[]) : infer R } ? R  :
+    T extends { (...args: any[]) : infer R; (...args: any[]) : infer R } ? R  :
+    T extends (...args: any[]) => infer R ? R : any
 
 export type MergeAll<Os extends readonly object[]> =
     O.MergeAll<{}, Os, "deep", 1> extends infer M
