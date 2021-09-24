@@ -2,7 +2,8 @@ import { L } from 'ts-toolbelt';
 import { partial2 } from './internals/partial2';
 
 /**
- * @description drops elements from front until predcation function returns false and returns copy of that array.
+ * @description drops elements from front until predcation function returns false and returns copy of that array or string.also wokrs in partial form
+ * @category List
  */
 
 export function drop_while<T extends any[]>(

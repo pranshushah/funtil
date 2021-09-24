@@ -4,6 +4,7 @@ import { partial2 } from './internals/partial2';
 
 /**
  * @description takes 2 array and returns array that does not contain any value of second array.it uses F.equals for eqality.
+ * @category List
  */
 export function difference<T>(arr1: T[], arr2: T[]): T[];
 export function difference<T>(arr1: T[]): (arr2: T[]) => T[];

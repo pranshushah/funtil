@@ -1,6 +1,7 @@
 import { partial2 } from './internals/partial2';
 /**
  * @description drops any number of elements you want from back array or string and returns new copy of or array or string.if you provide number > number of elements in array it does not drop any element and if you provide negative number it will not drop any element.
+ * @category List
  */
 export function drop_last<T extends any[]>(
   number_element_to_drop_from_back: number,

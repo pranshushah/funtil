@@ -1,7 +1,8 @@
 import { partial3 } from './internals/partial3';
 import { equals } from './math/equals';
 /**
- * @description takes predicate function fn and 2 elements.returns true if fn(x1) === fn(x2) otherwise false. it uses F.equals to compare. it also works with partial arguments
+ * @description takes predicate function fn and 2 elements.returns true if fn(x1) === fn(x2) otherwise false. it uses F.equals to compare. it also works with partial arguments.
+ * @category Logic
  */
 export function eq_by<T>(fn: (x: T) => boolean, x1: T, x2: T): boolean;
 export function eq_by<T>(fn: (x: T) => boolean, x1: T): (x2: T) => boolean;

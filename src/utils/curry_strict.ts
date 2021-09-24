@@ -4,6 +4,7 @@ import { StrictCurry, Head } from './types';
  * @description haskell style curried function that will take one argument at time
  * @param fn function you want to curried.
  * @param arity number of arguments it will take
+ * @category Function
  */
 
 export function strict_curry<P extends any[], R>(

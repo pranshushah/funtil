@@ -3,6 +3,7 @@ import { Obj } from './types';
 /**
  * @description takes array of tuple of [key,value] and maps that tuples into object.
  * @param arr  array of tuple of [key,value]
+ * @category List
  */
 export function from_pair<T>(arr: [string | number, any][]) {
   let return_obj: Obj<any> = {};

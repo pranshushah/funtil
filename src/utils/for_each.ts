@@ -2,6 +2,7 @@ import { partial2 } from './internals/partial2';
 
 /**
  * @description takes a function and an array, and calls that function on every element of array and returns original array.
+ * @category List
  */
 export function for_each<T>(
   fn: (arg: T, index: number, arr: readonly T[]) => void,

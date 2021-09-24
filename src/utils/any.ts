@@ -1,8 +1,9 @@
 import { partial2 } from './internals/partial2';
 
 /**
- * @description takes predication function and array and passes all element one by one to predication function if it returns true for any element function returns true otherwise returns false. all works in partial form
+ * @description takes predication function and array and passes all element one by one to predication function if it returns true for any element function returns true otherwise returns false. also works in partial form
  * @returns true if predication function returns true for any element in array or false
+ * @category List
  */
 export function any<T>(
   predicate: (arg: T) => boolean,

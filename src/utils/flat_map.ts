@@ -1,5 +1,6 @@
 /**
  * @description partial form of array.flatMap
+ * @category List
  */
 export function flat_map<
   T extends any,

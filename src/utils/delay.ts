@@ -4,6 +4,7 @@ import { partial2 } from './internals/partial2';
  * @description invokes the given function after given time,also works with parital form.
  * @param fn function you want to invoke
  * @param time wait time for that function in milisecond
+ * @category Function
  */
 export function delay<T extends (...args: any) => any>(
   fn: T,

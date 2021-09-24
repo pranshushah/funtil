@@ -4,6 +4,7 @@ import { partial2 } from './internals/partial2';
 
 /**
  * @description checks if given list ends with provided sublist. it uses F.equals
+ * @category List
  */
 
 export function ends_with<T extends any[]>(suffix: T, xs: T): boolean;

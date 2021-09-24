@@ -3,6 +3,7 @@ import { F } from 'ts-toolbelt';
  * @description flexible curry function that can take multiple arguments at time.
  * @param fn function you want to curried.
  * @param arity number of arguments it will take
+ * @category Function
  */
 export function curry<Fn extends F.Function>(
   fn: Fn,

@@ -1,7 +1,8 @@
 import { partial2 } from './internals/partial2';
 
 /**
- *@description takes a function and array of arguments and spread that arguments into function we passed,  also works on parital form
+ *@description takes a function and array of arguments and spread that arguments into function we passed, also works in parital form
+ *@category List
  */
 
 export function apply<T extends any[], R>(fn: (...args: T) => R, arr: T): R;

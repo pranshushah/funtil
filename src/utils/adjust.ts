@@ -6,6 +6,7 @@ import { partial3 } from './internals/partial3';
  * @param fn function that is called with element at given index
  * @param arr array you want to minupulate to
  * @returns new copy of array with function applied at given index
+ * @category List
  */
 export function adjust<T>(
   index: number,

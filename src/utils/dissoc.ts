@@ -1,7 +1,8 @@
 import { O } from 'ts-toolbelt';
 import { partial2 } from './internals/partial2';
 /**
- * @description returns the object that omits prop property.
+ * @description returns the object that omits prop property.also works in partial form
+ * @category Object
  */
 export function dissoc<T extends object, K extends keyof T>(
   prop: K,
