@@ -5,6 +5,7 @@ import { Any_Obj, DeepKeys } from './types';
 
 /**
  * @description takes a default value,path as an array and object and checks whether given path exist in object, if it does it returns the value at that path otherwise returns default value;also works with partial form.
+ * @category Object
  */
 export function path_or<T extends Any_Obj, D>(
   defaut_val: D,

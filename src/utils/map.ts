@@ -2,6 +2,7 @@ import { partial2 } from './internals/partial2';
 
 /**
  * @description same as es6 {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map|Array.map()}. also works with partial form.
+ * @category List
  */
 export function map<T, R>(
   mapper: (val: T, index: number, arr: readonly T[]) => R,

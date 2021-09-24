@@ -1,5 +1,6 @@
 /**
  * @description This method is like F.partial except that partially applied arguments are appended to the arguments it receives.type inference is not working as expected so you have to explicitly type genereic i hope we resolve this issue in up coming version.
+ * @category Function
  */
 export function partial_right<
   P1 extends unknown[],

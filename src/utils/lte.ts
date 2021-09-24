@@ -1,6 +1,7 @@
 import { partial2 } from './internals/partial2';
 /**
  * @description takes two number  and checks whether second number is less than first number, also works with partial form.
+ * @category Logic
  */
 export function lte(x2: number, x1: number): boolean;
 export function lte(x2: number): (x1: number) => boolean;

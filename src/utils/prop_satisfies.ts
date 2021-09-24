@@ -3,6 +3,7 @@ import { Any_Obj } from './types';
 
 /**
  * @description Returns ```true``` if the specified object property satisfies the given predicate; ```false``` otherwise; also works with partial form.
+ * @category Object
  */
 export function prop_satisfies<T extends Any_Obj>(
   pre: (arg: any) => boolean,

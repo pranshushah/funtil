@@ -5,6 +5,7 @@ import { partial2 } from './internals/partial2';
 import { Any_Obj } from './types';
 /**
  * @description Returns a new list by plucking the same named property off all objects in the list supplied;also works with partial form.
+ * @category List
  */
 
 type passing_prop = <T extends object>(

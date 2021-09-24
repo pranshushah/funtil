@@ -1,5 +1,6 @@
 /**
  * @description takes a function as argument and few arguments of that function and returns a function that takes rest of the argument. when you call returned function it invokes argument function with given arguments.
+ * @category Function
  */
 export function partial<
   T1 extends readonly any[],

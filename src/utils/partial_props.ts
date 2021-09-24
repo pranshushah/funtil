@@ -5,6 +5,7 @@ import { partial2 } from './internals/partial2';
  * @param fn takes object as and argument
  * @param intial_object_args partial object of the object we want to pass in argument of function.
  * @returns a function that takes remaining part of object will invoke the function when you call returned function.
+ * @category Object
  */
 export function partial_props<T extends O.Object, T1 extends Partial<T>, R>(
   fn: (x: T) => R,

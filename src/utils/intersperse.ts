@@ -3,6 +3,7 @@ import { partial2 } from './internals/partial2';
 
 /**
  * @description creates a new array that adds separator between the elements , also works in partial form.
+ * @category List
  */
 export function intersperse<T>(x: T, xs: readonly T[]): T[];
 export function intersperse<T>(x: T): (xs: readonly T[]) => T[];

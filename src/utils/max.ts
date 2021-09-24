@@ -1,6 +1,7 @@
 import { partial2 } from './internals/partial2';
 /**
  * @description returns maximum value of two number.
+ * @category Math
  */
 export function max(x1: number, x2: number): number;
 export function max(x1: number): (x2: number) => number;

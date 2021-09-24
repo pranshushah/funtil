@@ -5,6 +5,7 @@ import { Any_Obj, DeepKeys } from './types';
 
 /**
  * @description takes a path as an array and the object and returns the value at given in object otherwise it returns ```undefined```;also works with partial form.
+ * @category Object
  */
 export function path<T extends Any_Obj, ReturnValueType>(
   path_list: DeepKeys<T>[],

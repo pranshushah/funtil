@@ -2,6 +2,7 @@ import { partial3 } from './internals/partial3';
 
 /**
  * @description Move an item, at index from, to index to, in a list of elements. A new list will be created containing the new elements order.
+ * @category List
  */
 export function move<T>(from: number, to: number, list: T[]): T[];
 export function move(from: number, to: number): <T>(list: T[]) => T[];

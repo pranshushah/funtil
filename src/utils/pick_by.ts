@@ -2,6 +2,7 @@ import { partial2 } from './internals/partial2';
 import { Any_Obj, Pick_by } from './types';
 /**
  * @description Returns a partial copy of an object containing only the keys that satisfy the supplied predication function;also works with partial form.
+ * @category Object
  */
 export function pick_by<
   U,

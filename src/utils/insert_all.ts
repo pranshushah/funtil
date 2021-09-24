@@ -1,6 +1,7 @@
 import { partial3 } from './internals/partial3';
 /**
  * @description insert array of elements at given index of array and returns new copy of array., also works on partial form.
+ * @category List
  */
 export function insert_all<T>(
   insert_index: number,

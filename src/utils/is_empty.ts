@@ -8,6 +8,7 @@ import { is_undefined } from './is_undefined';
 
 /**
  * @description checks for string,array and object whether they are empty or not. returns false of every other data types.
+ * @category Function
  */
 export function is_empty(x: any) {
   if (is_null(x) || is_undefined(x)) {

@@ -2,6 +2,7 @@
  * @description it takes a function and returns memoized version of that function. argument are cached using `JSON.stringify`.
  * @param fn : function you want to memoize
  * @param arg : argument for that function.
+ * @category Function
  */
 
 export function memoize<T = undefined, R = void>(fn: (x: T) => R) {

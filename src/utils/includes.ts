@@ -2,6 +2,7 @@ import { equals } from './math/equals';
 import { partial2 } from './internals/partial2';
 /**
  * @description it checks whether given element is in array or not. it uses F.equals,also works with partial form.
+ * @category List
  */
 export function includes<T = any>(target: T, source: T[]): boolean;
 export function includes<T = any>(target: T): (source: T[]) => boolean;

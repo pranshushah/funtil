@@ -3,6 +3,7 @@ import { partial2 } from './internals/partial2';
 
 /**
  * @description merges two object if key exist in both object it take key-val from 2nd object. also works in partial form.
+ * @category Object
  */
 export function merge_right<T1 extends object, T2 extends object>(
   o1: T1,

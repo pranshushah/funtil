@@ -1,5 +1,6 @@
 /**
  * @description it is same as F.compose but order of exection of function is left-right
+ * @category Function
  */
 export function pipe<V extends any[], T1, T2, T3, T4, T5, T6>(
   fn0: (...args: V) => T1,

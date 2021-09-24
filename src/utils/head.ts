@@ -3,6 +3,7 @@ export function head<T>(list: readonly T[]): T | undefined;
 /**
  * @description takes an array or string and returns first element of it.
  * @param xs string or array
+ * @category List
  */
 export function head<T extends readonly any[]>(xs: T | string) {
   if (typeof xs === 'string') {

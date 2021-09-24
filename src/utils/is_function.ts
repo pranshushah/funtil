@@ -1,5 +1,6 @@
 /**
  * @description check for given element is function or not returns false for object,array and date
+ * @category Function
  */
 export function is_function(x: any) {
   return (

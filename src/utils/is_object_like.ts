@@ -4,6 +4,7 @@ import { is_primitive } from './is_primitive';
 import { is_set } from './is_set';
 /**
  * @description checks wether given value is object or not.returns false for function,array, null and primitive types.
+ * @category Function
  */
 export function is_object_like(x: any) {
   return (

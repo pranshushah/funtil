@@ -3,6 +3,7 @@ import { Any_Obj } from './types';
 
 /**
  * @description add new key-val pair in object and returns new copy of object(Note: it creates shallow copy).also works with partial form.
+ * @category Object
  */
 export function prop_set<T extends Any_Obj, K extends Any_Obj>(
   obj: T,
