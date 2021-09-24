@@ -2,6 +2,7 @@ import { mod } from './mod';
 
 /**
  * @description takes an array of number and returns median of it.
+ * @category Math
  */
 export function median(list: number[]) {
   if (list.length === 0) {
