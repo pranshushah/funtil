@@ -2,6 +2,7 @@ import { partial2 } from './internals/partial2';
 
 /**
  * @description returns a new list with n numbers from behind.
+ * @category List
  */
 export function take_last<T extends any[]>(
   number_elements_you_want_from_behind: number,

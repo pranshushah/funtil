@@ -8,6 +8,7 @@ export function split_every(n: number, list: string): string[];
 
 /**
  * @description Splits a collection into slices of the specified length; also works with partial form.
+ * @category List
  */
 export function split_every<T extends string | any[]>(n: number, list?: T) {
   return partial2(

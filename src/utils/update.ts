@@ -2,6 +2,7 @@ import { partial3 } from './internals/partial3';
 
 /**
  * @description updates given array at given index with given element and returns new copy of array.
+ * @category List
  */
 export function update<T>(n: number, el: T, elements: readonly T[]): T[];
 export function update<T>(n: number, el: T): (elements: readonly T[]) => T[];

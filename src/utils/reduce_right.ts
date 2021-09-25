@@ -2,6 +2,7 @@ import { partial3 } from './internals/partial3';
 
 /**
  * @description same as F.reduce function but reduces the array right-left; also works in partial form.
+ * @category List
  */
 export function reduce_right<T, R>(
   reducer_fn: (acc: R, element: T, index?: number, arr?: readonly T[]) => R,

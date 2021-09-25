@@ -2,6 +2,7 @@ import { F } from 'ts-toolbelt';
 
 /**
  * @description uncurries F.curry.
+ * @category Function
  */
 export function uncurry<F1 extends F.Function>(fn: F.Curry<F1>): F.UnCurry<F1> {
   // @ts-ignore-start

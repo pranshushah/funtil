@@ -4,6 +4,7 @@ import { unique } from './uniq';
 
 /**
  * @description it returns unioun of given two arrays.
+ * @category List
  */
 export function union<T extends any[]>(x1: T, x2: T): T;
 export function union<T extends any[]>(x1: T): (x2: T) => T;

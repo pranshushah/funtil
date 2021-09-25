@@ -2,6 +2,7 @@ import { partial2 } from './internals/partial2';
 
 /**
  * @description takes a function and its argument. it calls given function and returns the argument.
+ * @category List
  */
 
 export function tap<T>(fn: (arg: T) => any, x: T): T;

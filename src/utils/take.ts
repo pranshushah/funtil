@@ -2,6 +2,7 @@ import { partial2 } from './internals/partial2';
 
 /**
  * @returns first n elements an array of from front.
+ * @category List
  */
 export function take<T extends readonly any[]>(
   number_of_elements_you_want: number,

@@ -2,6 +2,7 @@ import { partial2 } from './internals/partial2';
 
 /**
  * @description takes an array of keys and values and makes object out of it.
+ * @category List
  */
 export function zip_obj<T>(
   keys: (string | number)[],

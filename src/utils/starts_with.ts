@@ -4,6 +4,7 @@ import { take } from './take';
 
 /**
  * @description checks if given array has prefix we passed, also works with partial form.
+ * @category List
  */
 export function starts_with<T extends readonly any[]>(
   prefix: T,

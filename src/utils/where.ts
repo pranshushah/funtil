@@ -4,6 +4,7 @@ import { is_match } from './is_match';
 
 /**
  * @description Looks through each value in the array, returning an array of all the values that matches the key-value pairs listed in matcher.
+ * @category List
  */
 export function where<T extends Record<string | number, any>>(
   matcher: Partial<T>,

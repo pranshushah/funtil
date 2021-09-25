@@ -4,6 +4,7 @@ import { partial2 } from './internals/partial2';
 
 /**
  * @description takes removal_list and list and removes every elements that is in removal_list.
+ * @category List
  */
 export function without<T>(removal_list: T[], list: T[]): T[];
 export function without<T>(removal_list: T[]): (list: T[]) => T[];

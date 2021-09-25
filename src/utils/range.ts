@@ -4,6 +4,7 @@ export function range(from: number): (to: number) => number[];
 
 /**
  * @description returns an array of given range;if given number isNan or Infinity it throws array; also works in partial form.
+ * @category List
  */
 export function range(from: number, to?: number) {
   return partial2(

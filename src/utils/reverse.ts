@@ -1,5 +1,6 @@
 /**
  * @description Reverses given string or array.
+ * @category List
  */
 export function reverse<T>(xs: T[] | string) {
   if (typeof xs === 'string') {

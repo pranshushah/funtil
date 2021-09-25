@@ -2,6 +2,7 @@ import { partial2 } from './internals/partial2';
 
 /**
  * @description takes a function and an array returns new array containing values from given array from start till predication function returns false.
+ * @category List
  */
 export function take_while<T>(predicate_fn: (arg: T) => boolean, xs: T[]): T[];
 
