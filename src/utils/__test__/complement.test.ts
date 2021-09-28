@@ -1,4 +1,5 @@
 import { complement } from '../complement';
+import { lt } from '../lt';
 
 it('creates boolean-returning function that reverses another', () => {
   const isEven = complement(function(x: number) {
@@ -8,10 +9,7 @@ it('creates boolean-returning function that reverses another', () => {
   expect(isEven(10)).toBe(true);
 });
 
-it('multiple arguments', () => {
-  const gt100 = complement(function(x: number, y: number) {
-    return x + y < 100;
-  });
-  expect(gt100(100, 20)).toBe(true);
-  expect(gt100(10, 20)).toBe(false);
+it('should work with overloaded arguments', () => {
+  let invertedLessThan30 = complement(lt(30));
+  expect(invertedLessThan30(25)).toBe(false);
 });

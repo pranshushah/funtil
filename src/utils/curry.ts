@@ -4,6 +4,13 @@ import { F } from 'ts-toolbelt';
  * @param fn function you want to curried.
  * @param arity number of arguments it will take
  * @category Function
+ * @example
+ * function multiplyThreeNumbers(a:number,b:number,c:number){
+ *    return a * b * c;
+ * }
+ * let curriedMultiply = F.curry(multiplyThreeNumbers);
+ * let a = curriedMultiply(3,4);
+ * a(2) // 24
  */
 export function curry<Fn extends F.Function>(
   fn: Fn,

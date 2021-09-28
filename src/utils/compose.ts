@@ -1,6 +1,12 @@
 /**
  * @description takes upto 6 functions as argument and returns the function that will take arguments of right-most function and it will call functions right-left.every functions except right most function should have only one parameter.
  * @category Function
+ * @example
+ * function upper(x: string) {
+    return x.toUpperCase();
+  }
+  const greeting = (first: string, last: string) => first + last;
+  F.compose(upper,greeting)("pranshu","shah") //PRANSHUSHAH
  */
 export function compose<V extends any[], T1, T2, T3, T4, T5, T6>(
   fn5: (x: T5) => T6,

@@ -4,6 +4,9 @@ import { partial2 } from './internals/partial2';
  * @description take two element. that can be either string or array and returns the concated version.it will throw error if we pass one string and one array.it also take partial arguments
  * @returns new string or array.
  * @category List
+ * @example
+ * F.concat([1,2],[3,4]) // [1,2,3,4]
+ * F.concat("pranshu ","shah") // "pranshu shah"
  */
 export function concat<T extends readonly any[]>(arg1: T, arg2: T): T;
 export function concat<T extends readonly any[]>(arg1: T): (arg2: T) => T;

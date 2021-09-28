@@ -5,6 +5,14 @@ import { StrictCurry, Head } from './types';
  * @param fn function you want to curried.
  * @param arity number of arguments it will take
  * @category Function
+ * @example
+ * function multiplyThreeNumbers(a:number,b:number,c:number){
+ *    return a * b * c;
+ * }
+ * let curriedMultiply = F.strict_curry(multiplyThreeNumbers);
+ * let a = curriedMultiply(3);
+ * let b = a(2)
+ * b(4) // 24
  */
 
 export function strict_curry<P extends any[], R>(
