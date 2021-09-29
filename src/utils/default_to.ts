@@ -4,7 +4,13 @@ import { is_undefined } from './is_undefined';
 
 /**
  * @description it takes default_val and value you want to check and returns value you wanted to check if that value if not undefined , null or NaN otherwise it returns default_val
+ * @returns default value if check value is null,undefined or NaN
  * @category Function
+ * @example
+ * F.default_to("pranshu","mit") // mit
+ * let defaultToPrasnshu  = F.default_to("pranshu");
+ * defaultToPranshu(null) // "pranshu"
+ * defaultToPranshu("zoom") // "zoom"
  */
 export function default_to<T1, T2>(default_val: T1, check_val: T2): T1 | T2;
 

@@ -2,7 +2,11 @@ import { partial2 } from './internals/partial2';
 
 /**
  * @description drops any number of elements you want from front of the array or string and returns new copy of or array or string.if you provide number > number of elements in array it  drops all elements and if you provide negative number it will not drop any element.
+ * @returns shallow copy with removed elements.
  * @category List
+ * @example
+ * F.drop([1,2,3,4,5,6],3) //[4,5,6]
+ * F.drop("pranshu",3) // 'nshu'
  */
 export function drop<T extends any[]>(n: number, xs: T): T;
 export function drop<T extends any[]>(n: number): (xs: T) => T;

@@ -3,7 +3,14 @@ import { partial2 } from './internals/partial2';
 
 /**
  * @description drops elements from front until predcation function returns false and returns copy of that array or string.also wokrs in partial form
+ * @returns shallow copy of the array with removed elements.
  * @category List
+ * @example
+ *function isOdd(x:number){
+ *  return F.mod(2,x) === 1;
+ *}
+ *F.drop_while(isOdd,[1,3,4,5]); //[4,5]
+ *F.drop_while((s: string) => s !== 'n', 'pranshu'); // 'nshu'
  */
 
 export function drop_while<T extends any[]>(

@@ -2,7 +2,13 @@ import { partial2 } from './internals/partial2';
 import { L } from 'ts-toolbelt';
 /**
  *@description drops elements from last until predication function returns false and it returns new copy of dropped .works also with partial arguments.
- @category List
+ *@category List
+ *@example
+ *function isOdd(x:number){
+ *  return F.mod(2,x) === 1;
+ *}
+ *F.drop_last_while(isOdd,[1,2,3,5,7]); //[1,2]
+ *F.drop_last_while((s: string) => s !== 'n', 'pranshu'); // 'pran'
  */
 export function drop_last_while<T extends any[]>(
   predicate_fn: (arg: L.UnionOf<T>) => boolean,

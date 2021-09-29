@@ -5,6 +5,8 @@ import { Any_Obj } from './types';
 /**
  * @description takes key and 2 objects and checks whether given key has same value in object.it uses `F.equals` to check equality.
  * @category Object
+ * @example
+ * F.eq_props("profile",{id:1,profile:{name:"pranshu shah",age:25}},{id:2,profile:{name:"pranshu shah",age:25},teacher:false}) //true
  */
 
 export function eq_props(
