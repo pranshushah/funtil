@@ -1,10 +1,12 @@
-export function head(str: string): string;
-export function head<T>(list: readonly T[]): T | undefined;
 /**
  * @description takes an array or string and returns first element of it.
- * @param xs string or array
  * @category List
+ * @example
+ * F.head("pranshu") // "p"
+ * F.head([1,2,3]) // 1
  */
+export function head(str: string): string;
+export function head<T>(list: readonly T[]): T | undefined;
 export function head<T extends readonly any[]>(xs: T | string) {
   if (typeof xs === 'string') {
     return xs.charAt(0);

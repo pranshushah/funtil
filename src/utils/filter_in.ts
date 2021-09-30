@@ -5,6 +5,11 @@ import { partial2 } from './internals/partial2';
  * @description returns an array of all elements for which predicate function returns true,also works with partial argument.
  * @alias filter
  * @category List
+ * @example
+ * function isOdd(x:number){
+ *    return x % 2 === 1;
+ * }
+ * F.filter_in(isOdd,[1,2,3,4,5,6,7]) // [1,3,5,7]
  */
 export function filter_in<T>(
   predicate_fn: (arg: T, index: number, arr: readonly T[]) => boolean,
