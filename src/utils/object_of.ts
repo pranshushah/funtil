@@ -3,6 +3,11 @@ import { partial2 } from './internals/partial2';
 /**
  * @description creates an object of given key val pair; also works with partial form.
  * @category Object
+ * @example
+ * F.object_of('id', 222); {id:222}
+ * F.object_of("getName",function(){
+ *  return this.name
+ * }) // {getName:function(){return this.name}}
  */
 export function object_of<T, K extends string | number>(
   key: K,
