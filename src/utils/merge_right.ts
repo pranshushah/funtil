@@ -4,6 +4,11 @@ import { partial2 } from './internals/partial2';
 /**
  * @description merges two object if key exist in both object it take key-val from 2nd object. also works in partial form.
  * @category Object
+ * @example
+ * F.merge_right(
+    { id: '11', name: 'pranshu shah' },
+    { id: '12', task: 'woww' }
+  ); // {id:'12',task:"woww",name:"pranshu shah"}
  */
 export function merge_right<T1 extends object, T2 extends object>(
   o1: T1,

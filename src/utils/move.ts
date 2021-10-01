@@ -3,6 +3,12 @@ import { partial3 } from './internals/partial3';
 /**
  * @description Move an item, at index from, to index to, in a list of elements. A new list will be created containing the new elements order.
  * @category List
+ * @example
+ * F.move(0,2,[0,1,2,3]) // [1,2,0,3]
+ * F.move(-1,0,[0,1,2,3]) // [3,0,1,2]
+ * F.move(0,-1,[0,1,2,3]) // [1,2,3,0]
+ * F.move(0,-5,[0,1,2,3]) // [0,1,2,3]
+ * F.move(-5,3,[0,1,2,3]) // [0,1,2,3]
  */
 export function move<T>(from: number, to: number, list: T[]): T[];
 export function move(from: number, to: number): <T>(list: T[]) => T[];

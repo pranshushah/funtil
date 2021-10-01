@@ -3,6 +3,11 @@ import { partial2 } from './internals/partial2';
 /**
  * @description merges two object if key exists in both object it takes key-val of first pair.also works in partial form
  * @category Object
+ * @example
+ * F.merge_left(
+    { id: '11', name: 'pranshu shah' },
+    { id: '12', task: 'woww' }
+  ); // {id:"11",name:"pranshu shah",task:'woww'}
  */
 export function merge_left<T1 extends object, T2 extends object>(
   o1: T1,

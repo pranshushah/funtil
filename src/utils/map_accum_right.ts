@@ -4,6 +4,11 @@ import { partial3 } from './internals/partial3';
  * @description he mapAccumRight function behaves like a combination of map and reduce; it applies a function to each element of a list, passing an accumulating parameter from right to left, and returns a tuple containing a final value of this accumulator together with the new list.also works with partial form
  * @returns tuple containing accumulator, and new mapped array.
  * @category List
+ * @example
+ * function adder(acc: string, x: string): [string, number] {
+    return [acc + x, parseInt(acc) + parseInt(x)];
+  }
+  F.map_accum_right(adder, '0', ['1', '2', '3', '4']); // ['04321',[433,45,7,4]]
  */
 export function map_accum_right<T1, T2, R>(
   fn: (acc: T1, val: T2) => [T1, R],
