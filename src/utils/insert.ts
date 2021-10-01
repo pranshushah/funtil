@@ -3,6 +3,8 @@ import { partial3 } from './internals/partial3';
 /**
  * insert element at given index of array and returns new copy of array,also works with partial form.
  * @category List
+ * @example
+ * F.insert(2,"pranshu",["mit","sanket","zoom","nisarg"]) //  ["mit", "sanket", "pranshu", "zoom", "nisarg"]
  */
 export function insert<T>(
   insert_index: number,

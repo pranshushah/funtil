@@ -10,4 +10,5 @@ it('should work with all datatype', function() {
   expect(is_object_like('')).toBe(false);
   expect(is_object_like(33)).toBe(false);
   expect(is_object_like(new Set())).toBe(false);
+  expect(is_object_like(null)).toBe(false);
 });
