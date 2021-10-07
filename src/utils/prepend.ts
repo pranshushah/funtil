@@ -3,6 +3,8 @@ import { partial2 } from './internals/partial2';
 /**
  * @description takes an element and array.adds that element at the start of the array.it returns new copy of array;also works with partial form.
  * @category List
+ * @example
+ * F.prepend(1,[2,3,4]) // [1,2,3,4]
  */
 export function prepend<T>(el: T, arr: T[]): T[];
 export function prepend<T>(el: T): (arr: T[]) => T[];

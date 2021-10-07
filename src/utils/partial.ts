@@ -1,6 +1,21 @@
 /**
  * @description takes a function as argument and few arguments of that function and returns a function that takes rest of the argument. when you call returned function it invokes argument function with given arguments.
  * @category Function
+ * @example
+ * async function postFetch(url:string,body={}:object){
+ *    let res = await fetch(url,{
+ *      method:"POST",
+ *      mode: 'cors',
+ *       headers: {
+ *         'Content-Type': 'application/json'
+ *       },
+ *       body: JSON.stringify(data)
+ *     });
+ *    return await res.json();
+ * }
+ * let addTodo = F.partial(postFetch,"addTodos");
+ * await addTodo({id:1,text:"todo1",done:false,userId:123})
+ *
  */
 export function partial<
   T1 extends readonly any[],

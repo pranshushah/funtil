@@ -1,8 +1,10 @@
 import { partial3 } from './internals/partial3';
 
 /**
- * @description wrapper around {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice|Array.slice()}; also works with partial form.
+ * @description wrapper around [Array.prototype.slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) . also works with partial form.
  * @category List
+ * @example
+ * F.slice(1,4,[1,2,3,4,5,6]) // [2,3,4]
  */
 export function slice<T extends readonly any[]>(
   from_index: number,

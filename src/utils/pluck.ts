@@ -3,15 +3,21 @@ import { prop } from './prop';
 import { partial_right } from './partial_right';
 import { partial2 } from './internals/partial2';
 import { Any_Obj } from './types';
-/**
- * @description Returns a new list by plucking the same named property off all objects in the list supplied;also works with partial form.
- * @category List
- */
 
 type passing_prop = <T extends object>(
   obj: T,
   key: string | number | symbol
 ) => T[keyof T];
+
+/**
+ * @description Returns a neuw list by plucking the same named property off all objects in the list supplied;also works with partial form.
+ * @category List
+ * @example
+ * F.pluck('name', [
+    { id: 1, name: 'pranshu' },
+    { id: 2, name: 'nisarg' },
+  ]); // ["pranshu","nisarg"]
+ */
 
 export function pluck<T extends Any_Obj>(
   key: keyof T,

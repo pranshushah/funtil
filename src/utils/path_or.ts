@@ -6,6 +6,10 @@ import { Any_Obj, DeepKeys } from './types';
 /**
  * @description takes a default value,path as an array and object and checks whether given path exist in object, if it does it returns the value at that path otherwise returns default value;also works with partial form.
  * @category Object
+ * @example
+ * let obj = { id: '1', profile: { name: 'pranshu' } };
+ * F.path_or('mit', ['profile', 'name'], obj); // "pranshu"
+ * F.path_or('mit', ['profile', 'age'], obj); // "mit"
  */
 export function path_or<T extends Any_Obj, D>(
   defaut_val: D,

@@ -1,6 +1,23 @@
 /**
  * @description This method is like F.partial except that partially applied arguments are appended to the arguments it receives.type inference is not working as expected so you have to explicitly type genereic i hope we resolve this issue in up coming version.
  * @category Function
+ * @example
+ * async function postFetch(url:string,body={}:object){
+ *    let res = await fetch(url,{
+ *      method:"POST",
+ *      mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      return await res.json();
+ * }
+  let postRequestFromUser = F.partial_right<[object],[string],typeof postFetch>(postFetch,{
+    user:localStorage.getItem("id"),
+    authId:localStorage.getItem("authId")
+  })
+  postRequestFromUser("addTodos")
  */
 export function partial_right<
   P1 extends unknown[],

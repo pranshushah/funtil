@@ -2,10 +2,19 @@ import { O } from 'ts-toolbelt';
 import { partial2 } from './internals/partial2';
 
 /**
- * @param fn takes object as and argument
- * @param intial_object_args partial object of the object we want to pass in argument of function.
+ * @description takes a function and an object that is partial of the object that we passes as function argument.
  * @returns a function that takes remaining part of object will invoke the function when you call returned function.
  * @category Object
+ * @example
+ * type Args = {
+ *  id:string;
+ *  name:string;
+ * }
+ * function deleteName(x:Args){
+ *    delete obj[x.id][x.name]
+ * }
+ * getNameAndDelete = F.partial_props(deleteName,{id:"111"})
+ * getNameAndDelete({name:"pranshu"})
  */
 export function partial_props<T extends O.Object, T1 extends Partial<T>, R>(
   fn: (x: T) => R,
