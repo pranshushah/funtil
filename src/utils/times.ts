@@ -3,6 +3,8 @@ import { partial2 } from './internals/partial2';
 /**
  * @description Calls an input function n times, returning an array containing the results of those function calls.
  * @category Function
+ * @example
+ * F.times(gt(3),5) // [false,false,false,false,true]
  */
 export function times<T>(fn: (arg: number) => T, n: number): T[];
 export function times<T>(fn: (arg: number) => T): (n: number) => T[];

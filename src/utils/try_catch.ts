@@ -6,6 +6,16 @@ import { OvarloadedParameters } from './types';
  * @description tryCatch takes two functions, a tryer and a catcher. The returned function evaluates the tryer; if it does not throw error, it simply returns the result. If the tryer does throw error, the returned function evaluates the catcher function and returns its result.
  * @returns function that takes tuple of array arguments for tryer and catcher.
  * @category Function
+ * @example
+ * function catcher(x: Error) {
+ *    return x.message;
+ * }
+ * let gtWithCatch= F.try_catch(gt,catcher)
+ * gtWithCatch([1,2],[]) // true
+ * let errorChecker = F.try_catch(function() {
+ *  throw Error('error');
+ * },catcher)
+ * errorChecker() // 'error'
  */
 export function try_catch<
   F extends (...args: any[]) => any,

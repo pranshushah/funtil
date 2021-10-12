@@ -3,6 +3,8 @@ import { partial2 } from './internals/partial2';
 /**
  * @description Creates a new list out of the two supplied by pairing up equally-positioned items from both lists. The returned list is truncated to the length of the shorter of the two input lists.
  * @category List
+ * @example
+ * F.zip(['1', '2', '3'], [1, 2, 3]) // [['1',1],['2',2],['3',3]]
  */
 export function zip<T, G>(arr1: T[], arr2: G[]): [T, G][];
 export function zip<T>(arr1: T[]): <G>(arr2: G[]) => [T, G][];

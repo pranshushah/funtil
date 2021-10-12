@@ -3,6 +3,8 @@ import { partial2 } from './internals/partial2';
 /**
  * @description takes an array of keys and values and makes object out of it.
  * @category List
+ * @example
+ * zip_obj(['id', 'name'], [11, 'pranshu shah']) // {"id":11,"name":"pranshu shah"}
  */
 export function zip_obj<T>(
   keys: (string | number)[],

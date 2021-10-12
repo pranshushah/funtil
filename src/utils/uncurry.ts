@@ -3,6 +3,10 @@ import { F } from 'ts-toolbelt';
 /**
  * @description uncurries F.curry.
  * @category Function
+ * @example
+ * const addFour = a => b => c => d => a + b + c + d;
+ * const uncurriedAddFour = F.uncurry(addFour);
+ * uncurriedAddFour(1, 2, 3, 4); //=> 10
  */
 export function uncurry<F1 extends F.Function>(fn: F.Curry<F1>): F.UnCurry<F1> {
   // @ts-ignore-start
