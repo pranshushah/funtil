@@ -1,4 +1,4 @@
-import { max } from '../max';
+import { max } from '../math/max';
 
 it('should work with 2 args', () => {
   let result = max(1, 2);

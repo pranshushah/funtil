@@ -1,4 +1,4 @@
-import { min } from '../min';
+import { min } from '../math/min';
 
 it('should work with 2 args', () => {
   let result = min(1, 2);
