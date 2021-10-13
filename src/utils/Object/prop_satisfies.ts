@@ -1,5 +1,5 @@
-import { partial3 } from './internals/partial3';
-import { Any_Obj } from './types';
+import { partial3 } from '../internals/partial3';
+import { Any_Obj } from '../types';
 
 /**
  * @description Returns `true` if the specified object property satisfies the given predicate; `false` otherwise; also works with partial form.

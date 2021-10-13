@@ -1,6 +1,6 @@
 import { map } from './map';
-import { prop } from '../prop';
-import { partial_right } from '../partial_right';
+import { prop } from '../Object/prop';
+import { partial_right } from '../Function/partial_right';
 import { partial2 } from '../internals/partial2';
 import { Any_Obj } from '../types';
 

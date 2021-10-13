@@ -1,5 +1,5 @@
 import { Merge } from 'Object/_api';
-import { partial2 } from './internals/partial2';
+import { partial2 } from '../internals/partial2';
 /**
  * @description merges two object if key exists in both object it takes key-val of first pair.also works in partial form
  * @category Object

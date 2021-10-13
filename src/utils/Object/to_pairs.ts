@@ -1,4 +1,4 @@
-import { Obj } from './types';
+import { Obj } from '../types';
 
 /**
  * @description wrapper around[Object.entries()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries).

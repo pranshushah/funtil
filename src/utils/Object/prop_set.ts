@@ -1,5 +1,5 @@
-import { partial3 } from './internals/partial3';
-import { Any_Obj } from './types';
+import { partial3 } from '../internals/partial3';
+import { Any_Obj } from '../types';
 
 /**
  * @description add new key-val pair in object and returns new copy of object(Note: it creates shallow copy).also works with partial form.

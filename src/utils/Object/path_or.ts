@@ -1,7 +1,7 @@
-import { default_to } from './Function/default_to';
-import { partial3 } from './internals/partial3';
+import { default_to } from '../Function/default_to';
+import { partial3 } from '../internals/partial3';
 import { path } from './path';
-import { Any_Obj, DeepKeys } from './types';
+import { Any_Obj, DeepKeys } from '../types';
 
 /**
  * @description takes a default value,path as an array and object and checks whether given path exist in object, if it does it returns the value at that path otherwise returns default value;also works with partial form.
