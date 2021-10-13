@@ -1,4 +1,4 @@
-import { for_each } from './for_each';
+import { for_each } from './List/for_each';
 import { partial2 } from './internals/partial2';
 
 /**

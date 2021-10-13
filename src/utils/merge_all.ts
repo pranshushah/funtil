@@ -1,4 +1,4 @@
-import { reduce } from './reduce';
+import { reduce } from './List/reduce';
 import { MergeAll } from './types';
 /**
  * @description takes an array of objects and returns an object containing all objects in array,also work in partial form

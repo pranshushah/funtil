@@ -1,4 +1,4 @@
-import { concat } from '../concat';
+import { concat } from '../List/concat';
 import { flip } from '../flip';
 
 it('should filp the first two argument', () => {

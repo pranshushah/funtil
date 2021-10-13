@@ -4,6 +4,10 @@
  * @param wait throttling time
  * @param immediate if immediate is true it invokes at leading end otherwise it invokes at trailing end.for more info please check out this [link.]{@link https://css-tricks.com/debouncing-throttling-explained-examples/}
  * @category Function
+ * @example
+ * window.addEventListener('scroll',F.throttle(function(e:Event){
+ *  console.log(e)
+ * },200))
  *
  */
 export function throttle<F extends (...args: any[]) => any>(

@@ -1,4 +1,4 @@
-import { compact } from '../compact';
+import { compact } from '../List/compact';
 
 it('removes falsy values in list', () => {
   const check_list = [1, 2, 4, undefined, null, ''];

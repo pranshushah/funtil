@@ -1,4 +1,4 @@
-import { map } from './map';
+import { map } from './List/map';
 import { prop } from './prop';
 import { partial_right } from './partial_right';
 import { partial2 } from './internals/partial2';
