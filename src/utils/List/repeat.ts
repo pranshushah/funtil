@@ -1,6 +1,6 @@
-import { always } from '../always';
+import { always } from '../Function/always';
 import { partial2 } from '../internals/partial2';
-import { times } from '../times';
+import { times } from '../Function/times';
 
 /**
  * @description takes and value you want to repeat and how many times you want to repeat and returns an array that contains given repeating given number.also works in partial form.

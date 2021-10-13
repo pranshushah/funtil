@@ -1,4 +1,4 @@
-import { StrictCurry, Head } from './types';
+import { StrictCurry, Head } from '../types';
 
 /**
  * @description haskell style curried function that will take one argument at time

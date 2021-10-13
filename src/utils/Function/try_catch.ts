@@ -1,6 +1,6 @@
 import { Tail } from 'List/_api';
-import { partial2 } from './internals/partial2';
-import { OvarloadedParameters } from './types';
+import { partial2 } from '../internals/partial2';
+import { OvarloadedParameters } from '../types';
 
 /**
  * @description tryCatch takes two functions, a tryer and a catcher. The returned function evaluates the tryer; if it does not throw error, it simply returns the result. If the tryer does throw error, the returned function evaluates the catcher function and returns its result.

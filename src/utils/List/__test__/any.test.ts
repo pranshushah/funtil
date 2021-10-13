@@ -1,5 +1,5 @@
 import { any } from '../any';
-import { lt } from '../../lt';
+import { lt } from '../../Logic/lt';
 
 describe('any', () => {
   it('should return true when call any', () => {

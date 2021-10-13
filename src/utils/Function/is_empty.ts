@@ -1,5 +1,5 @@
 import { is_object } from './is_object';
-import { equals } from './math/equals';
+import { equals } from '../math/equals';
 import { is_array_like } from './is_array_like';
 import { is_map } from './is_map';
 import { is_set } from './is_set';

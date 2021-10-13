@@ -1,6 +1,6 @@
 import { any_pass } from '../any_pass';
-import { gt } from '../../gt';
-import { lt } from '../../lt';
+import { gt } from '../gt';
+import { lt } from '../lt';
 import { mod } from '../../math/mod';
 
 it('should return true when call any_pass', () => {

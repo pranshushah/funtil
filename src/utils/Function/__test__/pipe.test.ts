@@ -1,6 +1,6 @@
-import { gt } from '../gt';
-import { add } from '../math/add';
-import { negate } from '../math/negate';
+import { gt } from '../../Logic/gt';
+import { add } from '../../math/add';
+import { negate } from '../../math/negate';
 import { pipe } from '../pipe';
 
 it('checking with 3 pipe functions', () => {

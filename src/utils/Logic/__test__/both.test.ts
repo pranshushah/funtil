@@ -1,6 +1,6 @@
 import { both } from '../both';
-import { gt } from '../../gt';
-import { lt } from '../../lt';
+import { gt } from '../gt';
+import { lt } from '../lt';
 
 it('should returns true when you call function that returned from both', () => {
   const gt10 = gt(10);

@@ -1,4 +1,4 @@
-import { partial2 } from './internals/partial2';
+import { partial2 } from '../internals/partial2';
 
 /**
  * @description Wrapper around `array.flatMap`.also supports partial form.

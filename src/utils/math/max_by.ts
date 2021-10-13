@@ -1,4 +1,4 @@
-import { partial3 } from './internals/partial3';
+import { partial3 } from '../internals/partial3';
 /**
  * @description takes two value and returns a value who returns max value when call with given function.also works with partial form.
  * @category Math

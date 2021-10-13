@@ -1,4 +1,4 @@
-import { default_to } from './default_to';
+import { default_to } from './Function/default_to';
 import { partial3 } from './internals/partial3';
 import { path } from './path';
 import { Any_Obj, DeepKeys } from './types';

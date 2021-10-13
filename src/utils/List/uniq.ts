@@ -1,4 +1,4 @@
-import { identity } from '../identity';
+import { identity } from '../Function/identity';
 import { uniq_by } from './uniq_by';
 
 /**

@@ -1,4 +1,4 @@
-import { partial2 } from './internals/partial2';
+import { partial2 } from '../internals/partial2';
 import { is_null } from './is_null';
 import { is_undefined } from './is_undefined';
 

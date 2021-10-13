@@ -1,4 +1,4 @@
-import { partial2 } from './internals/partial2';
+import { partial2 } from '../internals/partial2';
 
 /**
  * @description Calls an input function n times, returning an array containing the results of those function calls.

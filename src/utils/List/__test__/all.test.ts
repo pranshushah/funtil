@@ -1,5 +1,5 @@
 import { all } from '../all';
-import { lt } from '../../lt';
+import { lt } from '../../Logic/lt';
 
 describe('all', () => {
   it('should return true when call all', () => {

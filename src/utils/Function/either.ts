@@ -1,5 +1,5 @@
-import { partial2 } from './internals/partial2';
-import { Pred } from './types';
+import { partial2 } from '../internals/partial2';
+import { Pred } from '../types';
 
 /**
  * @description takes two functions and returns a function that will take arguments for both of the function and returns true if any one function returns true otherwise returns false

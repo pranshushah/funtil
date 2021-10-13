@@ -1,5 +1,5 @@
 import { partial3 } from './internals/partial3';
-import { is_empty } from './is_empty';
+import { is_empty } from './Function/is_empty';
 import { Any_Obj } from './types';
 /**
  * @description If the given, non-null object has an own property with the specified name, returns the value of that property if it does not satisfy `F.is_empty`. Otherwise returns the provided default value, also works with partial form.

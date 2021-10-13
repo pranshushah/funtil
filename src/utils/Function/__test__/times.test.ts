@@ -1,4 +1,4 @@
-import { gt } from '../gt';
+import { gt } from '../../Logic/gt';
 import { times } from '../times';
 
 it('should work with 2 args', () => {

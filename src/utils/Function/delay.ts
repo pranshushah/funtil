@@ -1,5 +1,5 @@
-import { partial2 } from './internals/partial2';
-import { OvarloadedParameters, OverloadedReturnType } from './types';
+import { partial2 } from '../internals/partial2';
+import { OvarloadedParameters, OverloadedReturnType } from '../types';
 
 /**
  * @description invokes the given function after given time,also works with parital form.

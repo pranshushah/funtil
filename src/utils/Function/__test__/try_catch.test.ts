@@ -1,4 +1,4 @@
-import { gt } from '../gt';
+import { gt } from '../../Logic/gt';
 import { try_catch } from '../try_catch';
 
 function catcher(x: Error) {
