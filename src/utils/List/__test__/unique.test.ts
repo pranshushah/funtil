@@ -1,4 +1,4 @@
-import { unique } from '../uniq';
+import { unique } from '../unique';
 
 it('should work with primitive type', () => {
   let result = unique([1, 2, 1, 2, 3, 4]);

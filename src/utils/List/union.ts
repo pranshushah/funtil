@@ -1,6 +1,6 @@
 import { concat } from './concat';
 import { partial2 } from '../internals/partial2';
-import { unique } from './uniq';
+import { unique } from './unique';
 
 /**
  * @description it returns unioun of given two arrays.

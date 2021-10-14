@@ -15,7 +15,7 @@ import { StrictCurry, Head } from '../types';
  * b(4) // 24
  */
 
-export function strict_curry<P extends any[], R>(
+export function curry_strict<P extends any[], R>(
   fn: (...args: P) => R,
   arity = fn.length
 ): StrictCurry<P, R> {
