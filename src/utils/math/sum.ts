@@ -1,4 +1,4 @@
-import { reduce } from '../reduce';
+import { reduce } from '../List/reduce';
 import { add } from './add';
 
 /**

@@ -1,4 +1,4 @@
-import { clone } from '../clone';
+import { clone } from '../Function/clone';
 import { partial3 } from '../internals/partial3';
 /**
  * @description he mapAccumRight function behaves like a combination of map and reduce; it applies a function to each element of a list, passing an accumulating parameter from right to left, and returns a tuple containing a final value of this accumulator together with the new list.also works with partial form

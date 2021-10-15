@@ -1,4 +1,4 @@
-import { tap } from '../List/tap';
+import { tap } from '../tap';
 
 it('should work with 2 args', () => {
   let number = 1;

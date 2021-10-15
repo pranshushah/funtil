@@ -1,4 +1,4 @@
-import { clone } from '../clone';
+import { clone } from '../Function/clone';
 import { partial3 } from '../internals/partial3';
 /**
  * @description The mapAccum function behaves like a combination of map and reduce; it applies a function to each element of a list, passing an accumulating parameter from left to right, and returning a final value of this accumulator together with the new list.also works with partial form.

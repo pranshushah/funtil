@@ -1,5 +1,5 @@
-import { partial2 } from './internals/partial2';
-import { equals } from './math/equals';
+import { partial2 } from '../internals/partial2';
+import { equals } from '../math/equals';
 
 /**
  * @description Tells you if the keys and values in matcher are present in obj.

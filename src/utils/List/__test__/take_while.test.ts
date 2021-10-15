@@ -1,4 +1,4 @@
-import { lt } from '../lt';
+import { lt } from '../../Logic/lt';
 import { take_while } from '../take_while';
 
 it('should work with 2 args', () => {

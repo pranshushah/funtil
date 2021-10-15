@@ -1,4 +1,4 @@
-import { is_array } from '../../is_array';
+import { is_array } from '../../Function/is_array';
 import { pair } from '../pair';
 
 it('should works with 2 args', () => {

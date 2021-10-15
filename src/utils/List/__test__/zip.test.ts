@@ -1,4 +1,4 @@
-import { zip } from '../List/zip';
+import { zip } from '../zip';
 
 it('should merge the array', () => {
   let result = zip(['1', '2', '3'], [1, 2, 3]);

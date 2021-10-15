@@ -1,4 +1,4 @@
-import { gt } from '../gt';
+import { gt } from '../../Logic/gt';
 import { split_when } from '../split_when';
 
 it('should work with 2 args', () => {

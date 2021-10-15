@@ -1,4 +1,4 @@
-import { partial2 } from './internals/partial2';
+import { partial2 } from '../internals/partial2';
 
 /**
  * @description returns an array of all elements for which predicate function returns true,also works with partial argument.

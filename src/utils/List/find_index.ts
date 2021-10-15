@@ -1,4 +1,4 @@
-import { partial2 } from './internals/partial2';
+import { partial2 } from '../internals/partial2';
 
 /**
  * @description returns the first index for which predication function returns true. returns -1 if predication function does not return true for any value in array,also works with partial argument.

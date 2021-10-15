@@ -1,4 +1,4 @@
-import { partial2 } from './internals/partial2';
+import { partial2 } from '../internals/partial2';
 
 /**
  * @description returns the last element for which predication function returns true. returns undefined if predication function does not return true for any value in array.also works with partial argument.

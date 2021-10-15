@@ -1,6 +1,6 @@
 import { find } from './find';
-import { partial2 } from './internals/partial2';
-import { is_match } from './is_match';
+import { partial2 } from '../internals/partial2';
+import { is_match } from '../Function/is_match';
 
 /**
  *

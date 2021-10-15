@@ -1,5 +1,5 @@
-import { partial2 } from './internals/partial2';
-import { equals } from './math/equals';
+import { partial2 } from '../internals/partial2';
+import { equals } from '../math/equals';
 
 /**
  * @description takes and element and array and finds index of that element in array.it uses F.equals so you can find idnex of non primitive easily,also works with partial form

@@ -1,5 +1,5 @@
 import { take_while_last } from '../take_while_last';
-import { lt } from '../lt';
+import { lt } from '../../Logic/lt';
 
 it('should work with 2 args', () => {
   let result: any = take_while_last(lt(33), [1, 2, 3, 33, 4, 5]);

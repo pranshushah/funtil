@@ -1,5 +1,5 @@
-import { apply } from '../List/apply';
-import { lte } from '../lte';
+import { apply } from '../apply';
+import { lte } from '../../Logic/lte';
 
 it('it spreads the arguments for given function', () => {
   const array_min = apply(Math.min);
