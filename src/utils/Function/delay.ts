@@ -15,18 +15,16 @@ import { OvarloadedParameters, OverloadedReturnType } from '../types';
 export function delay<T extends (...args: any) => any>(
   fn: T,
   time: number
-): (...args: OvarloadedParameters<T>) => OverloadedReturnType<T>;
+): (...args: Parameters<T>) => OverloadedReturnType<T>;
 
 export function delay<T extends (...args: any) => any>(
   fn: T
-): (
-  time: number
-) => (...args: OvarloadedParameters<T>) => OverloadedReturnType<T>;
+): (time: number) => (...args: Parameters<T>) => OverloadedReturnType<T>;
 
 export function delay<T extends (...args: any) => any>(fn: T, time?: number) {
   return partial2(
     function main(fn, time) {
-      return function(...args: OvarloadedParameters<T>) {
+      return function(...args: Parameters<T>) {
         setTimeout(() => {
           fn(...args);
         }, Math.abs(time));
