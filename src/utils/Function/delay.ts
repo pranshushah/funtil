@@ -1,5 +1,5 @@
 import { partial2 } from '../internals/partial2';
-import { OverloadedReturnType } from '../types';
+import { OvarloadedParameters, OverloadedReturnType } from '../types';
 
 /**
  * @description invokes the given function after given time,also works with parital form.
@@ -12,19 +12,21 @@ import { OverloadedReturnType } from '../types';
  * delayedGreet = F.delay(greet,200)
  * delayedGreet("pranshu")
  */
-export function delay<T extends (...args: any) => any>(
+export function delay<T extends (...args: any[]) => any>(
   fn: T,
   time: number
-): (...args: Parameters<T>) => OverloadedReturnType<T>;
+): (...args: OvarloadedParameters<T>) => OverloadedReturnType<T>;
 
-export function delay<T extends (...args: any) => any>(
+export function delay<T extends (...args: any[]) => any>(
   fn: T
-): (time: number) => (...args: Parameters<T>) => OverloadedReturnType<T>;
+): (
+  time: number
+) => (...args: OvarloadedParameters<T>) => OverloadedReturnType<T>;
 
-export function delay<T extends (...args: any) => any>(fn: T, time?: number) {
+export function delay<T extends (...args: any[]) => any>(fn: T, time?: number) {
   return partial2(
     function main(fn, time) {
-      return function(...args: Parameters<T>) {
+      return function(...args: OvarloadedParameters<T>) {
         setTimeout(() => {
           fn(...args);
         }, Math.abs(time));
