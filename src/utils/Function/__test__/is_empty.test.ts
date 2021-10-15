@@ -1,7 +1,6 @@
 import { is_empty } from '../is_empty';
 
 it('should work if string,array and object is empty', function() {
-  expect(is_empty(arguments)).toBeTruthy();
   expect(is_empty([])).toBeTruthy();
   expect(is_empty({})).toBeTruthy();
   expect(is_empty(new Map())).toBeTruthy();
