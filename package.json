@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -8,7 +8,7 @@
     "src"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=14"
   },
   "scripts": {
     "start": "tsdx watch",
@@ -26,17 +26,17 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "functional_utility",
+  "name": "funtil",
   "author": "pranshu shah",
-  "module": "dist/functional_utility.esm.js",
+  "module": "dist/funtil.esm.js",
   "size-limit": [
     {
-      "path": "dist/functional_utility.cjs.production.min.js",
-      "limit": "10 KB"
+      "path": "dist/funtil.cjs.production.min.js",
+      "limit": "20 KB"
     },
     {
-      "path": "dist/functional_utility.esm.js",
-      "limit": "10 KB"
+      "path": "dist/funtil.esm.js",
+      "limit": "20 KB"
     }
   ],
   "devDependencies": {
