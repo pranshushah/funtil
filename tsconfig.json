@@ -3,7 +3,7 @@
   "include": ["src", "types"],
   "compilerOptions": {
     "module": "ESNext",
-    "lib": ["esnext"],
+    "lib": ["ES7"],
     "downlevelIteration": true,
     "importHelpers": true,
     // output .d.ts declaration files for consumers
