@@ -24,3 +24,4 @@ yarn add funtil
 ```
 npm install funtil --save
 ```
+for documentation visit this website [website](funtil.netlify.app) .
