@@ -6,6 +6,7 @@
   "files": [
     "dist"
   ],
+  "homepage": "funtil.netlify.app",
   "description": "functional utitlity library written in typescript for the typescript developer",
   "bugs": {
     "url": "https://github.com/pranshushah/funtil/issues",
