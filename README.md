@@ -1,4 +1,4 @@
-![funtil logo](https://drive.google.com/file/d/1YppHyujVtAt2Mq5D1VShc0bbQSjAVS8H/view?usp=sharing)
+![Funtil logo](https://user-images.githubusercontent.com/22542204/137592655-6f4f4c7b-9a35-4459-b03f-770cb0ce9007.png)
 
 # Funtil
 
