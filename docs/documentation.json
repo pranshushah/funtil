@@ -227,7 +227,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/adjust.ts",
-					"line": 16,
+					"line": 19,
 					"character": 16
 				}
 			],
@@ -247,7 +247,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\n F.adjust(3,F.negate,[1,2,3,4]) // => [1,2,3,-4]\n\n const arrayGetter = F.adjust(3,F.negate);\n arrayGetter([1,2])  // => [1,-2]\n\n const functionAndArrayGetter = F.adjust(-1);\n functionAndArrayGetter(F.negate,[1,2,3]); // => [1,2,-3]\n"
+								"text": "\n```typescript\nF.adjust(3,F.negate,[1,2,3,4]) // => [1,2,3,-4]\n\n const arrayGetter = F.adjust(3,F.negate);\n arrayGetter([1,2])  // => [1,-2]\n\n const functionAndArrayGetter = F.adjust(-1);\n functionAndArrayGetter(F.negate,[1,2,3]); // => [1,2,-3]\n\n```\n"
 							}
 						]
 					},
@@ -430,7 +430,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/adjust.ts",
-									"line": 25,
+									"line": 28,
 									"character": 3
 								}
 							],
@@ -505,7 +505,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/adjust.ts",
-									"line": 29,
+									"line": 32,
 									"character": 3
 								}
 							],
@@ -726,7 +726,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/all.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -746,7 +746,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\n F.all(F.lt(100), [1, 2, 3, 3, 56, -112, -32])  // =>  true\n let arrayGetter = F.all(F.lt(100));\n arrayGetter([1, 2, 3, 3, 56, 112, -32]) // false\n"
+								"text": "\n```typescript\n F.all(F.lt(100), [1, 2, 3, 3, 56, -112, -32])  // =>  true\n let arrayGetter = F.all(F.lt(100));\n arrayGetter([1, 2, 3, 3, 56, 112, -32]) // false\n```\n"
 							}
 						]
 					},
@@ -901,7 +901,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/all.ts",
-									"line": 19,
+									"line": 21,
 									"character": 3
 								}
 							],
@@ -1149,7 +1149,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/any.ts",
-					"line": 14,
+					"line": 16,
 					"character": 16
 				}
 			],
@@ -1169,7 +1169,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction isItLongString(str:string){\n return str.length > 10;\n}\nF.any(isItLongString,[\"pranshu\",\"mit\",\"pranshu shah\"]) // true;\nF.any(isItLongString,[\"pranshu\",\"mit\",\"sanket\"]) // false;\n"
+								"text": "\n```typescript\nfunction isItLongString(str:string){\n return str.length > 10;\n}\nF.any(isItLongString,[\"pranshu\",\"mit\",\"pranshu shah\"]) // true;\nF.any(isItLongString,[\"pranshu\",\"mit\",\"sanket\"]) // false;\n```\n"
 							}
 						]
 					},
@@ -1324,7 +1324,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/any.ts",
-									"line": 21,
+									"line": 23,
 									"character": 3
 								}
 							],
@@ -1490,7 +1490,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/append.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -1510,7 +1510,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nlet arr = [1,2,3];\narr = append(arr,4); // [1,2,3,4]\n"
+								"text": "\n```typescript\nlet arr = [1,2,3];\narr = append(arr,4); // [1,2,3,4]\n```\n"
 							}
 						]
 					},
@@ -1604,7 +1604,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/append.ts",
-									"line": 12,
+									"line": 14,
 									"character": 37
 								}
 							],
@@ -1653,7 +1653,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/apply.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -1673,7 +1673,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nlet array_min = F.apply(Math.min);\narray_min([1,2,3,-1]) // -1\n"
+								"text": "\n```typescript\nlet array_min = F.apply(Math.min);\narray_min([1,2,3,-1]) // -1\n```\n"
 							}
 						]
 					},
@@ -1852,7 +1852,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/apply.ts",
-									"line": 19,
+									"line": 21,
 									"character": 3
 								}
 							],
@@ -2967,7 +2967,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/compact.ts",
-					"line": 11,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -2987,7 +2987,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.compact([1,\"\",\"pranshu\",null,3,undefined]) //[1,\"pranshu\",3]\n"
+								"text": "\n```typescript\nF.compact([1,\"\",\"pranshu\",null,3,undefined]) //[1,\"pranshu\",3]\n\n```\n"
 							}
 						]
 					},
@@ -4750,7 +4750,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/concat.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -4770,7 +4770,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.concat([1,2],[3,4]) // [1,2,3,4]\nF.concat(\"pranshu \",\"shah\") // \"pranshu shah\"\n"
+								"text": "\n```typescript\nF.concat([1,2],[3,4]) // [1,2,3,4]\nF.concat(\"pranshu \",\"shah\") // \"pranshu shah\"\n```\n"
 							}
 						]
 					},
@@ -4877,7 +4877,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/concat.ts",
-									"line": 12,
+									"line": 14,
 									"character": 59
 								}
 							],
@@ -4942,7 +4942,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/concat.ts",
-									"line": 13,
+									"line": 15,
 									"character": 38
 								}
 							],
@@ -6105,7 +6105,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/difference.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -6125,7 +6125,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.difference([1,2,3,4,5],[2,4,6]); // [1,3,5]\nF.difference([{id:1,task:\"task1\"},{id:2,task:\"task2\"},{id:3,task:\"task3\"}],[{id:1,task:\"task1\"},{id:4,task:\"task4\"}]) // [{id:2,task:\"task2\"},{id:3,task:\"task3\"}]"
+								"text": "\n```typescript\nF.difference([1,2,3,4,5],[2,4,6]); // [1,3,5]\nF.difference([{id:1,task:\"task1\"},{id:2,task:\"task2\"},{id:3,task:\"task3\"}],[{id:1,task:\"task1\"},{id:4,task:\"task4\"}]) // [{id:2,task:\"task2\"},{id:3,task:\"task3\"}]\n```\n"
 							}
 						]
 					},
@@ -6222,7 +6222,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/difference.ts",
-									"line": 14,
+									"line": 16,
 									"character": 42
 								}
 							],
@@ -6888,7 +6888,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/drop_last.ts",
-					"line": 9,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -6907,7 +6907,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.drop_last([1,2,3,4,5,6],3) //[1,2,3]\nF.drop_last(\"pranshu\",3) // 'pran'\n"
+								"text": "\n```typescript\nF.drop_last([1,2,3,4,5,6],3) //[1,2,3]\nF.drop_last(\"pranshu\",3) // 'pran'\n```\n"
 							}
 						]
 					},
@@ -7004,7 +7004,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/drop_last.ts",
-									"line": 15,
+									"line": 17,
 									"character": 3
 								}
 							],
@@ -7104,7 +7104,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/drop_last.ts",
-									"line": 23,
+									"line": 25,
 									"character": 3
 								}
 							],
@@ -7148,7 +7148,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/drop_last_while.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -7167,7 +7167,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction isOdd(x:number){\n return F.mod(2,x) === 1;\n}\nF.drop_last_while(isOdd,[1,2,3,5,7]); //[1,2]\nF.drop_last_while((s: string) => s !== 'n', 'pranshu'); // 'pran'\n"
+								"text": "\n```typescript\nfunction isOdd(x:number){\n return F.mod(2,x) === 1;\n}\nF.drop_last_while(isOdd,[1,2,3,5,7]); //[1,2]\nF.drop_last_while((s: string) => s !== 'n', 'pranshu'); // 'pran'\n```\n"
 							}
 						]
 					},
@@ -7466,7 +7466,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/drop_last_while.ts",
-									"line": 27,
+									"line": 29,
 									"character": 3
 								}
 							],
@@ -7510,7 +7510,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/drop_repeats.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -7530,7 +7530,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.drop_repeats([1,2,3,1,2,3,1,2]) // [1,2,3]\nF.drop_repeats([{id:1,name:\"pranshu\"},{id:2,name:\"mit\"},{id:3,name:\"sanket\"},{id:2,name:\"mit\"}]) // [{id:1,name:\"pranshu\"},{id:2,name:\"mit\"},{id:3,name:\"sanket\"}]"
+								"text": "\n```typescript\nF.drop_repeats([1,2,3,1,2,3,1,2]) // [1,2,3]\nF.drop_repeats([{id:1,name:\"pranshu\"},{id:2,name:\"mit\"},{id:3,name:\"sanket\"},{id:2,name:\"mit\"}]) // [{id:1,name:\"pranshu\"},{id:2,name:\"mit\"},{id:3,name:\"sanket\"}]\n```\n"
 							}
 						]
 					},
@@ -7583,7 +7583,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/drop_while.ts",
-					"line": 16,
+					"line": 18,
 					"character": 16
 				}
 			],
@@ -7603,7 +7603,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction isOdd(x:number){\n return F.mod(2,x) === 1;\n}\nF.drop_while(isOdd,[1,3,4,5]); //[4,5]\nF.drop_while((s: string) => s !== 'n', 'pranshu'); // 'nshu'\n"
+								"text": "\n```typescript\nfunction isOdd(x:number){\n return F.mod(2,x) === 1;\n}\nF.drop_while(isOdd,[1,3,4,5]); //[4,5]\nF.drop_while((s: string) => s !== 'n', 'pranshu'); // 'nshu'\n```\n"
 							}
 						]
 					},
@@ -7778,7 +7778,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/drop_while.ts",
-									"line": 22,
+									"line": 24,
 									"character": 3
 								}
 							],
@@ -7942,7 +7942,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/drop_while.ts",
-									"line": 31,
+									"line": 33,
 									"character": 3
 								}
 							],
@@ -8334,7 +8334,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/ends_with.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -8353,7 +8353,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.ends_with([{id:1,name:\"pranshu\"}],[{id:3,name:\"sanket\"},{id:2,name:\"mit\"},{id:1,name:\"pranshu\"}]) // true\nF.ends_with(\"pra\",\"pranshu\") // false\n"
+								"text": "\n```typescript\nF.ends_with([{id:1,name:\"pranshu\"}],[{id:3,name:\"sanket\"},{id:2,name:\"mit\"},{id:1,name:\"pranshu\"}]) // true\nF.ends_with(\"pra\",\"pranshu\") // false\n```\n"
 							}
 						]
 					},
@@ -8451,7 +8451,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/ends_with.ts",
-									"line": 14,
+									"line": 16,
 									"character": 55
 								}
 							],
@@ -8550,7 +8550,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/ends_with.ts",
-									"line": 17,
+									"line": 19,
 									"character": 43
 								}
 							],
@@ -9433,7 +9433,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/filter.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -9456,7 +9456,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction isOdd(x:number){\n   return x % 2 === 1;\n}\nF.filter(isOdd,[1,2,3,4,5,6,7]) // [1,3,5,7]\n"
+								"text": "\n```typescript\nfunction isOdd(x:number){\n   return x % 2 === 1;\n}\nF.filter(isOdd,[1,2,3,4,5,6,7]) // [1,3,5,7]\n```\n"
 							}
 						]
 					},
@@ -9675,7 +9675,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/filter.ts",
-									"line": 20,
+									"line": 22,
 									"character": 3
 								}
 							],
@@ -9731,7 +9731,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/filter_in.ts",
-					"line": 14,
+					"line": 16,
 					"character": 16
 				}
 			],
@@ -9754,7 +9754,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction isOdd(x:number){\n   return x % 2 === 1;\n}\nF.filter_in(isOdd,[1,2,3,4,5,6,7]) // [1,3,5,7]\n"
+								"text": "\n```typescript\nfunction isOdd(x:number){\n   return x % 2 === 1;\n}\nF.filter_in(isOdd,[1,2,3,4,5,6,7]) // [1,3,5,7]\n```\n"
 							}
 						]
 					},
@@ -9973,7 +9973,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/filter_in.ts",
-									"line": 21,
+									"line": 23,
 									"character": 3
 								}
 							],
@@ -10029,7 +10029,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/filter_out.ts",
-					"line": 14,
+					"line": 16,
 					"character": 16
 				}
 			],
@@ -10048,7 +10048,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction isOdd(x:number){\n   return x % 2 === 1;\n}\nF.filter_out(isOdd,[1,2,3,4,5,6,7]) // [2,4,6]\n"
+								"text": "\n```typescript\nfunction isOdd(x:number){\n   return x % 2 === 1;\n}\nF.filter_out(isOdd,[1,2,3,4,5,6,7]) // [2,4,6]\n```\n"
 							}
 						]
 					},
@@ -10267,7 +10267,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/filter_out.ts",
-									"line": 21,
+									"line": 23,
 									"character": 3
 								}
 							],
@@ -10342,7 +10342,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction isLongString(x:string){\n   return x.length > 10;\n}\nF.find_index(isLongString,[\"mit\",\"sanket\",\"pranshu shah\",\"nisarg\",\"mit nilesh desai\"]) // 2\nF.find_index(isLongString,[\"mit\",\"sanket\",\"pranshu\",\"nisarg\"]) // -1\n"
+								"text": "\nfunction isLongString(x:string){\n   return x.length > 10;\n}\nF.find(isLongString,[\"mit\",\"sanket\",\"pranshu shah\",\"nisarg\",\"mit nilesh desai\"]) // \"pranshu shah\"\nF.find(isLongString,[\"mit\",\"sanket\",\"pranshu\",\"nisarg\"]) // undefined\n"
 							}
 						]
 					},
@@ -10451,9 +10451,18 @@
 						}
 					],
 					"type": {
-						"type": "reference",
-						"id": 977,
-						"name": "T"
+						"type": "union",
+						"types": [
+							{
+								"type": "reference",
+								"id": 977,
+								"name": "T"
+							},
+							{
+								"type": "intrinsic",
+								"name": "undefined"
+							}
+						]
 					}
 				},
 				{
@@ -10591,9 +10600,18 @@
 										}
 									],
 									"type": {
-										"type": "reference",
-										"id": 986,
-										"name": "T"
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"id": 986,
+												"name": "T"
+											},
+											{
+												"type": "intrinsic",
+												"name": "undefined"
+											}
+										]
 									}
 								}
 							]
@@ -10611,7 +10629,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/find_index.ts",
-					"line": 14,
+					"line": 16,
 					"character": 16
 				}
 			],
@@ -10630,7 +10648,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction isLongString(x:string){\n   return x.length > 10;\n}\nF.find_index(isLongString,[\"mit\",\"sanket\",\"pranshu shah\",\"nisarg\",\"mit nilesh desai\"]) // 2\nF.find_index(isLongString,[\"mit\",\"sanket\",\"pranshu\",\"nisarg\"]) // -1\n"
+								"text": "\n```typescript\nfunction isLongString(x:string){\n   return x.length > 10;\n}\nF.find_index(isLongString,[\"mit\",\"sanket\",\"pranshu shah\",\"nisarg\",\"mit nilesh desai\"]) // 2\nF.find_index(isLongString,[\"mit\",\"sanket\",\"pranshu\",\"nisarg\"]) // -1\n```\n"
 							}
 						]
 					},
@@ -10845,7 +10863,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/find_index.ts",
-									"line": 21,
+									"line": 23,
 									"character": 3
 								}
 							],
@@ -10897,7 +10915,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/find_last.ts",
-					"line": 14,
+					"line": 16,
 					"character": 16
 				}
 			],
@@ -10916,7 +10934,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction isLongString(x:string){\n   return x.length > 10;\n}\nF.find_last(isLongString,[\"mit\",\"sanket\",\"pranshu shah\",\"nisarg\",\"mit nilesh desai\"]) // \"mit nilesh desai\"\nF.find_index(isLongString,[\"mit\",\"sanket\",\"pranshu\",\"nisarg\"]) // undefined\n"
+								"text": "\n```typescript\nfunction isLongString(x:string){\n   return x.length > 10;\n}\nF.find_last(isLongString,[\"mit\",\"sanket\",\"pranshu shah\",\"nisarg\",\"mit nilesh desai\"]) // \"mit nilesh desai\"\nF.find_index(isLongString,[\"mit\",\"sanket\",\"pranshu\",\"nisarg\"]) // undefined\n```\n"
 							}
 						]
 					},
@@ -11141,7 +11159,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/find_last.ts",
-									"line": 21,
+									"line": 23,
 									"character": 3
 								}
 							],
@@ -11203,7 +11221,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/find_last_index.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -11222,7 +11240,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction isLongString(x:string){\n   return x.length > 10;\n}\nF.find_last_index(isLongString,[\"mit\",\"sanket\",\"pranshu shah\",\"nisarg\",\"mit nilesh desai\"]) // 4\nF.find_last_index(isLongString,[\"mit\",\"sanket\",\"pranshu\",\"nisarg\"]) // -1\n"
+								"text": "\n```typescript\nfunction isLongString(x:string){\n   return x.length > 10;\n}\nF.find_last_index(isLongString,[\"mit\",\"sanket\",\"pranshu shah\",\"nisarg\",\"mit nilesh desai\"]) // 4\nF.find_last_index(isLongString,[\"mit\",\"sanket\",\"pranshu\",\"nisarg\"]) // -1\n```\n"
 							}
 						]
 					},
@@ -11437,7 +11455,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/find_last_index.ts",
-									"line": 20,
+									"line": 22,
 									"character": 3
 								}
 							],
@@ -11693,7 +11711,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/flat_map.ts",
-					"line": 12,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -11708,11 +11726,11 @@
 						"tags": [
 							{
 								"tag": "description",
-								"text": "Wrapper around `array.flatMap`.also supports partial form."
+								"text": "Wrapper around `[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap](array.prototype.flatMap)`.also supports partial form."
 							},
 							{
 								"tag": "example",
-								"text": "\nlet arr = [\"it's always sunny in\",\"philadelphia\"];\nF.flat_map(function mapper(x:string){\n   return x.split(\" \")\n},arr) // [\"it's\", \"always\", \"sunny\", \"in\", \"philadelphia\"]\n"
+								"text": "\n```typescript\nlet arr = [\"it's always sunny in\",\"philadelphia\"];\nF.flat_map(function mapper(x:string){\n   return x.split(\" \")\n},arr) // [\"it's\", \"always\", \"sunny\", \"in\", \"philadelphia\"]\n```\n"
 							}
 						]
 					},
@@ -11950,7 +11968,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/flat_map.ts",
-									"line": 20,
+									"line": 22,
 									"character": 14
 								}
 							],
@@ -12001,7 +12019,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/flatten.ts",
-					"line": 8,
+					"line": 10,
 					"character": 16
 				}
 			],
@@ -12020,7 +12038,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.flatten([1,2,3,[[4,5]]]) // [1,2,3,4,5]\nF.flatten(1,2,3,[[[4]]]) // [1,2,3,4]\n"
+								"text": "\n```typescript\nF.flatten([1,2,3,[[4,5]]]) // [1,2,3,4,5]\nF.flatten(1,2,3,[[[4]]]) // [1,2,3,4]\n```\n"
 							}
 						]
 					},
@@ -12386,7 +12404,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/for_each.ts",
-					"line": 12,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -12406,7 +12424,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfor_each(function todoPrinter(todo){\n console.log(todo.task)\n},[{id:1,task:\"task1\"},{id:2,task:\"task2\"},{id:3,task:\"task3\"}]) // task1 task2 task3\n"
+								"text": "\n```typescript\nfor_each(function todoPrinter(todo){\n console.log(todo.task)\n},[{id:1,task:\"task1\"},{id:2,task:\"task2\"},{id:3,task:\"task3\"}]) // task1 task2 task3\n```\n"
 							}
 						]
 					},
@@ -12625,7 +12643,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/for_each.ts",
-									"line": 19,
+									"line": 21,
 									"character": 3
 								}
 							],
@@ -12681,7 +12699,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/from_pair.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -12701,7 +12719,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nlet namePair = [[\"name\",\"pranshu\"],[\"age\",24],[\"city\",\"surat\"]]\nF.from_pair(namePair) {name:\"pranshu\",age:24,city:\"surat\"}\n"
+								"text": "\n```typescript\nlet namePair = [[\"name\",\"pranshu\"],[\"age\",24],[\"city\",\"surat\"]]\nF.from_pair(namePair) {name:\"pranshu\",age:24,city:\"surat\"}\n```\n"
 							}
 						]
 					},
@@ -13022,7 +13040,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/head.ts",
-					"line": 8,
+					"line": 10,
 					"character": 16
 				}
 			],
@@ -13041,7 +13059,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.head(\"pranshu\") // \"p\"\nF.head([1,2,3]) // 1\n"
+								"text": "\n```typescript\nF.head(\"pranshu\") // \"p\"\nF.head([1,2,3]) // 1\n```\n"
 							}
 						]
 					},
@@ -13358,7 +13376,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/includes.ts",
-					"line": 7,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -13468,7 +13486,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/includes.ts",
-									"line": 8,
+									"line": 13,
 									"character": 46
 								}
 							],
@@ -13800,7 +13818,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/index_of.ts",
-					"line": 8,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -13816,6 +13834,10 @@
 							{
 								"tag": "description",
 								"text": "takes and element and array and finds index of that element in array.it uses F.equals so you can find idnex of non primitive easily,also works with partial form"
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescript\nF.index_of(\"pranshu\",[\"mit\",\"pranshu\",\"saumya\"]) // 1\nF.index_of({id:1,name:\"pranshu\"},[{id:1,name:\"pranshu\"},{id:2,name:\"mit\"},{id:3,name:\"sanket\"}]) // 0\nF.index_of({id:1,name:\"saumya\"},[{id:1,name:\"pranshu\"},{id:2,name:\"mit\"},{id:3,name:\"sanket\"}]) // -1\n```\n"
 							}
 						]
 					},
@@ -13906,7 +13928,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/index_of.ts",
-									"line": 9,
+									"line": 15,
 									"character": 38
 								}
 							],
@@ -14041,7 +14063,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/insert.ts",
-					"line": 9,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -14057,7 +14079,7 @@
 						"tags": [
 							{
 								"tag": "example",
-								"text": "\nF.insert(2,\"pranshu\",[\"mit\",\"sanket\",\"zoom\",\"nisarg\"]) //  [\"mit\", \"sanket\", \"pranshu\", \"zoom\", \"nisarg\"]\n"
+								"text": "\n```typescript\nF.insert(2,\"pranshu\",[\"mit\",\"sanket\",\"zoom\",\"nisarg\"]) //  [\"mit\", \"sanket\", \"pranshu\", \"zoom\", \"nisarg\"]\n```\n"
 							}
 						]
 					},
@@ -14174,7 +14196,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/insert.ts",
-									"line": 18,
+									"line": 20,
 									"character": 3
 								}
 							],
@@ -14249,7 +14271,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/insert.ts",
-									"line": 22,
+									"line": 24,
 									"character": 3
 								}
 							],
@@ -14404,7 +14426,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/insert_all.ts",
-					"line": 12,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -14424,7 +14446,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.insert_all(2,[6,7],[1,2,3,4,5]) // [1,2,6,7,3,4,5]\nF.insert_all(111,[6,7],[1,2,3,4,5]) // [1,2,3,4,5,6,7]\nF.insert_all(-1,[6,7],[1,2,3,4,5]) // [6,7,1,2,3,4,5]\nF.insert_all(-111,[6,7],[1,2,3,4,5]) // [6,7,1,2,3,4,5]\n"
+								"text": "\n```typescript\nF.insert_all(2,[6,7],[1,2,3,4,5]) // [1,2,6,7,3,4,5]\nF.insert_all(111,[6,7],[1,2,3,4,5]) // [1,2,3,4,5,6,7]\nF.insert_all(-1,[6,7],[1,2,3,4,5]) // [6,7,1,2,3,4,5]\nF.insert_all(-111,[6,7],[1,2,3,4,5]) // [6,7,1,2,3,4,5]\n```\n"
 							}
 						]
 					},
@@ -14555,7 +14577,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/insert_all.ts",
-									"line": 21,
+									"line": 23,
 									"character": 3
 								}
 							],
@@ -14630,7 +14652,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/insert_all.ts",
-									"line": 25,
+									"line": 27,
 									"character": 3
 								}
 							],
@@ -14799,7 +14821,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/intersperse.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -14819,7 +14841,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.intersperse(\" \",[\"pranshu\",\"tikendrakumar\",\"shah\"]) // [\"pranshu\",\" \",\"tikendrakumar\",\" \",\"shah\"]\n"
+								"text": "\n```typescript\nF.intersperse(\" \",[\"pranshu\",\"tikendrakumar\",\"shah\"]) // [\"pranshu\",\" \",\"tikendrakumar\",\" \",\"shah\"]\n```\n"
 							}
 						]
 					},
@@ -14914,7 +14936,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/intersperse.ts",
-									"line": 12,
+									"line": 14,
 									"character": 38
 								}
 							],
@@ -15854,7 +15876,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/join.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -15873,7 +15895,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nlet addSpace = F.join(\" \");\naddSpace([\"pranshu\",\"shah\"]) // \"pranshu shah\"\nF.join('-',[\"left\",\"right\",\"center\"]) // \"left-right-center\"\n"
+								"text": "\n```typescript\nlet addSpace = F.join(\" \");\naddSpace([\"pranshu\",\"shah\"]) // \"pranshu shah\"\nF.join('-',[\"left\",\"right\",\"center\"]) // \"left-right-center\"\n```\n"
 							}
 						]
 					},
@@ -15939,7 +15961,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/join.ts",
-									"line": 12,
+									"line": 14,
 									"character": 33
 								}
 							],
@@ -16144,7 +16166,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/last_index_of.ts",
-					"line": 12,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -16163,7 +16185,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.last_index_of({id:1,name:pranshu},[{id:1,name:\"pranshu\"},{id:2,name:\"mit\"},{id:1,name:\"pranshu\"}]) // 2\nF.last_index_of(2,[1,3,4,5]) // -1\nF.last_index_of(\"a\",[\"a\",\"b\",\"c\",\"a\"]) // 3\n"
+								"text": "\n```typescript\nF.last_index_of({id:1,name:pranshu},[{id:1,name:\"pranshu\"},{id:2,name:\"mit\"},{id:1,name:\"pranshu\"}]) // 2\nF.last_index_of(2,[1,3,4,5]) // -1\nF.last_index_of(\"a\",[\"a\",\"b\",\"c\",\"a\"]) // 3\n```\n"
 							}
 						]
 					},
@@ -16254,7 +16276,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/last_index_of.ts",
-									"line": 13,
+									"line": 15,
 									"character": 43
 								}
 							],
@@ -16306,7 +16328,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/length.ts",
-					"line": 10,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -16325,7 +16347,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.length(\"pranshu\") // 7\nF.length([1,2,3,4]) // 4\nF.length([]) // 0\n\n"
+								"text": "\n```typescript\nF.length(\"pranshu\") // 7\nF.length([1,2,3,4]) // 4\nF.length([]) // 0\n```\n"
 							}
 						]
 					},
@@ -16632,7 +16654,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/map.ts",
-					"line": 12,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -16651,7 +16673,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction mapper(todo:Todo){\n   return todo.task\n}\nF.map(mapper,[{id:1,task:\"task1\"},{id:2,task:\"task2\"},{id:3,task:\"task3\"}]) // [\"task1\",\"task2\",\"task3\"]\n"
+								"text": "\n```typescript\nfunction mapper(todo:Todo){\n   return todo.task\n}\nF.map(mapper,[{id:1,task:\"task1\"},{id:2,task:\"task2\"},{id:3,task:\"task3\"}]) // [\"task1\",\"task2\",\"task3\"]\n```\n"
 							}
 						]
 					},
@@ -16886,7 +16908,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/map.ts",
-									"line": 19,
+									"line": 21,
 									"character": 3
 								}
 							],
@@ -16942,7 +16964,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/map_accum.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -16962,7 +16984,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction adder(acc: string, x: string): [string, number] {\nreturn [acc + x, parseInt(acc) + parseInt(x)];\n}\nF.map_accum(adder, '0', ['1', '2', '3', '4']); // ['01234',[1,3,15,127]]\n"
+								"text": "\n```typescript\nfunction adder(acc: string, x: string): [string, number] {\nreturn [acc + x, parseInt(acc) + parseInt(x)];\n}\nF.map_accum(adder, '0', ['1', '2', '3', '4']); // ['01234',[1,3,15,127]]\n```\n"
 							}
 						]
 					},
@@ -17229,7 +17251,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/map_accum.ts",
-									"line": 22,
+									"line": 24,
 									"character": 3
 								}
 							],
@@ -17393,7 +17415,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/map_accum.ts",
-									"line": 26,
+									"line": 28,
 									"character": 3
 								}
 							],
@@ -17550,7 +17572,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/map_accum_right.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -17570,7 +17592,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction adder(acc: string, x: string): [string, number] {\nreturn [acc + x, parseInt(acc) + parseInt(x)];\n}\nF.map_accum_right(adder, '0', ['1', '2', '3', '4']); // ['04321',[433,45,7,4]]\n"
+								"text": "\n```typescript\nfunction adder(acc: string, x: string): [string, number] {\nreturn [acc + x, parseInt(acc) + parseInt(x)];\n}\nF.map_accum_right(adder, '0', ['1', '2', '3', '4']); // ['04321',[433,45,7,4]]\n```\n"
 							}
 						]
 					},
@@ -17837,7 +17859,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/map_accum_right.ts",
-									"line": 22,
+									"line": 24,
 									"character": 3
 								}
 							],
@@ -18001,7 +18023,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/map_accum_right.ts",
-									"line": 26,
+									"line": 28,
 									"character": 3
 								}
 							],
@@ -18866,7 +18888,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/move.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -18885,7 +18907,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.move(0,2,[0,1,2,3]) // [1,2,0,3]\nF.move(-1,0,[0,1,2,3]) // [3,0,1,2]\nF.move(0,-1,[0,1,2,3]) // [1,2,3,0]\nF.move(0,-5,[0,1,2,3]) // [0,1,2,3]\nF.move(-5,3,[0,1,2,3]) // [0,1,2,3]\n"
+								"text": "\n```typescript\nF.move(0,2,[0,1,2,3]) // [1,2,0,3]\nF.move(-1,0,[0,1,2,3]) // [3,0,1,2]\nF.move(0,-1,[0,1,2,3]) // [1,2,3,0]\nF.move(0,-5,[0,1,2,3]) // [0,1,2,3]\nF.move(-5,3,[0,1,2,3]) // [0,1,2,3]\n```\n"
 							}
 						]
 					},
@@ -18987,7 +19009,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/move.ts",
-									"line": 14,
+									"line": 16,
 									"character": 48
 								}
 							],
@@ -19067,7 +19089,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/move.ts",
-									"line": 17,
+									"line": 19,
 									"character": 3
 								}
 							],
@@ -19382,7 +19404,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/none.ts",
-					"line": 24,
+					"line": 26,
 					"character": 16
 				}
 			],
@@ -19401,7 +19423,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction doneChecker(todo: Todo) {\nreturn todo.done === true;\n}\nF.none(doneChecker,[\n{ id: 11, done: false },\n{ id: 12, done: false },\n{ id: 13, done: true },\n{ id: 14, done: false },\n]) // false\n\nF.none(doneChecker,[\n{ id: 11, done: false },\n{ id: 12, done: false },\n{ id: 13, done: false },\n{ id: 14, done: false },\n]) // true\n"
+								"text": "\n```typescript\nfunction doneChecker(todo: Todo) {\nreturn todo.done === true;\n}\nF.none(doneChecker,[\n{ id: 11, done: false },\n{ id: 12, done: false },\n{ id: 13, done: true },\n{ id: 14, done: false },\n]) // false\n\nF.none(doneChecker,[\n{ id: 11, done: false },\n{ id: 12, done: false },\n{ id: 13, done: false },\n{ id: 14, done: false },\n]) // true\n```\n"
 							}
 						]
 					},
@@ -19552,7 +19574,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/none.ts",
-									"line": 25,
+									"line": 27,
 									"character": 50
 								}
 							],
@@ -19600,7 +19622,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/nth.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -19619,7 +19641,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.nth(1,[1,2,3,4]) // 2\nF.nth(-1,[1,2,3,4]) // 2\nF.nth(9,[1,2,3,4]) // undefined\nF.nth(2,\"pranshu\") // 'a'\n"
+								"text": "\n```typescript\nF.nth(1,[1,2,3,4]) // 2\nF.nth(-1,[1,2,3,4]) // 2\nF.nth(9,[1,2,3,4]) // undefined\nF.nth(2,\"pranshu\") // 'a'\n```\n"
 							}
 						]
 					},
@@ -19731,7 +19753,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/nth.ts",
-									"line": 19,
+									"line": 21,
 									"character": 3
 								}
 							],
@@ -19846,7 +19868,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/nth.ts",
-									"line": 22,
+									"line": 24,
 									"character": 32
 								}
 							],
@@ -20102,7 +20124,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/of.ts",
-					"line": 9,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -20121,7 +20143,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.of(33) // [33]\nF.of(\"pranshu\") // [\"pranshu\"]\nF.of({id:11,name:\"pranshu\"}) // [{id:11,name:\"pranshu\"}]\n"
+								"text": "\n```typescript\nF.of(33) // [33]\nF.of(\"pranshu\") // [\"pranshu\"]\nF.of({id:11,name:\"pranshu\"}) // [{id:11,name:\"pranshu\"}]\n```\n"
 							}
 						]
 					},
@@ -20561,7 +20583,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/pair.ts",
-					"line": 10,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -20580,7 +20602,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.pair(\"pranshu\",\"shah\") [\"pranshu\",\"shah\"];\nF.pai({auth:true},{premium:false}) [{auth:true},{premium:false}]\n"
+								"text": "\n```typescript\nF.pair(\"pranshu\",\"shah\") [\"pranshu\",\"shah\"];\nF.pai({auth:true},{premium:false}) [{auth:true},{premium:false}]\n```\n"
 							}
 						]
 					},
@@ -20682,7 +20704,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/pair.ts",
-									"line": 11,
+									"line": 13,
 									"character": 35
 								}
 							],
@@ -25117,7 +25139,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/pluck.ts",
-					"line": 22,
+					"line": 24,
 					"character": 16
 				}
 			],
@@ -25136,7 +25158,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.pluck('name', [\n{ id: 1, name: 'pranshu' },\n{ id: 2, name: 'nisarg' },\n]); // [\"pranshu\",\"nisarg\"]\n"
+								"text": "\n```typescript\nF.pluck('name', [\n{ id: 1, name: 'pranshu' },\n{ id: 2, name: 'nisarg' },\n]); // [\"pranshu\",\"nisarg\"]\n```\n"
 							}
 						]
 					},
@@ -25254,7 +25276,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/pluck.ts",
-									"line": 28,
+									"line": 30,
 									"character": 3
 								}
 							],
@@ -25331,7 +25353,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/prepend.ts",
-					"line": 9,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -25350,7 +25372,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.prepend(1,[2,3,4]) // [1,2,3,4]\n"
+								"text": "\n```typescript\nF.prepend(1,[2,3,4]) // [1,2,3,4]\n```\n"
 							}
 						]
 					},
@@ -25441,7 +25463,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/prepend.ts",
-									"line": 10,
+									"line": 12,
 									"character": 35
 								}
 							],
@@ -27371,7 +27393,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/range.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -27390,7 +27412,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.range(3,6) // [3,4,5]\nF.range(1,Infinity) // throws error\nF.range(NaN,11) // throws error\nF.range(5,1) // []\n"
+								"text": "\n```typescript\nF.range(3,6) // [3,4,5]\nF.range(1,Infinity) // throws error\nF.range(NaN,11) // throws error\nF.range(5,1) // []\n```\n"
 							}
 						]
 					},
@@ -27456,7 +27478,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/range.ts",
-									"line": 14,
+									"line": 16,
 									"character": 37
 								}
 							],
@@ -27503,7 +27525,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/reduce.ts",
-					"line": 8,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -27519,7 +27541,11 @@
 						"tags": [
 							{
 								"tag": "description",
-								"text": "same as {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce| Array.reduce()} but does not skip deleted or unassigned indices (sparse arrays); also works in partial form."
+								"text": "same as [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce](Array.prototype.reduce()) but does not skip deleted or unassigned indices (sparse arrays); also works in partial form."
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescript\nF.reduce(F.add,0,[1,2,3]) // 6\n```\n"
 							}
 						]
 					},
@@ -27807,7 +27833,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/reduce.ts",
-									"line": 17,
+									"line": 21,
 									"character": 3
 								}
 							],
@@ -27975,7 +28001,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/reduce.ts",
-									"line": 21,
+									"line": 25,
 									"character": 3
 								}
 							],
@@ -28708,7 +28734,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/remove.ts",
-					"line": 9,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -28727,7 +28753,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.remove(3,2,[1, 2, 3, 4, 5, 6]) // [1,2,3,6]\n"
+								"text": "\n```typescript\nF.remove(3,2,[1, 2, 3, 4, 5, 6]) // [1,2,3,6]\n```\n"
 							}
 						]
 					},
@@ -28838,7 +28864,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/remove.ts",
-									"line": 13,
+									"line": 15,
 									"character": 3
 								}
 							],
@@ -28918,7 +28944,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/remove.ts",
-									"line": 16,
+									"line": 18,
 									"character": 3
 								}
 							],
@@ -29045,7 +29071,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/repeat.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -29064,7 +29090,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.repeat({ id: 1, name: 'pranshu' },3) [{ id: 1, name: 'pranshu' },{ id: 1, name: 'pranshu' },{ id: 1, name: 'pranshu' }]\n"
+								"text": "\n```typescript\nF.repeat({ id: 1, name: 'pranshu' },3) [{ id: 1, name: 'pranshu' },{ id: 1, name: 'pranshu' },{ id: 1, name: 'pranshu' }]\n```\n"
 							}
 						]
 					},
@@ -29151,7 +29177,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/repeat.ts",
-									"line": 12,
+									"line": 14,
 									"character": 37
 								}
 							],
@@ -29199,7 +29225,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/reverse.ts",
-					"line": 8,
+					"line": 10,
 					"character": 16
 				}
 			],
@@ -29218,7 +29244,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.reverse([1,2,3,4]) // [4,3,2,1]\nF.reverse(\"mit\") // \"tim\"\n"
+								"text": "\n```typescript\nF.reverse([1,2,3,4]) // [4,3,2,1]\nF.reverse(\"mit\") // \"tim\"\n```\n"
 							}
 						]
 					},
@@ -29453,7 +29479,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/scan.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -29472,7 +29498,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction stringCombiner(acc: string, element: string) {\n   return acc + element;\n}\nF.scan(stringCombiner, '', ['0', '1', '2', '3']); // ['','0','01','012','0123']\n"
+								"text": "\n```typescript\nfunction stringCombiner(acc: string, element: string) {\n   return acc + element;\n}\nF.scan(stringCombiner, '', ['0', '1', '2', '3']); // ['','0','01','012','0123']\n```\n"
 							}
 						]
 					},
@@ -29751,7 +29777,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/scan.ts",
-									"line": 19,
+									"line": 21,
 									"character": 3
 								}
 							],
@@ -30015,7 +30041,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/scan.ts",
-									"line": 27,
+									"line": 29,
 									"character": 3
 								}
 							],
@@ -30071,7 +30097,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/slice.ts",
-					"line": 9,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -30090,7 +30116,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.slice(1,4,[1,2,3,4,5,6]) // [2,3,4]\n"
+								"text": "\n```typescript\nF.slice(1,4,[1,2,3,4,5,6]) // [2,3,4]\n```\n"
 							}
 						]
 					},
@@ -30243,7 +30269,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/slice.ts",
-									"line": 20,
+									"line": 22,
 									"character": 3
 								}
 							],
@@ -30352,7 +30378,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/slice.ts",
-									"line": 24,
+									"line": 26,
 									"character": 3
 								}
 							],
@@ -30598,7 +30624,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/split_at.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -30617,7 +30643,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.split_at(3,[1,2,3,4,5,6,7,8,9]) // [[1,2,3],[4,5,6,7,8,9]]\nF.split_at(3, 'pranshu'); // [\"pra\",\"nshu\"]\n"
+								"text": "\n```typescript\nF.split_at(3,[1,2,3,4,5,6,7,8,9]) // [[1,2,3],[4,5,6,7,8,9]]\nF.split_at(3, 'pranshu'); // [\"pra\",\"nshu\"]\n```\n"
 							}
 						]
 					},
@@ -30705,7 +30731,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/split_at.ts",
-									"line": 14,
+									"line": 16,
 									"character": 3
 								}
 							],
@@ -30839,7 +30865,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/split_every.ts",
-					"line": 12,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -30858,7 +30884,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.split_every(3,[1,2,3,4,5,6,7,8]) // [[1,2,3],[4,5,6],[7,8]]\nF.split_every(3,\"pranshu\") // [\"pra\",\"nsh\",\"u\"]\n"
+								"text": "\n```typescript\nF.split_every(3,[1,2,3,4,5,6,7,8]) // [[1,2,3],[4,5,6],[7,8]]\nF.split_every(3,\"pranshu\") // [\"pra\",\"nsh\",\"u\"]\n```\n"
 							}
 						]
 					},
@@ -30954,7 +30980,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/split_every.ts",
-									"line": 15,
+									"line": 17,
 									"character": 3
 								}
 							],
@@ -31078,7 +31104,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/split_when.ts",
-					"line": 9,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -31094,7 +31120,7 @@
 						"tags": [
 							{
 								"tag": "example",
-								"text": "\nF.split_when(F.gt(5),[11, 2, 3, 6, 1, 4, 8, 3]) // [[11],[2,3,6],[1,4,8],[3]]\n"
+								"text": "\n```typescript\nF.split_when(F.gt(5),[11, 2, 3, 6, 1, 4, 8, 3]) // [[11],[2,3,6],[1,4,8],[3]]\n```\n"
 							}
 						]
 					},
@@ -31256,7 +31282,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/split_when.ts",
-									"line": 16,
+									"line": 18,
 									"character": 3
 								}
 							],
@@ -31315,7 +31341,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/starts_with.ts",
-					"line": 14,
+					"line": 16,
 					"character": 16
 				}
 			],
@@ -31334,7 +31360,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.starts_with([1,2],[1,2,3,5]) // true\nF.starts_with([1,2,4],[1,2,3,5]) // false\nF.starts_with(\"pra\",\"pranshu\") // true\nF.starts_with(\"pa\",\"pranshu\") // false\n"
+								"text": "\n```typescript\nF.starts_with([1,2],[1,2,3,5]) // true\nF.starts_with([1,2,4],[1,2,3,5]) // false\nF.starts_with(\"pra\",\"pranshu\") // true\nF.starts_with(\"pa\",\"pranshu\") // false\n```\n"
 							}
 						]
 					},
@@ -31440,7 +31466,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/starts_with.ts",
-									"line": 20,
+									"line": 22,
 									"character": 3
 								}
 							],
@@ -31539,7 +31565,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/starts_with.ts",
-									"line": 22,
+									"line": 24,
 									"character": 45
 								}
 							],
@@ -31757,7 +31783,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/take.ts",
-					"line": 10,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -31773,7 +31799,7 @@
 						"tags": [
 							{
 								"tag": "example",
-								"text": "\nF.take(3,[1,2,3,4,5,6]) // [1,2,3]\nF.take(3,\"pranshu\") // \"pra\"\n"
+								"text": "\n```typescript\nF.take(3,[1,2,3,4,5,6]) // [1,2,3]\nF.take(3,\"pranshu\") // \"pra\"\n```\n"
 							}
 						]
 					},
@@ -31893,7 +31919,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/take.ts",
-									"line": 19,
+									"line": 21,
 									"character": 3
 								}
 							],
@@ -31983,7 +32009,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/take_last.ts",
-					"line": 10,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -32002,7 +32028,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.take_last(3,[1,2,3,4,5]) // [3,4,5]\nF.take_last(3,\"pranshu\") // \"shu\"\n"
+								"text": "\n```typescript\nF.take_last(3,[1,2,3,4,5]) // [3,4,5]\nF.take_last(3,\"pranshu\") // \"shu\"\n```\n"
 							}
 						]
 					},
@@ -32127,7 +32153,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/take_last.ts",
-									"line": 22,
+									"line": 24,
 									"character": 3
 								}
 							],
@@ -32995,7 +33021,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/tap.ts",
-					"line": 15,
+					"line": 17,
 					"character": 16
 				}
 			],
@@ -33014,7 +33040,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nlet number = 1;\n\nfunction logger(x: number) {\nnumber = number + x;\n}\nF.tap(logger,3) // returns 3 , number === 4\n"
+								"text": "\n```typescript\nlet number = 1;\n\nfunction logger(x: number) {\nnumber = number + x;\n}\nF.tap(logger,3) // returns 3 , number === 4\n```\n"
 							}
 						]
 					},
@@ -33163,7 +33189,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/tap.ts",
-									"line": 16,
+									"line": 18,
 									"character": 45
 								}
 							],
@@ -34489,7 +34515,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/union.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -34508,7 +34534,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.union([{ id: 1, name: 'pranshu' },{ id: 2, name: 'mit' },{ id: 3, name: 'sanket' }],\n[{ id: 1, name: 'pranshu' },{ id: 5, name: 'harsh' }]);\n// [{ id: 1, name: 'pranshu' },{ id: 2, name: 'mit' },{ id: 3, name: 'sanket' },{ id: 5, name: 'harsh' }]\n"
+								"text": "\n```typescript\nF.union([{ id: 1, name: 'pranshu' },{ id: 2, name: 'mit' },{ id: 3, name: 'sanket' }],\n[{ id: 1, name: 'pranshu' },{ id: 5, name: 'harsh' }]); \n// [{ id: 1, name: 'pranshu' },{ id: 2, name: 'mit' },{ id: 3, name: 'sanket' },{ id: 5, name: 'harsh' }]\n```\n"
 							}
 						]
 					},
@@ -34607,7 +34633,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/union.ts",
-									"line": 14,
+									"line": 16,
 									"character": 47
 								}
 							],
@@ -34653,7 +34679,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/uniq_by.ts",
-					"line": 24,
+					"line": 26,
 					"character": 16
 				}
 			],
@@ -34672,7 +34698,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\ntype Name = {\nid: string;\nname: string;\n};\nfunction nameGetter(x: Name) {\n return x.name;\n}\nF.uniq_by(nameGetter, [\n{ id: '1', name: 'pranshu' },\n{ id: '1', name: 'mit' },\n{ id: '1', name: 'pranshu' },\n{ id: '1', name: 'smit' },\n]); // [\"pranshu\",\"mit\",\"smit\"]\n"
+								"text": "\n```typescript\ntype Name = {\nid: string;\nname: string;\n};\nfunction nameGetter(x: Name) {\n return x.name;\n}\nF.uniq_by(nameGetter, [\n{ id: '1', name: 'pranshu' },\n{ id: '1', name: 'mit' },\n{ id: '1', name: 'pranshu' },\n{ id: '1', name: 'smit' },\n]); // [\"pranshu\",\"mit\",\"smit\"]\n```\n"
 							}
 						]
 					},
@@ -34847,7 +34873,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/uniq_by.ts",
-									"line": 25,
+									"line": 27,
 									"character": 50
 								}
 							],
@@ -34903,7 +34929,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/unique.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -34922,7 +34948,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.unique([{ id: 1, name: 'pranshu' },{ id: 2, name: 'mit' },{ id: 1, name: 'pranshu' }]);\n// [{ id: 1, name: 'pranshu' },{ id: 2, name: 'mit' }]\n"
+								"text": "\n```typescript\nF.unique([{ id: 1, name: 'pranshu' },{ id: 2, name: 'mit' },{ id: 1, name: 'pranshu' }]);\n// [{ id: 1, name: 'pranshu' },{ id: 2, name: 'mit' }]\n```\n"
 							}
 						]
 					},
@@ -34972,7 +34998,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/unnest.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -34991,7 +35017,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.unnest([\n[1, 2],\n[3, 4],\n[5, 6],\n]); // [1,2,3,4,5,6]\n"
+								"text": "\n```typescript\nF.unnest([\n[1, 2],\n[3, 4],\n[5, 6],\n]); // [1,2,3,4,5,6]\n```\n"
 							}
 						]
 					},
@@ -35064,7 +35090,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/update.ts",
-					"line": 12,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -35083,7 +35109,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.update(2,23,[1,2,3,4,5]) // [1,2,23,4,5]\nF.update(-1,23,[1,2,3,4,5]) // [1,2,3,4,23]\nF.update(NaN,23,[1,2,3,4,5]) // [1,2,3,4,23]\nF.update(9,23,[1,2,3,4,5]) // [1,2,3,4,23]\n"
+								"text": "\n```typescript\nF.update(2,23,[1,2,3,4,5]) // [1,2,23,4,5]\nF.update(-1,23,[1,2,3,4,5]) // [1,2,3,4,23]\nF.update(NaN,23,[1,2,3,4,5]) // [1,2,3,4,23]\nF.update(9,23,[1,2,3,4,5]) // [1,2,3,4,23]\n```\n"
 							}
 						]
 					},
@@ -35200,7 +35226,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/update.ts",
-									"line": 13,
+									"line": 15,
 									"character": 45
 								}
 							],
@@ -35275,7 +35301,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/update.ts",
-									"line": 16,
+									"line": 18,
 									"character": 3
 								}
 							],
@@ -35532,7 +35558,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/where.ts",
-					"line": 16,
+					"line": 18,
 					"character": 16
 				}
 			],
@@ -35551,7 +35577,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF. where({ name: \"mit\" }, [\n{ id: 11, name: 'pranshu' },\n{ id: 12, name: 'mit' },\n{ id: 13, name: 'sanket patel' },\n{ id: 14, name: \"mit\" },\n]); // [{ id: 12, name: 'mit' },{ id: 14, name: \"mit\" },]\n"
+								"text": "\n```typescript\nF. where({ name: \"mit\" }, [\n{ id: 11, name: 'pranshu' },\n{ id: 12, name: 'mit' },\n{ id: 13, name: 'sanket patel' },\n{ id: 14, name: \"mit\" },\n]); // [{ id: 12, name: 'mit' },{ id: 14, name: \"mit\" },]\n```\n"
 							}
 						]
 					},
@@ -35694,7 +35720,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/where.ts",
-									"line": 23,
+									"line": 25,
 									"character": 3
 								}
 							],
@@ -35780,7 +35806,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/without.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -35799,7 +35825,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.without([1,2,3],[1,2,3,4,5,6]) // [4,5,6]\n"
+								"text": "\n```typescript\nF.without([1,2,3],[1,2,3,4,5,6]) // [4,5,6]\n```\n"
 							}
 						]
 					},
@@ -35896,7 +35922,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/without.ts",
-									"line": 12,
+									"line": 14,
 									"character": 47
 								}
 							],
@@ -35948,7 +35974,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/zip.ts",
-					"line": 9,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -35967,7 +35993,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.zip(['1', '2', '3'], [1, 2, 3]) // [['1',1],['2',2],['3',3]]\n"
+								"text": "\n```typescript\nF.zip(['1', '2', '3'], [1, 2, 3]) // [['1',1],['2',2],['3',3]]\n```\n"
 							}
 						]
 					},
@@ -36081,7 +36107,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/zip.ts",
-									"line": 10,
+									"line": 12,
 									"character": 35
 								}
 							],
@@ -36152,7 +36178,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/zip_obj.ts",
-					"line": 9,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -36171,7 +36197,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nzip_obj(['id', 'name'], [11, 'pranshu shah']) // {\"id\":11,\"name\":\"pranshu shah\"}\n"
+								"text": "\n```typescript\nzip_obj(['id', 'name'], [11, 'pranshu shah']) // {\"id\":11,\"name\":\"pranshu shah\"}\n```\n"
 							}
 						]
 					},
@@ -36291,7 +36317,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/zip_obj.ts",
-									"line": 15,
+									"line": 17,
 									"character": 3
 								}
 							],
@@ -36368,7 +36394,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/zip_with.ts",
-					"line": 12,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -36387,7 +36413,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction concate(x: number, y: string) {\n   return x + y;\n}\nF.zip_with(concate, [1, 2, 3, 4], ['1', '2']); // ['11','22']\n"
+								"text": "\n```typescript\nfunction concate(x: number, y: string) {\n   return x + y;\n}\nF.zip_with(concate, [1, 2, 3, 4], ['1', '2']); // ['11','22']\n```\n"
 							}
 						]
 					},
@@ -36626,7 +36652,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/zip_with.ts",
-									"line": 21,
+									"line": 23,
 									"character": 3
 								}
 							],
@@ -36766,7 +36792,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/zip_with.ts",
-									"line": 25,
+									"line": 27,
 									"character": 3
 								}
 							],
@@ -37138,7 +37164,6 @@
 						1097,
 						1118,
 						1122,
-						1128,
 						1158,
 						1169,
 						1175,
@@ -37185,6 +37210,12 @@
 						1973,
 						1986,
 						1997
+					]
+				},
+				{
+					"title": "List\n```typescript\nF.includes(\"pranshu\",[\"pranshu\",\"mit\",\"saumya\"]) // true\nF.includes({id:1,name:\"pranshu\"},[{id:1,name:\"pranshu\"},{id:2,name:\"mit\"},{id:3,name:\"sanket\"}]) // true\nF.includes({id:1,name:\"saumya\"},[{id:1,name:\"pranshu\"},{id:2,name:\"mit\"},{id:3,name:\"sanket\"}]) // false\n```",
+					"children": [
+						1128
 					]
 				},
 				{

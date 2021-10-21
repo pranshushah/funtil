@@ -4,8 +4,10 @@ import { Pred } from '../types';
  * @returns  returns a function that takes arguments for list of predication functions.
  * @category Logic
  * @example
+ * ```typescript
  *   all_pass([F.gt(0), F.lt(100)])(33); // true
  *   all_pass([F.lt(11)])(12) //false
+ * ```
  */
 
 export function all_pass<T extends any[]>(preds: Pred<T>[]) {

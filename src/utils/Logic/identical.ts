@@ -3,10 +3,12 @@ import { partial2 } from '../internals/partial2';
  * @description takes two elements and checks whether both of them are equal or not. it uses **Object.is** to check equality,also works with partial form
  * @category Logic
  * @example
+ * ```typescript
  * F.identical(33,33) //true
  * let obj = {id:1,name:"pranshu"};
  * F.identical(obj,obj) //true
  * F.identical({id:1,name:"pranshu"},{id:1,name:"pranshu"}) // false
+ * ```
  */
 export function identical(x1: any, x2: any): boolean;
 export function identical(x1: any): (x2: any) => boolean;
