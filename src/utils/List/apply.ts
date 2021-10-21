@@ -6,8 +6,10 @@ import { OvarloadedParameters, OverloadedReturnType } from '../types';
  *@returns return value of the function.
  *@category List
  *@example
+ *```typescript
  * let array_min = F.apply(Math.min);
  * array_min([1,2,3,-1]) // -1
+ *```
  */
 
 export function apply<Function extends (...args: any[]) => any>(

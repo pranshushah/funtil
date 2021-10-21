@@ -4,7 +4,9 @@ import { partial2 } from '../internals/partial2';
  * Takes an array and a predication function and splits the array when predication function reuturns true; also works with partial form.
  * @category List
  * @example
+ * ```typescript
  * F.split_when(F.gt(5),[11, 2, 3, 6, 1, 4, 8, 3]) // [[11],[2,3,6],[1,4,8],[3]]
+ * ```
  */
 export function split_when<T>(
   pred_fn: (arg: T) => boolean,

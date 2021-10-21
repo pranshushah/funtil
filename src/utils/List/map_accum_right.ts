@@ -5,10 +5,12 @@ import { partial3 } from '../internals/partial3';
  * @returns tuple containing accumulator, and new mapped array.
  * @category List
  * @example
+ * ```typescript
  * function adder(acc: string, x: string): [string, number] {
     return [acc + x, parseInt(acc) + parseInt(x)];
   }
   F.map_accum_right(adder, '0', ['1', '2', '3', '4']); // ['04321',[433,45,7,4]]
+ * ```
  */
 export function map_accum_right<T1, T2, R>(
   fn: (acc: T1, val: T2) => [T1, R],

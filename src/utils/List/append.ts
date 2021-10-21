@@ -5,8 +5,10 @@ import { partial2 } from '../internals/partial2';
  * @returns new copy of array with given value at end
  * @category List
  * @example
+ * ```typescript
  * let arr = [1,2,3];
  * arr = append(arr,4); // [1,2,3,4]
+ * ```
  */
 export function append<T>(arr: T[], val: T): T[];
 export function append<T>(arr: T[]): (val: T) => T[];

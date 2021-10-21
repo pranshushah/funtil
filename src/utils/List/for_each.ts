@@ -5,9 +5,11 @@ import { partial2 } from '../internals/partial2';
  * @returns original array.
  * @category List
  * @example
+ * ```typescript
  * for_each(function todoPrinter(todo){
  *  console.log(todo.task)
  * },[{id:1,task:"task1"},{id:2,task:"task2"},{id:3,task:"task3"}]) // task1 task2 task3
+ * ```
  */
 export function for_each<T>(
   fn: (arg: T, index: number, arr: readonly T[]) => void,

@@ -13,10 +13,12 @@ type passing_prop = <T extends object>(
  * @description Returns a neuw list by plucking the same named property off all objects in the list supplied;also works with partial form.
  * @category List
  * @example
+ * ```typescript
  * F.pluck('name', [
     { id: 1, name: 'pranshu' },
     { id: 2, name: 'nisarg' },
   ]); // ["pranshu","nisarg"]
+ * ```
  */
 
 export function pluck<T extends Any_Obj>(

@@ -4,10 +4,12 @@ import { partial2 } from '../internals/partial2';
  * @description returns an array of given range;if given number isNan or Infinity it throws array; also works in partial form.
  * @category List
  * @example
+ * ```typescript
  * F.range(3,6) // [3,4,5]
  * F.range(1,Infinity) // throws error
  * F.range(NaN,11) // throws error
  * F.range(5,1) // []
+ * ```
  */
 
 export function range(from: number, to: number): number[];

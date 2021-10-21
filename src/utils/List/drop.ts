@@ -5,8 +5,10 @@ import { partial2 } from '../internals/partial2';
  * @returns shallow copy with removed elements.
  * @category List
  * @example
+ * ```typescript
  * F.drop([1,2,3,4,5,6],3) //[4,5,6]
  * F.drop("pranshu",3) // 'nshu'
+ * ```
  */
 export function drop<T extends any[]>(n: number, xs: T): T;
 export function drop<T extends any[]>(n: number): (xs: T) => T;

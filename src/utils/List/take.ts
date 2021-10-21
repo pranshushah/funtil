@@ -4,8 +4,10 @@ import { partial2 } from '../internals/partial2';
  * @returns first n elements an array of from front.
  * @category List
  * @example
+ * ```typescript
  * F.take(3,[1,2,3,4,5,6]) // [1,2,3]
  * F.take(3,"pranshu") // "pra"
+ * ```
  */
 export function take<T extends readonly any[]>(
   number_of_elements_you_want: number,

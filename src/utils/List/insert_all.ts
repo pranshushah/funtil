@@ -4,10 +4,12 @@ import { partial3 } from '../internals/partial3';
  * @returns new copy of array with new elements
  * @category List
  * @example
+ * ```typescript
  * F.insert_all(2,[6,7],[1,2,3,4,5]) // [1,2,6,7,3,4,5]
  * F.insert_all(111,[6,7],[1,2,3,4,5]) // [1,2,3,4,5,6,7]
  * F.insert_all(-1,[6,7],[1,2,3,4,5]) // [6,7,1,2,3,4,5]
  * F.insert_all(-111,[6,7],[1,2,3,4,5]) // [6,7,1,2,3,4,5]
+ * ```
  */
 export function insert_all<T>(
   insert_index: number,

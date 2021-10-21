@@ -7,18 +7,18 @@ import { partial2 } from '../internals/partial2';
  * function isLongString(x:string){
  *    return x.length > 10;
  * }
- * F.find_index(isLongString,["mit","sanket","pranshu shah","nisarg","mit nilesh desai"]) // 2
- * F.find_index(isLongString,["mit","sanket","pranshu","nisarg"]) // -1
+ * F.find(isLongString,["mit","sanket","pranshu shah","nisarg","mit nilesh desai"]) // "pranshu shah"
+ * F.find(isLongString,["mit","sanket","pranshu","nisarg"]) // undefined
  */
 
 export function find<T>(
   predicate_fn: (arg: T, index: number, arr: readonly T[]) => boolean,
   arr: readonly T[]
-): T;
+): T | undefined;
 
 export function find<T>(
   predicate_fn: (arg: T, index: number, arr: readonly T[]) => boolean
-): (arr: readonly T[]) => T;
+): (arr: readonly T[]) => T | undefined;
 
 export function find<T>(
   predicate_fn: (arg: T, index: number, arr: readonly T[]) => boolean,

@@ -5,7 +5,10 @@ import { for_each } from './for_each';
  * @returns it returns new copy of array without mutating original array
  * @category List
  * @example
+ * ```typescript
  * F.compact([1,"","pranshu",null,3,undefined]) //[1,"pranshu",3]
+ *
+ * ```
  */
 
 export function compact<T>(arr: readonly T[]) {

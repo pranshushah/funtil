@@ -29,7 +29,8 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "docs": "node docs.js"
   },
   "peerDependencies": {},
   "prettier": {

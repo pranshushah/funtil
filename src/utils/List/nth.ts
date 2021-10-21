@@ -5,10 +5,12 @@ import { partial2 } from '../internals/partial2';
  * @description returns value of nth index of array or string.if you pass negative index it will convert to it's absolute value.
  * @category List
  * @example
+ * ```typescript
  * F.nth(1,[1,2,3,4]) // 2
  * F.nth(-1,[1,2,3,4]) // 2
  * F.nth(9,[1,2,3,4]) // undefined
  * F.nth(2,"pranshu") // 'a'
+ * ```
  */
 export function nth<T extends any[]>(
   n: number,

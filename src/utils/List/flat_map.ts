@@ -1,13 +1,15 @@
 import { partial2 } from '../internals/partial2';
 
 /**
- * @description Wrapper around `array.flatMap`.also supports partial form.
+ * @description Wrapper around `[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap](array.prototype.flatMap)`.also supports partial form.
  * @category List
  * @example
+ * ```typescript
  * let arr = ["it's always sunny in","philadelphia"];
  * F.flat_map(function mapper(x:string){
  *    return x.split(" ")
  * },arr) // ["it's", "always", "sunny", "in", "philadelphia"]
+ * ```
  */
 export function flat_map<
   T extends any,

@@ -5,10 +5,12 @@ import { partial2 } from '../internals/partial2';
  * @alias filter_in
  * @category List
  * @example
+ * ```typescript
  * function isOdd(x:number){
  *    return x % 2 === 1;
  * }
  * F.filter(isOdd,[1,2,3,4,5,6,7]) // [1,3,5,7]
+ * ```
  */
 export function filter<T>(
   predicate_fn: (arg: T, index: number, arr: readonly T[]) => boolean,

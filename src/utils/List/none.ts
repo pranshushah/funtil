@@ -4,6 +4,7 @@ import { partial2 } from '../internals/partial2';
  * @description returns true if predication function returns false for all the value of array, otherwise it returns false; also works with partial form.
  * @category List
  * @example
+ * ```typescript
   function doneChecker(todo: Todo) {
     return todo.done === true;
   }
@@ -20,6 +21,7 @@ import { partial2 } from '../internals/partial2';
     { id: 13, done: false },
     { id: 14, done: false },
   ]) // true
+ * ```
  */
 export function none<T>(fn: (arg: T) => boolean, arr: T[]): boolean;
 export function none<T>(fn: (arg: T) => boolean): (arr: T[]) => boolean;

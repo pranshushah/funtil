@@ -2,8 +2,10 @@
  * @description takes an array or string and returns first element of it.
  * @category List
  * @example
+ * ```typescript
  * F.head("pranshu") // "p"
  * F.head([1,2,3]) // 1
+ * ```
  */
 export function head(str: string): string;
 export function head<T>(list: readonly T[]): T | undefined;

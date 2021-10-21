@@ -5,8 +5,10 @@ import { slice } from './slice';
  * @description Splits a given list or string at a given index; also works with partial form.
  * @category List
  * @example
+ * ```typescript
  * F.split_at(3,[1,2,3,4,5,6,7,8,9]) // [[1,2,3],[4,5,6,7,8,9]]
  * F.split_at(3, 'pranshu'); // ["pra","nshu"]
+ * ```
  */
 export function split_at<T extends readonly any[]>(index: number, xs: T): T[];
 export function split_at(

@@ -5,13 +5,16 @@ import { partial3 } from '../internals/partial3';
  * @returns new copy of array with function applied at given index
  * @category List
  * @example
- *  F.adjust(3,F.negate,[1,2,3,4]) // => [1,2,3,-4]
+ * ```typescript
+ * F.adjust(3,F.negate,[1,2,3,4]) // => [1,2,3,-4]
  *
  *  const arrayGetter = F.adjust(3,F.negate);
  *  arrayGetter([1,2])  // => [1,-2]
  *
  *  const functionAndArrayGetter = F.adjust(-1);
  *  functionAndArrayGetter(F.negate,[1,2,3]); // => [1,2,-3]
+ *
+ * ```
  */
 export function adjust<T>(
   index: number,

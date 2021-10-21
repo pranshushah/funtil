@@ -6,6 +6,7 @@ import { partial2 } from '../internals/partial2';
  * @description takes a function and an array. returns an array that contains the return value of the function that takes element of an array as an argument.
  * @category List
  * @example
+ * ```typescript
  *type Name = {
   id: string;
   name: string;
@@ -19,6 +20,7 @@ import { partial2 } from '../internals/partial2';
     { id: '1', name: 'pranshu' },
     { id: '1', name: 'smit' },
   ]); // ["pranshu","mit","smit"]
+ * ```
  */
 
 export function uniq_by<T, U>(fn: (arg: T) => U, arr: readonly T[]): T[];

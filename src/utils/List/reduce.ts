@@ -1,9 +1,13 @@
 import { partial3 } from '../internals/partial3';
 
 /**
- * @description same as {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce| Array.reduce()} but does not skip deleted or unassigned indices (sparse arrays); also works in partial form.
+ * @description same as [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce](Array.prototype.reduce()) but does not skip deleted or unassigned indices (sparse arrays); also works in partial form.
  * @returns accumulator
  * @category List
+ * @example
+ * ```typescript
+ * F.reduce(F.add,0,[1,2,3]) // 6
+ * ```
  */
 export function reduce<T, R>(
   reducer_fn: (acc: R, element: T, index?: number, arr?: readonly T[]) => R,

@@ -5,11 +5,13 @@ import { partial2 } from '../internals/partial2';
  * @returns true if predication function returns true for any element in array or false
  * @category List
  * @example
+ * ```typescript
  * function isItLongString(str:string){
  *  return str.length > 10;
  * }
  * F.any(isItLongString,["pranshu","mit","pranshu shah"]) // true;
  * F.any(isItLongString,["pranshu","mit","sanket"]) // false;
+ * ```
  */
 export function any<T>(
   predicate: (arg: T) => boolean,

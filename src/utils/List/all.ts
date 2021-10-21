@@ -5,9 +5,11 @@ import { partial2 } from '../internals/partial2';
  * @returns true if predication function returns true for all elements in array otherwise false
  * @category List
  * @example
+ * ```typescript
  *  F.all(F.lt(100), [1, 2, 3, 3, 56, -112, -32])  // =>  true
  *  let arrayGetter = F.all(F.lt(100));
  *  arrayGetter([1, 2, 3, 3, 56, 112, -32]) // false
+ * ```
  */
 
 export function all<T>(

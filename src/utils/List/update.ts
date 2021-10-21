@@ -4,10 +4,12 @@ import { partial3 } from '../internals/partial3';
  * @description updates given array at given index with given element and returns new copy of array.
  * @category List
  * @example
+ * ```typescript
  * F.update(2,23,[1,2,3,4,5]) // [1,2,23,4,5]
  * F.update(-1,23,[1,2,3,4,5]) // [1,2,3,4,23]
  * F.update(NaN,23,[1,2,3,4,5]) // [1,2,3,4,23]
  * F.update(9,23,[1,2,3,4,5]) // [1,2,3,4,23]
+ * ```
  */
 export function update<T>(n: number, el: T, elements: readonly T[]): T[];
 export function update<T>(n: number, el: T): (elements: readonly T[]) => T[];

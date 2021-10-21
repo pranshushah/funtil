@@ -4,11 +4,13 @@ import { partial2 } from '../internals/partial2';
  * @description returns the last element for which predication function returns true. returns undefined if predication function does not return true for any value in array.also works with partial argument.
  * @category List
  * @example
+ * ```typescript
  * function isLongString(x:string){
  *    return x.length > 10;
  * }
  * F.find_last(isLongString,["mit","sanket","pranshu shah","nisarg","mit nilesh desai"]) // "mit nilesh desai"
  * F.find_index(isLongString,["mit","sanket","pranshu","nisarg"]) // undefined
+ * ```
  */
 
 export function find_last<T>(

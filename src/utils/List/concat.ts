@@ -5,8 +5,10 @@ import { partial2 } from '../internals/partial2';
  * @returns new string or array.
  * @category List
  * @example
+ * ```typescript
  * F.concat([1,2],[3,4]) // [1,2,3,4]
  * F.concat("pranshu ","shah") // "pranshu shah"
+ * ```
  */
 export function concat<T extends readonly any[]>(arg1: T, arg2: T): T;
 export function concat<T extends readonly any[]>(arg1: T): (arg2: T) => T;

@@ -3,6 +3,11 @@ import { partial2 } from '../internals/partial2';
 /**
  * @description it checks whether given element is in array or not. it uses F.equals,also works with partial form.
  * @category List
+ * ```typescript
+ * F.includes("pranshu",["pranshu","mit","saumya"]) // true
+ * F.includes({id:1,name:"pranshu"},[{id:1,name:"pranshu"},{id:2,name:"mit"},{id:3,name:"sanket"}]) // true
+ * F.includes({id:1,name:"saumya"},[{id:1,name:"pranshu"},{id:2,name:"mit"},{id:3,name:"sanket"}]) // false
+ * ```
  */
 export function includes<T = any>(target: T, source: T[]): boolean;
 export function includes<T = any>(target: T): (source: T[]) => boolean;

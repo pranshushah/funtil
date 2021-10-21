@@ -6,7 +6,9 @@ import { partial2 } from '../internals/partial2';
  * @returns new array that has separator between every element.
  * @category List
  * @example
+ * ```typescript
  * F.intersperse(" ",["pranshu","tikendrakumar","shah"]) // ["pranshu"," ","tikendrakumar"," ","shah"]
+ * ```
  */
 export function intersperse<T>(x: T, xs: readonly T[]): T[];
 export function intersperse<T>(x: T): (xs: readonly T[]) => T[];

@@ -4,8 +4,10 @@ import { partial2 } from '../internals/partial2';
  * @description returns a new list with n numbers from behind.
  * @category List
  * @example
+ * ```typescript
  * F.take_last(3,[1,2,3,4,5]) // [3,4,5]
  * F.take_last(3,"pranshu") // "shu"
+ * ```
  */
 export function take_last<T extends any[]>(
   number_elements_you_want_from_behind: number,

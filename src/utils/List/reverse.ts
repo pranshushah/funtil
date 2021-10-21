@@ -2,8 +2,10 @@
  * @description Reverses given string or array.
  * @category List
  * @example
+ * ```typescript
  * F.reverse([1,2,3,4]) // [4,3,2,1]
  * F.reverse("mit") // "tim"
+ * ```
  */
 export function reverse<T>(xs: T[]): T[];
 export function reverse(xs: string): string;
