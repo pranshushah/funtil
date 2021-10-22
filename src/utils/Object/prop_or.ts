@@ -5,8 +5,10 @@ import { Any_Obj } from '../types';
  * @description If the given, non-null object has an own property with the specified name, returns the value of that property if it does not satisfy `F.is_empty`. Otherwise returns the provided default value, also works with partial form.
  * @category Object
  * @example
+ * ```typescript
  * F.prop_or('mit', { id: '11', author: 'pranshu' }, 'author'); // "pranshu"
  * F.prop_or('mit', { id: '11', author: null }, 'author'); // "mit"
+ * ```
  */
 export function prop_or<O extends Any_Obj, ReturnType>(
   default_val: ReturnType,

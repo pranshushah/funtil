@@ -5,7 +5,9 @@ import { Any_Obj } from '../types';
  * @description add new key-val pair in object and returns new copy of object(Note: it creates shallow copy).also works with partial form.
  * @category Object
  * @example
+ * ```typescript
  * F.prop_set({id:1,todo:"doing stuff"},"author","pranshu") // {id:1,todo:"doing stuff",author:"pranshu"};
+ * ```
  */
 export function prop_set<T extends Any_Obj, K extends Any_Obj, Val>(
   obj: T,

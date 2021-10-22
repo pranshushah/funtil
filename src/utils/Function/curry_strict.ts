@@ -6,6 +6,7 @@ import { StrictCurry, Head } from '../types';
  * @param arity number of arguments it will take
  * @category Function
  * @example
+ * ```typescript
  * function multiplyThreeNumbers(a:number,b:number,c:number){
  *    return a * b * c;
  * }
@@ -13,6 +14,7 @@ import { StrictCurry, Head } from '../types';
  * let a = curriedMultiply(3);
  * let b = a(2)
  * b(4) // 24
+ * ```
  */
 
 export function curry_strict<P extends any[], R>(

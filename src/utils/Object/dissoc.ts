@@ -5,9 +5,11 @@ import { partial2 } from '../internals/partial2';
  * @category Object
  * @returns shallow copy of the object with omitted key.
  * @example
+ * ```typescript
  * F.dissoc("room",{id:1,name:"pranshu",room:401}); // {id:1,name:"pranshu"}
  * let deleteRoom = F.dissoc("room");
  * deleteRoom({id:2,name:"mit",room:1001}) // {id:2,name:"mit"}
+ * ```
  */
 export function dissoc<T extends object, K extends keyof T>(
   prop: K,

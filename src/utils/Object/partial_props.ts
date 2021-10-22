@@ -6,6 +6,7 @@ import { partial2 } from '../internals/partial2';
  * @returns a function that takes remaining part of object will invoke the function when you call returned function.
  * @category Object
  * @example
+ * ```typescript
  * type Args = {
  *  id:string;
  *  name:string;
@@ -15,6 +16,7 @@ import { partial2 } from '../internals/partial2';
  * }
  * getNameAndDelete = F.partial_props(deleteName,{id:"111"})
  * getNameAndDelete({name:"pranshu"})
+ * ```
  */
 export function partial_props<T extends O.Object, T1 extends Partial<T>, R>(
   fn: (x: T) => R,

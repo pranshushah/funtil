@@ -7,8 +7,10 @@ import { Any_Obj, DeepKeys } from '../types';
  * @description takes a path as an array and the object and returns the value at given in object otherwise it returns `undefined`;also works with partial form.
  * @category Object
  * @example
+ * ```typescript
  * let obj = { id: '1', profile: { name: 'pranshu' } };
  * path<typeof obj, string>(['profile', 'name'], obj); //"pranshu"
+ * ```
  */
 export function path<T extends Any_Obj, ReturnValueType>(
   path_list: DeepKeys<T>[],

@@ -5,7 +5,9 @@ import { partial3 } from '../internals/partial3';
  * @returns new object with all properties of old object and new key,value pair we pass
  * @category Object
  * @example
+ * ```typescript
  * F.assoc('z',"hello",{x:1,y:2}) // {x:1,y:2,z:"hello"}
+ * ```
  */
 
 export function assoc<T, U extends object, K extends string | number | symbol>(

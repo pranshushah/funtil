@@ -5,6 +5,7 @@ import { Any_Obj } from '../types';
  * @description Returns `true` if the specified object property satisfies the given predicate; `false` otherwise; also works with partial form.
  * @category Object
  * @example
+ * ```typescript
  * function longNameChecker(name: string) {
     return name.length > 10;
   }
@@ -12,6 +13,7 @@ import { Any_Obj } from '../types';
     id: '12',
     name: 'mit',
   }); // false
+ * ```
  */
 export function prop_satisfies<T extends Any_Obj>(
   pre: (arg: any) => boolean,
