@@ -5,9 +5,11 @@
  * @param immediate if immediate is true it invokes at leading end otherwise it invokes at trailing end.for more info please check out this [link.]{@link https://css-tricks.com/debouncing-throttling-explained-examples/}
  * @category Function
  * @example
+ * ```typescript
  * input.addEventListener("keyup",F.debounce(){
  *    fetch("getSuggestions");
  * })
+ * ```
  */
 export function debounce<F extends (...args: any[]) => any>(
   fn: F,

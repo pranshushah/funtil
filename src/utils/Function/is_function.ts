@@ -2,8 +2,10 @@
  * @description check for given element is function or not returns false for object,array and date
  * @category Function
  * @example
+ * ```typescript
  * F.is_function(Array.isArray) // true
  * F.is_function(Array.prototype) // false
+ * ```
  */
 export function is_function(x: any) {
   return (

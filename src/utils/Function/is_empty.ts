@@ -10,6 +10,7 @@ import { is_undefined } from './is_undefined';
  * @description checks for string,array and object whether they are empty or not. returns false of every other data types.
  * @category Function
  * @example
+ * ```typescript
  * F.is_empty(null) //true
  * F.is_empty(undefined) //true
  * F.is_empty([1,2]) // false
@@ -17,6 +18,7 @@ import { is_undefined } from './is_undefined';
  * F.is_empty({}) //true
  * F.is_empty("") // true
  * F.is_empty("pra") // false
+ * ```
  */
 export function is_empty(x: any) {
   if (is_null(x) || is_undefined(x)) {

@@ -2,6 +2,7 @@
  * @description takes and function as an argument and returns a function that takes arguments for function we passed and invokes that function only once.
  * @category Function
  * @example
+ * ```typescript
  *  let count = 0;
     function inc() {
       count++;
@@ -10,6 +11,7 @@
     let resultOnce = F.once(inc); 
     resultOnce(); // count  = 1;
     resultOnce(); // count  = 1;
+ * ```
  */
 export function once<F extends (...a: readonly any[]) => any>(fn: F) {
   let calculated = false;

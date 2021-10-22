@@ -7,10 +7,12 @@ import { is_undefined } from './is_undefined';
  * @returns default value if check value is null,undefined or NaN
  * @category Function
  * @example
+ * ```typescript
  * F.default_to("pranshu","mit") // mit
  * let defaultToPrasnshu  = F.default_to("pranshu");
  * defaultToPranshu(null) // "pranshu"
  * defaultToPranshu("zoom") // "zoom"
+ * ```
  */
 export function default_to<T1, T2>(default_val: T1, check_val: T2): T1 | T2;
 

@@ -6,11 +6,13 @@ import { OvarloadedParameters, OverloadedReturnType } from '../types';
  * @returns function that exectues passed function after given time.
  * @category Function
  * @example
+ * ```typescript
  * function greet(name){
  *    alert(`Welcome ${name}!`)
  * }
  * delayedGreet = F.delay(greet,200)
  * delayedGreet("pranshu")
+ * ```
  */
 export function delay<T extends (...args: any[]) => any>(
   fn: T,

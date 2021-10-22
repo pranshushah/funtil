@@ -7,6 +7,7 @@ import { OvarloadedParameters } from '../types';
  * @returns function that takes tuple of array arguments for tryer and catcher.
  * @category Function
  * @example
+ * ```typescript
  * function catcher(x: Error) {
  *    return x.message;
  * }
@@ -16,6 +17,7 @@ import { OvarloadedParameters } from '../types';
  *  throw Error('error');
  * },catcher)
  * errorChecker() // 'error'
+ * ```
  */
 export function try_catch<
   F extends (...args: any[]) => any,

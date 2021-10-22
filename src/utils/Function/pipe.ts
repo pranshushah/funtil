@@ -2,11 +2,14 @@
  * @description it is same as F.compose but order of exection of function is left-right
  * @category Function
  * @example
- * * function upper(x: string) {
+ * ```typescript
+ * 
+ * function upper(x: string) {
     return x.toUpperCase();
   }
   const greeting = (first: string, last: string) => first + last;
   F.compose(greeting,upper)("pranshu","shah") //PRANSHUSHAH
+ * ```
  */
 export function pipe<V extends any[], T1, T2, T3, T4, T5, T6>(
   fn0: (...args: V) => T1,
