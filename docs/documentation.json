@@ -953,7 +953,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Logic/all_pass.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -973,7 +973,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\n  all_pass([F.gt(0), F.lt(100)])(33); // true\n  all_pass([F.lt(11)])(12) //false\n"
+								"text": "\n```typescript\n  all_pass([F.gt(0), F.lt(100)])(33); // true\n  all_pass([F.lt(11)])(12) //false\n```\n"
 							}
 						]
 					},
@@ -1376,7 +1376,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Logic/any_pass.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -1396,7 +1396,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.any_pass([F.lt(33),F.gt(20)])(30) // true;\nF.any_pass([F.lt(33),F.gt(20)])(35) // true;\nF.any_pass([F.lt(33),F.gt(35)])(34) // false;\n"
+								"text": "\n```typescript\nF.any_pass([F.lt(33),F.gt(20)])(30) // true;\nF.any_pass([F.lt(33),F.gt(20)])(35) // true;\nF.any_pass([F.lt(33),F.gt(35)])(34) // false;\n```\n"
 							}
 						]
 					},
@@ -2633,7 +2633,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Logic/both.ts",
-					"line": 10,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -2652,7 +2652,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.both(F.lt(30),F.gt(20))(25) // true\nF.both(F.lt(30),F.gt(20))(15) // false\n"
+								"text": "\n```typescript\nF.both(F.lt(30),F.gt(20))(25) // true\nF.both(F.lt(30),F.gt(20))(15) // false\n```\n"
 							}
 						]
 					},
@@ -2721,7 +2721,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Logic/both.ts",
-									"line": 13,
+									"line": 15,
 									"character": 3
 								}
 							],
@@ -2811,7 +2811,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Logic/both.ts",
-									"line": 17,
+									"line": 19,
 									"character": 3
 								}
 							],
@@ -2853,7 +2853,7 @@
 											"sources": [
 												{
 													"fileName": "utils/Logic/both.ts",
-													"line": 17,
+													"line": 19,
 													"character": 21
 												}
 											],
@@ -3041,7 +3041,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Logic/complement.ts",
-					"line": 10,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -3060,7 +3060,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nlet invertedLessThan30 =  F.complement(F.lt(30));\ninvertedLessThan30(25) // false\n"
+								"text": "\n```typescript\nlet invertedLessThan30 =  F.complement(F.lt(30));\ninvertedLessThan30(25) // false\n```\n"
 							}
 						]
 					},
@@ -8594,7 +8594,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Logic/eq_by.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -8613,7 +8613,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nlet gt10 = gt(10);\nF.eq_by(gt10,31,22); // true\nF.eq_by(gt10,31,5) // false\n"
+								"text": "\n```typescript\nlet gt10 = gt(10);\nF.eq_by(gt10,31,22); // true\nF.eq_by(gt10,31,5) // false\n```\n"
 							}
 						]
 					},
@@ -8785,7 +8785,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Logic/eq_by.ts",
-									"line": 12,
+									"line": 14,
 									"character": 52
 								}
 							],
@@ -8891,7 +8891,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Logic/eq_by.ts",
-									"line": 15,
+									"line": 17,
 									"character": 3
 								}
 							],
@@ -12788,7 +12788,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Logic/gt.ts",
-					"line": 12,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -12807,7 +12807,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.gt(20,23) // true\nlet isGreaterThan20= F.gt(20)\nisGreaterThan20(15) // false\nisGreaterThan20(25) // true\n\n"
+								"text": "\n```typescript\nF.gt(20,23) // true\nlet isGreaterThan20= F.gt(20)\nisGreaterThan20(15) // false\nisGreaterThan20(25) // true\n```\n\n"
 							}
 						]
 					},
@@ -12870,7 +12870,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Logic/gt.ts",
-									"line": 13,
+									"line": 15,
 									"character": 32
 								}
 							],
@@ -12914,7 +12914,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Logic/gte.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -12933,7 +12933,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.gte(20,23) // true\nlet isGreaterThanOrEqualTo20= F.gte(20)\nisGreaterThanOrEqualTo20(15) // false\nisGreaterThanOrEqualTo20(20) // true\nisGreaterThanOrEqualTo20(33) // true\n"
+								"text": "\n```typescript\nF.gte(20,23) // true\nlet isGreaterThanOrEqualTo20= F.gte(20)\nisGreaterThanOrEqualTo20(15) // false\nisGreaterThanOrEqualTo20(20) // true\nisGreaterThanOrEqualTo20(33) // true\n```\n"
 							}
 						]
 					},
@@ -12996,7 +12996,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Logic/gte.ts",
-									"line": 14,
+									"line": 16,
 									"character": 33
 								}
 							],
@@ -13143,7 +13143,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Logic/identical.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -13162,7 +13162,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.identical(33,33) //true\nlet obj = {id:1,name:\"pranshu\"};\nF.identical(obj,obj) //true\nF.identical({id:1,name:\"pranshu\"},{id:1,name:\"pranshu\"}) // false\n"
+								"text": "\n```typescript\nF.identical(33,33) //true\nlet obj = {id:1,name:\"pranshu\"};\nF.identical(obj,obj) //true\nF.identical({id:1,name:\"pranshu\"},{id:1,name:\"pranshu\"}) // false\n```\n"
 							}
 						]
 					},
@@ -13225,7 +13225,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Logic/identical.ts",
-									"line": 12,
+									"line": 14,
 									"character": 36
 								}
 							],
@@ -16402,7 +16402,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Logic/lt.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -16421,7 +16421,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.lt(33,23) // true\nlet lessThan20 = F.lt(20);\nlessThan20(33) // false\nlessThan20(12) // true\n"
+								"text": "\n```typescript\nF.lt(33,23) // true\nlet lessThan20 = F.lt(20);\nlessThan20(33) // false\nlessThan20(12) // true\n```\n"
 							}
 						]
 					},
@@ -16484,7 +16484,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Logic/lt.ts",
-									"line": 12,
+									"line": 14,
 									"character": 32
 								}
 							],
@@ -16528,7 +16528,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Logic/lte.ts",
-					"line": 12,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -16547,7 +16547,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.lte(33,23) // true\nlet lessThanOrEqual20 = F.lte(20);\nlessThanOrEqual20(33) // false\nlessThanOrEqual20(12) // true\nlessThanOrEqual20(20) // true\n"
+								"text": "\n```typescript\nF.lte(33,23) // true\nlet lessThanOrEqual20 = F.lte(20);\nlessThanOrEqual20(33) // false\nlessThanOrEqual20(12) // true\nlessThanOrEqual20(20) // true\n```\n"
 							}
 						]
 					},
@@ -16610,7 +16610,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Logic/lte.ts",
-									"line": 13,
+									"line": 15,
 									"character": 33
 								}
 							],
