@@ -50,7 +50,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/T.ts",
-					"line": 8,
+					"line": 10,
 					"character": 16
 				}
 			],
@@ -69,7 +69,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.T(33) // true\nF.T() // true\n"
+								"text": "\n```typescript\nF.T(33) // true\nF.T() // true\n```\n"
 							}
 						]
 					},
@@ -104,7 +104,7 @@
 			"sources": [
 				{
 					"fileName": "utils/math/add.ts",
-					"line": 7,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -120,6 +120,10 @@
 							{
 								"tag": "description",
 								"text": "takes two number and adds them.also works in partial form."
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescript\nF.add(2,3) // 5;\nlet addToFive = F.add(5);\naddToFive(6) // 11;\n```\n"
 							}
 						]
 					},
@@ -147,7 +151,7 @@
 							"sources": [
 								{
 									"fileName": "utils/math/add.ts",
-									"line": 7,
+									"line": 13,
 									"character": 32
 								}
 							],
@@ -1067,7 +1071,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/always.ts",
-					"line": 9,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -1086,7 +1090,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nlet todo = {id:1,task:\"going to school\"}\nlet todo1 = F.always(todo)();\ntodo === todo1 // true\n"
+								"text": "\n```typescript\nlet todo = {id:1,task:\"going to school\"}\nlet todo1 = F.always(todo)();\ntodo === todo1 // true\n```\n"
 							}
 						]
 					},
@@ -1910,7 +1914,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/assoc.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -1930,7 +1934,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.assoc('z',\"hello\",{x:1,y:2}) // {x:1,y:2,z:\"hello\"}\n"
+								"text": "\n```typescript\nF.assoc('z',\"hello\",{x:1,y:2}) // {x:1,y:2,z:\"hello\"}\n```\n"
 							}
 						]
 					},
@@ -2130,7 +2134,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/assoc.ts",
-									"line": 20,
+									"line": 22,
 									"character": 3
 								}
 							],
@@ -2243,7 +2247,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/assoc.ts",
-									"line": 24,
+									"line": 26,
 									"character": 3
 								}
 							],
@@ -2442,7 +2446,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/binary.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -2461,7 +2465,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction triplets(a:number,b:number,c?:number)(){\n   return [a,b,c];\n}\nlet twins = F.binary(triplets);\ntwins(3,4) // [3,4,undefined]\n"
+								"text": "\n```typescript\nfunction triplets(a:number,b:number,c?:number)(){\n   return [a,b,c];\n}\nlet twins = F.binary(triplets);\ntwins(3,4) // [3,4,undefined]\n```\n"
 							}
 						]
 					},
@@ -2574,7 +2578,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/binary.ts",
-									"line": 13,
+									"line": 15,
 									"character": 3
 								}
 							],
@@ -2904,7 +2908,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/clone.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -2923,7 +2927,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nlet item = {id:1,person:{name:\"pranshu\"}}\nlet cloned = F.clone(item);\ncloned === item // false;\nitem.person === item.person // false;\n"
+								"text": "\n```typescript\nlet item = {id:1,person:{name:\"pranshu\"}}\nlet cloned = F.clone(item);\ncloned === item // false;\nitem.person === item.person // false;\n```\n"
 							}
 						]
 					},
@@ -3185,7 +3189,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/compose.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -3204,7 +3208,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction upper(x: string) {\nreturn x.toUpperCase();\n}\nconst greeting = (first: string, last: string) => first + last;\nF.compose(upper,greeting)(\"pranshu\",\"shah\") //PRANSHUSHAH\n"
+								"text": "\n```typescript\nfunction upper(x: string) {\nreturn x.toUpperCase();\n}\nconst greeting = (first: string, last: string) => first + last;\nF.compose(upper,greeting)(\"pranshu\",\"shah\") //PRANSHUSHAH\n```\n"
 							}
 						]
 					},
@@ -3551,7 +3555,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/compose.ts",
-									"line": 18,
+									"line": 20,
 									"character": 3
 								}
 							],
@@ -3678,7 +3682,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/compose.ts",
-									"line": 21,
+									"line": 23,
 									"character": 3
 								}
 							],
@@ -3856,7 +3860,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/compose.ts",
-									"line": 25,
+									"line": 27,
 									"character": 3
 								}
 							],
@@ -4086,7 +4090,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/compose.ts",
-									"line": 30,
+									"line": 32,
 									"character": 3
 								}
 							],
@@ -4368,7 +4372,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/compose.ts",
-									"line": 36,
+									"line": 38,
 									"character": 3
 								}
 							],
@@ -4702,7 +4706,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/compose.ts",
-									"line": 43,
+									"line": 45,
 									"character": 3
 								}
 							],
@@ -5021,7 +5025,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/constant.ts",
-					"line": 10,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -5044,7 +5048,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nlet todo = {id:1,task:\"todo1\"};\nconstantTodo = constant(todo);\nconstantTodo(todo) === todo // true;\n"
+								"text": "\n```typescript\nlet todo = {id:1,task:\"todo1\"};\nconstantTodo = constant(todo);\nconstantTodo(todo) === todo // true;\n```\n"
 							}
 						]
 					},
@@ -5107,7 +5111,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/curry.ts",
-					"line": 15,
+					"line": 17,
 					"character": 16
 				}
 			],
@@ -5126,7 +5130,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction multiplyThreeNumbers(a:number,b:number,c:number){\n   return a * b * c;\n}\nlet curriedMultiply = F.curry(multiplyThreeNumbers);\nlet a = curriedMultiply(3,4);\na(2) // 24\n"
+								"text": "\n```typescript\nfunction multiplyThreeNumbers(a:number,b:number,c:number){\n   return a * b * c;\n}\nlet curriedMultiply = F.curry(multiplyThreeNumbers);\nlet a = curriedMultiply(3,4);\na(2) // 24\n```\n"
 							}
 						]
 					},
@@ -5213,7 +5217,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/curry_strict.ts",
-					"line": 18,
+					"line": 20,
 					"character": 16
 				}
 			],
@@ -5232,7 +5236,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction multiplyThreeNumbers(a:number,b:number,c:number){\n   return a * b * c;\n}\nlet curriedMultiply = F.strict_curry(multiplyThreeNumbers);\nlet a = curriedMultiply(3);\nlet b = a(2)\nb(4) // 24\n"
+								"text": "\n```typescript\nfunction multiplyThreeNumbers(a:number,b:number,c:number){\n   return a * b * c;\n}\nlet curriedMultiply = F.strict_curry(multiplyThreeNumbers);\nlet a = curriedMultiply(3);\nlet b = a(2)\nb(4) // 24\n```\n"
 							}
 						]
 					},
@@ -5354,7 +5358,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/debounce.ts",
-					"line": 12,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -5373,7 +5377,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\ninput.addEventListener(\"keyup\",F.debounce(){\n   fetch(\"getSuggestions\");\n})\n"
+								"text": "\n```typescript\ninput.addEventListener(\"keyup\",F.debounce(){\n   fetch(\"getSuggestions\");\n})\n```\n"
 							}
 						]
 					},
@@ -5530,7 +5534,7 @@
 			"sources": [
 				{
 					"fileName": "utils/math/dec.ts",
-					"line": 5,
+					"line": 9,
 					"character": 16
 				}
 			],
@@ -5546,6 +5550,10 @@
 							{
 								"tag": "description",
 								"text": "decrements given number."
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescript\nF.dec(3) // 2;\n```\n"
 							}
 						]
 					},
@@ -5578,7 +5586,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/default_to.ts",
-					"line": 15,
+					"line": 17,
 					"character": 16
 				}
 			],
@@ -5598,7 +5606,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.default_to(\"pranshu\",\"mit\") // mit\nlet defaultToPrasnshu  = F.default_to(\"pranshu\");\ndefaultToPranshu(null) // \"pranshu\"\ndefaultToPranshu(\"zoom\") // \"zoom\"\n"
+								"text": "\n```typescript\nF.default_to(\"pranshu\",\"mit\") // mit\nlet defaultToPrasnshu  = F.default_to(\"pranshu\");\ndefaultToPranshu(null) // \"pranshu\"\ndefaultToPranshu(\"zoom\") // \"zoom\"\n```\n"
 							}
 						]
 					},
@@ -5707,7 +5715,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/default_to.ts",
-									"line": 17,
+									"line": 19,
 									"character": 53
 								}
 							],
@@ -5763,7 +5771,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/delay.ts",
-					"line": 15,
+					"line": 17,
 					"character": 16
 				}
 			],
@@ -5783,7 +5791,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction greet(name){\n   alert(`Welcome ${name}!`)\n}\ndelayedGreet = F.delay(greet,200)\ndelayedGreet(\"pranshu\")\n"
+								"text": "\n```typescript\nfunction greet(name){\n   alert(`Welcome ${name}!`)\n}\ndelayedGreet = F.delay(greet,200)\ndelayedGreet(\"pranshu\")\n```\n"
 							}
 						]
 					},
@@ -5873,7 +5881,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/delay.ts",
-									"line": 18,
+									"line": 20,
 									"character": 3
 								}
 							],
@@ -6006,7 +6014,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/delay.ts",
-									"line": 22,
+									"line": 24,
 									"character": 3
 								}
 							],
@@ -6041,7 +6049,7 @@
 											"sources": [
 												{
 													"fileName": "utils/Function/delay.ts",
-													"line": 24,
+													"line": 26,
 													"character": 5
 												}
 											],
@@ -6274,7 +6282,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/dissoc.ts",
-					"line": 12,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -6294,7 +6302,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.dissoc(\"room\",{id:1,name:\"pranshu\",room:401}); // {id:1,name:\"pranshu\"}\nlet deleteRoom = F.dissoc(\"room\");\ndeleteRoom({id:2,name:\"mit\",room:1001}) // {id:2,name:\"mit\"}\n"
+								"text": "\n```typescript\nF.dissoc(\"room\",{id:1,name:\"pranshu\",room:401}); // {id:1,name:\"pranshu\"}\nlet deleteRoom = F.dissoc(\"room\");\ndeleteRoom({id:2,name:\"mit\",room:1001}) // {id:2,name:\"mit\"}\n```\n"
 							}
 						]
 					},
@@ -6435,7 +6443,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/dissoc.ts",
-									"line": 18,
+									"line": 20,
 									"character": 3
 								}
 							],
@@ -6505,7 +6513,7 @@
 			"sources": [
 				{
 					"fileName": "utils/math/divide.ts",
-					"line": 7,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -6583,7 +6591,7 @@
 							"sources": [
 								{
 									"fileName": "utils/math/divide.ts",
-									"line": 8,
+									"line": 13,
 									"character": 35
 								}
 							],
@@ -7986,7 +7994,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/either.ts",
-					"line": 14,
+					"line": 16,
 					"character": 16
 				}
 			],
@@ -8006,7 +8014,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nlet gt10 = F.gt(10);\nlet lt5 = F.lt(5);\nF.either(gt10,lt5)(7) // false\nF.either(gt10,lt5)(17) // true\n"
+								"text": "\n```typescript\nlet gt10 = F.gt(10);\nlet lt5 = F.lt(5);\nF.either(gt10,lt5)(7) // false\nF.either(gt10,lt5)(17) // true\n```\n"
 							}
 						]
 					},
@@ -8075,7 +8083,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/either.ts",
-									"line": 17,
+									"line": 19,
 									"character": 3
 								}
 							],
@@ -8167,7 +8175,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/either.ts",
-									"line": 21,
+									"line": 23,
 									"character": 3
 								}
 							],
@@ -8209,7 +8217,7 @@
 											"sources": [
 												{
 													"fileName": "utils/Function/either.ts",
-													"line": 21,
+													"line": 23,
 													"character": 21
 												}
 											],
@@ -8260,7 +8268,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/empty.ts",
-					"line": 12,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -8279,7 +8287,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.empty([1,2,3]) // []\nF.empty('pranshu') // ''\nF.empty(33) // {}\n"
+								"text": "\n```typescript\nF.empty([1,2,3]) // []\nF.empty('pranshu') // ''\nF.empty(33) // {}\n```\n"
 							}
 						]
 					},
@@ -9006,7 +9014,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/eq_props.ts",
-					"line": 12,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -9025,7 +9033,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.eq_props(\"profile\",{id:1,profile:{name:\"pranshu shah\",age:25}},{id:2,profile:{name:\"pranshu shah\",age:25},teacher:false}) //true\n"
+								"text": "\n```typescript\nF.eq_props(\"profile\",{id:1,profile:{name:\"pranshu shah\",age:25}},{id:2,profile:{name:\"pranshu shah\",age:25},teacher:false}) //true\n```\n"
 							}
 						]
 					},
@@ -9128,7 +9136,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/eq_props.ts",
-									"line": 21,
+									"line": 23,
 									"character": 3
 								}
 							],
@@ -9200,7 +9208,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/eq_props.ts",
-									"line": 25,
+									"line": 27,
 									"character": 3
 								}
 							],
@@ -9311,7 +9319,7 @@
 			"sources": [
 				{
 					"fileName": "utils/math/equals.ts",
-					"line": 8,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -9327,6 +9335,10 @@
 							{
 								"tag": "description",
 								"text": "compares two element. it uses deep equality to check two elements.also works in partial form."
+							},
+							{
+								"tag": "example",
+								"text": "\nF.equals(\"pranshu\",\"pranshu\") // true;\nF.equals({id:1,name:\"pranshu\"},{id:1,name:\"pranshu\"}) // true\n"
 							}
 						]
 					},
@@ -9389,7 +9401,7 @@
 							"sources": [
 								{
 									"fileName": "utils/math/equals.ts",
-									"line": 9,
+									"line": 12,
 									"character": 32
 								}
 							],
@@ -12187,7 +12199,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/flip.ts",
-					"line": 8,
+					"line": 10,
 					"character": 16
 				}
 			],
@@ -12206,7 +12218,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nlet flippedConcat = F.flip(F.concat);\nflippedConcat(\"pranshu\",\"shah\") //shahpranshu\n"
+								"text": "\n```typescript\nlet flippedConcat = F.flip(F.concat);\nflippedConcat(\"pranshu\",\"shah\") //shahpranshu\n```\n"
 							}
 						]
 					},
@@ -12331,7 +12343,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/flip.ts",
-									"line": 10,
+									"line": 12,
 									"character": 3
 								}
 							],
@@ -13269,7 +13281,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/identity.ts",
-					"line": 7,
+					"line": 10,
 					"character": 16
 				}
 			],
@@ -13285,6 +13297,10 @@
 							{
 								"tag": "description",
 								"text": "always returns the value that passed in argument."
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescript\nlet numbers = [1,2,3,4];\nidentity(numbers) // [1,2,3,4]\n```\n"
 							}
 						]
 					},
@@ -13328,7 +13344,7 @@
 			"sources": [
 				{
 					"fileName": "utils/math/inc.ts",
-					"line": 5,
+					"line": 7,
 					"character": 16
 				}
 			],
@@ -13344,6 +13360,10 @@
 							{
 								"tag": "description",
 								"text": "increments given number by one."
+							},
+							{
+								"tag": "example",
+								"text": "\nF.inc(5) // 6;\n"
 							}
 						]
 					},
@@ -14992,7 +15012,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/is_array.ts",
-					"line": 10,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -15011,7 +15031,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.is_array([1,2]) // true\nF.is_array(\"pranshu\") // false\nF.is_array({}) // false\nF.is_array(undefined) // false\n"
+								"text": "\n```typescript\nF.is_array([1,2]) // true\nF.is_array(\"pranshu\") // false\nF.is_array({}) // false\nF.is_array(undefined) // false\n```\n"
 							}
 						]
 					},
@@ -15044,7 +15064,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/is_array_like.ts",
-					"line": 15,
+					"line": 17,
 					"character": 16
 				}
 			],
@@ -15063,7 +15083,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.is_array_like(\"pranshu\") // true\nfunction x(){\n F.is_array_like(arguments) // true\n}\nF.is_array_like({id:1}) // false\n"
+								"text": "\n```typescript\nF.is_array_like(\"pranshu\") // true\nfunction x(){\n F.is_array_like(arguments) // true\n}\nF.is_array_like({id:1}) // false\n```\n"
 							}
 						]
 					},
@@ -15096,7 +15116,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/is_date.ts",
-					"line": 8,
+					"line": 10,
 					"character": 16
 				}
 			],
@@ -15115,7 +15135,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.is_date(new Date()) // true\nF.is_date({}) // false\n"
+								"text": "\n```typescript\nF.is_date(new Date()) // true\nF.is_date({}) // false\n```\n"
 							}
 						]
 					},
@@ -15157,7 +15177,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/is_empty.ts",
-					"line": 21,
+					"line": 23,
 					"character": 16
 				}
 			],
@@ -15176,7 +15196,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.is_empty(null) //true\nF.is_empty(undefined) //true\nF.is_empty([1,2]) // false\nF.is_empty([]) // true\nF.is_empty({}) //true\nF.is_empty(\"\") // true\nF.is_empty(\"pra\") // false\n"
+								"text": "\n```typescript\nF.is_empty(null) //true\nF.is_empty(undefined) //true\nF.is_empty([1,2]) // false\nF.is_empty([]) // true\nF.is_empty({}) //true\nF.is_empty(\"\") // true\nF.is_empty(\"pra\") // false\n```\n"
 							}
 						]
 					},
@@ -15209,7 +15229,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/is_finite.ts",
-					"line": 9,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -15225,7 +15245,7 @@
 						"tags": [
 							{
 								"tag": "example",
-								"text": "\nF.is_finite(10) // true\nF.is_finite(0/0) // false\nF.is_finite(1/0) // false\n"
+								"text": "\n```typescript\nF.is_finite(10) // true\nF.is_finite(0/0) // false\nF.is_finite(1/0) // false\n```\n"
 							}
 						]
 					},
@@ -15258,7 +15278,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/is_function.ts",
-					"line": 8,
+					"line": 10,
 					"character": 16
 				}
 			],
@@ -15277,7 +15297,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.is_function(Array.isArray) // true\nF.is_function(Array.prototype) // false\n"
+								"text": "\n```typescript\nF.is_function(Array.isArray) // true\nF.is_function(Array.prototype) // false\n```\n"
 							}
 						]
 					},
@@ -15310,7 +15330,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/is_map.ts",
-					"line": 10,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -15329,7 +15349,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.is_map(new Map()) // true\nF.is_map({}) // false\nF.is_map(new Date()) // false\nF.is_map(new Set()) // false\n"
+								"text": "\n```typescript\nF.is_map(new Map()) // true\nF.is_map({}) // false\nF.is_map(new Date()) // false\nF.is_map(new Set()) // false\n```\n"
 							}
 						]
 					},
@@ -15564,7 +15584,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/is_null.ts",
-					"line": 10,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -15583,7 +15603,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.is_null(null) // true\nF.is_null(undefined) // false\nF.is_null({}) // false\n\n"
+								"text": "\n```typescript\nF.is_null(null) // true\nF.is_null(undefined) // false\nF.is_null({}) // false\n```\n\n"
 							}
 						]
 					},
@@ -15616,7 +15636,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/is_object.ts",
-					"line": 10,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -15635,7 +15655,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.is_object({id:1}) // true\nF.is_object([]) // true\nF.is_object(new Map()) // true\nF.is_object(null) // true\n"
+								"text": "\n```typescript\nF.is_object({id:1}) // true\nF.is_object([]) // true\nF.is_object(new Map()) // true\nF.is_object(null) // true\n```\n"
 							}
 						]
 					},
@@ -15668,7 +15688,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/is_object_like.ts",
-					"line": 15,
+					"line": 17,
 					"character": 16
 				}
 			],
@@ -15687,7 +15707,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.is_object_like({id:1}); // true\nF.is_object_like(new Map()); // false\nF.is_object_like([]); // false\nF.is_object_like(new Set()); // false\nF.is_object_like(null); // false\n"
+								"text": "\n```typescript\nF.is_object_like({id:1}); // true\nF.is_object_like(new Map()); // false\nF.is_object_like([]); // false\nF.is_object_like(new Set()); // false\nF.is_object_like(null); // false\n```\n"
 							}
 						]
 					},
@@ -15720,7 +15740,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/is_primitive.ts",
-					"line": 16,
+					"line": 18,
 					"character": 16
 				}
 			],
@@ -15739,7 +15759,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.is_primitive(null) // true\nF.is_primitive(\"pranshu\") // true\nF.is_primitive(33) // true\nF.is_primitive(undefined) // true\nF.is_primitive({}) // false\nF.is_primitive([]) // false\nF.is_primitive(()=>{}) // false\n"
+								"text": "\n```typescript\nF.is_primitive(null) // true\nF.is_primitive(\"pranshu\") // true\nF.is_primitive(33) // true\nF.is_primitive(undefined) // true\nF.is_primitive({}) // false\nF.is_primitive([]) // false\nF.is_primitive(()=>{}) // false\n```\n"
 							}
 						]
 					},
@@ -15772,7 +15792,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/is_set.ts",
-					"line": 10,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -15791,7 +15811,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.is_set(new Set()) // true\nF.is_set({}) // false\nF.is_set(new Date()) // false\nF.is_set(new Map()) // false\n"
+								"text": "\n```typescript\nF.is_set(new Set()) // true\nF.is_set({}) // false\nF.is_set(new Date()) // false\nF.is_set(new Map()) // false\n```\n"
 							}
 						]
 					},
@@ -15824,7 +15844,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/is_undefined.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -15843,7 +15863,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.is_undefined(undefined) // true\nF.is_undefined(null) // false\nF.is_undefined({}) // false\nF.is_undefined([]) // false\nF.is_undefined(22) // false\nF.is_undefined(\"pranshu\") // false\n\n"
+								"text": "\n```typescript\nF.is_undefined(undefined) // true\nF.is_undefined(null) // false\nF.is_undefined({}) // false\nF.is_undefined([]) // false\nF.is_undefined(22) // false\nF.is_undefined(\"pranshu\") // false\n```\n\n"
 							}
 						]
 					},
@@ -16008,7 +16028,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/keys.ts",
-					"line": 8,
+					"line": 10,
 					"character": 16
 				}
 			],
@@ -16027,7 +16047,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.keys({id:1,name:\"pranshu\",age:24}) // [\"id\",\"name\",\"age\"]\nF.keys([10,20,30]) // ['0','1','2']\n"
+								"text": "\n```typescript\nF.keys({id:1,name:\"pranshu\",age:24}) // [\"id\",\"name\",\"age\"]\nF.keys([10,20,30]) // ['0','1','2']\n```\n"
 							}
 						]
 					},
@@ -18180,7 +18200,7 @@
 			"sources": [
 				{
 					"fileName": "utils/math/mean.ts",
-					"line": 7,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -18196,6 +18216,10 @@
 							{
 								"tag": "description",
 								"text": "takes array of numbers returns mean of that array."
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescript\nF.mean([10, 2, 38, 23, 38, 23, 21]) // 22.14\n```\n"
 							}
 						]
 					},
@@ -18231,7 +18255,7 @@
 			"sources": [
 				{
 					"fileName": "utils/math/median.ts",
-					"line": 7,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -18247,6 +18271,10 @@
 							{
 								"tag": "description",
 								"text": "takes an array of number and returns median of it."
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescript\nF.median([10, 2, 38, 23, 38, 23, 21]) // 23\n```\n"
 							}
 						]
 					},
@@ -18282,7 +18310,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/merge_all.ts",
-					"line": 14,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -18301,7 +18329,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.merge_all([\n{ id: '11', name: 'pranshu shah' },\n{ id: '12', task: 'woww' },\n{ id: '13', name: 'zoom' },\n]); // {id:'13',name:\"zoom\",task:\"woww\"}\n\n"
+								"text": "\n```typescript\nF.merge_all([\n{ id: '11', name: 'pranshu shah' },\n{ id: '12', task: 'woww' },\n{ id: '13', name: 'zoom' },\n]); // {id:'13',name:\"zoom\",task:\"woww\"}\n```\n"
 							}
 						]
 					},
@@ -18358,7 +18386,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/merge_left.ts",
-					"line": 12,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -18377,7 +18405,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.merge_left(\n{ id: '11', name: 'pranshu shah' },\n{ id: '12', task: 'woww' }\n); // {id:\"11\",name:\"pranshu shah\",task:'woww'}\n"
+								"text": "\n```typescript\nF.merge_left(\n{ id: '11', name: 'pranshu shah' },\n{ id: '12', task: 'woww' }\n); // {id:\"11\",name:\"pranshu shah\",task:'woww'}\n```\n"
 							}
 						]
 					},
@@ -18492,7 +18520,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/merge_left.ts",
-									"line": 19,
+									"line": 21,
 									"character": 3
 								}
 							],
@@ -18562,7 +18590,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/merge_right.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -18581,7 +18609,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.merge_right(\n{ id: '11', name: 'pranshu shah' },\n{ id: '12', task: 'woww' }\n); // {id:'12',task:\"woww\",name:\"pranshu shah\"}\n"
+								"text": "\n```typescript\nF.merge_right(\n{ id: '11', name: 'pranshu shah' },\n{ id: '12', task: 'woww' }\n); // {id:'12',task:\"woww\",name:\"pranshu shah\"}\n```\n"
 							}
 						]
 					},
@@ -18696,7 +18724,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/merge_right.ts",
-									"line": 20,
+									"line": 22,
 									"character": 3
 								}
 							],
@@ -18766,7 +18794,7 @@
 			"sources": [
 				{
 					"fileName": "utils/math/mod.ts",
-					"line": 7,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -18782,6 +18810,10 @@
 							{
 								"tag": "description",
 								"text": "takes two number y and x returns x%y.also works in partial form."
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescript\nF.mod(2,6) // 0\nlet modOf2 = F.mod(2);\nmodOf2(12) // 0\n```\n"
 							}
 						]
 					},
@@ -18844,7 +18876,7 @@
 							"sources": [
 								{
 									"fileName": "utils/math/mod.ts",
-									"line": 8,
+									"line": 14,
 									"character": 32
 								}
 							],
@@ -19234,7 +19266,7 @@
 			"sources": [
 				{
 					"fileName": "utils/math/multiply.ts",
-					"line": 7,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -19250,6 +19282,10 @@
 							{
 								"tag": "description",
 								"text": "mulitplies two number.also works in partial form."
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescript\nF.multiply(2,3) // 6\n```\n"
 							}
 						]
 					},
@@ -19312,7 +19348,7 @@
 							"sources": [
 								{
 									"fileName": "utils/math/multiply.ts",
-									"line": 8,
+									"line": 12,
 									"character": 37
 								}
 							],
@@ -19356,7 +19392,7 @@
 			"sources": [
 				{
 					"fileName": "utils/math/negate.ts",
-					"line": 5,
+					"line": 10,
 					"character": 16
 				}
 			],
@@ -19372,6 +19408,10 @@
 							{
 								"tag": "description",
 								"text": "returns negation of given number."
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescript\nF.negate(33) // -33\nF.negate(-21) // 21\n```\n"
 							}
 						]
 					},
@@ -19912,7 +19952,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/object_of.ts",
-					"line": 12,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -19931,7 +19971,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.object_of('id', 222); {id:222}\nF.object_of(\"getName\",function(){\n return this.name\n}) // {getName:function(){return this.name}}\n"
+								"text": "\n```typescript\nF.object_of('id', 222); {id:222}\nF.object_of(\"getName\",function(){\n return this.name\n}) // {getName:function(){return this.name}}\n```\n"
 							}
 						]
 					},
@@ -20067,7 +20107,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/object_of.ts",
-									"line": 18,
+									"line": 20,
 									"character": 3
 								}
 							],
@@ -20192,7 +20232,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/omit.ts",
-					"line": 10,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -20211,7 +20251,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.omit({id: 'hello',name: 'pranshu',age: 24},['id', 'name']); // {age:24}\n"
+								"text": "\n```typescript\nF.omit({id: 'hello',name: 'pranshu',age: 24},['id', 'name']); // {age:24}\n```\n"
 							}
 						]
 					},
@@ -20368,7 +20408,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/omit.ts",
-									"line": 17,
+									"line": 19,
 									"character": 3
 								}
 							],
@@ -20428,7 +20468,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/once.ts",
-					"line": 14,
+					"line": 16,
 					"character": 16
 				}
 			],
@@ -20447,7 +20487,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\n let count = 0;\nfunction inc() {\ncount++;\nreturn count;\n}\nlet resultOnce = F.once(inc);\nresultOnce(); // count  = 1;\nresultOnce(); // count  = 1;\n"
+								"text": "\n```typescript\n let count = 0;\nfunction inc() {\ncount++;\nreturn count;\n}\nlet resultOnce = F.once(inc); \nresultOnce(); // count  = 1;\nresultOnce(); // count  = 1;\n```\n"
 							}
 						]
 					},
@@ -20769,7 +20809,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/partial.ts",
-					"line": 20,
+					"line": 22,
 					"character": 16
 				}
 			],
@@ -20788,7 +20828,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nasync function postFetch(url:string,body={}:object){\n   let res = await fetch(url,{\n     method:\"POST\",\n     mode: 'cors',\n      headers: {\n        'Content-Type': 'application/json'\n      },\n      body: JSON.stringify(data)\n    });\n   return await res.json();\n}\nlet addTodo = F.partial(postFetch,\"addTodos\");\nawait addTodo({id:1,text:\"todo1\",done:false,userId:123})\n\n"
+								"text": "\n```typescript\nasync function postFetch(url:string,body={}:object){\n   let res = await fetch(url,{\n     method:\"POST\",\n     mode: 'cors',\n      headers: {\n        'Content-Type': 'application/json'\n      },\n      body: JSON.stringify(data)\n    });\n   return await res.json();\n}\nlet addTodo = F.partial(postFetch,\"addTodos\");\nawait addTodo({id:1,text:\"todo1\",done:false,userId:123})\n```\n\n"
 							}
 						]
 					},
@@ -20933,7 +20973,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/partial.ts",
-									"line": 27,
+									"line": 29,
 									"character": 3
 								}
 							],
@@ -20982,7 +21022,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/partial_props.ts",
-					"line": 19,
+					"line": 21,
 					"character": 16
 				}
 			],
@@ -21002,7 +21042,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\ntype Args = {\n id:string;\n name:string;\n}\nfunction deleteName(x:Args){\n   delete obj[x.id][x.name]\n}\ngetNameAndDelete = F.partial_props(deleteName,{id:\"111\"})\ngetNameAndDelete({name:\"pranshu\"})\n"
+								"text": "\n```typescript\ntype Args = {\n id:string;\n name:string;\n}\nfunction deleteName(x:Args){\n   delete obj[x.id][x.name]\n}\ngetNameAndDelete = F.partial_props(deleteName,{id:\"111\"})\ngetNameAndDelete({name:\"pranshu\"})\n```\n"
 							}
 						]
 					},
@@ -21114,7 +21154,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/partial_props.ts",
-									"line": 22,
+									"line": 24,
 									"character": 3
 								}
 							],
@@ -21247,7 +21287,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/partial_props.ts",
-									"line": 26,
+									"line": 28,
 									"character": 3
 								}
 							],
@@ -21303,7 +21343,7 @@
 											"sources": [
 												{
 													"fileName": "utils/Object/partial_props.ts",
-													"line": 28,
+													"line": 30,
 													"character": 5
 												}
 											],
@@ -21364,7 +21404,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/partial_right.ts",
-					"line": 22,
+					"line": 24,
 					"character": 16
 				}
 			],
@@ -21383,7 +21423,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nasync function postFetch(url:string,body={}:object){\n   let res = await fetch(url,{\n     method:\"POST\",\n     mode: 'cors',\nheaders: {\n'Content-Type': 'application/json'\n},\nbody: JSON.stringify(data)\n});\nreturn await res.json();\n}\nlet postRequestFromUser = F.partial_right<[object],[string],typeof postFetch>(postFetch,{\nuser:localStorage.getItem(\"id\"),\nauthId:localStorage.getItem(\"authId\")\n})\npostRequestFromUser(\"addTodos\")\n"
+								"text": "\n```typescript\nasync function postFetch(url:string,body={}:object){\n   let res = await fetch(url,{\n     method:\"POST\",\n     mode: 'cors',\nheaders: {\n'Content-Type': 'application/json'\n},\nbody: JSON.stringify(data)\n});\nreturn await res.json();\n}\nlet postRequestFromUser = F.partial_right<[object],[string],typeof postFetch>(postFetch,{\nuser:localStorage.getItem(\"id\"),\nauthId:localStorage.getItem(\"authId\")\n})\npostRequestFromUser(\"addTodos\")\n```\n"
 							}
 						]
 					},
@@ -21524,7 +21564,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/partial_right.ts",
-									"line": 26,
+									"line": 28,
 									"character": 29
 								}
 							],
@@ -21579,7 +21619,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/path.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -21598,7 +21638,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nlet obj = { id: '1', profile: { name: 'pranshu' } };\npath<typeof obj, string>(['profile', 'name'], obj); //\"pranshu\"\n"
+								"text": "\n```typescript\nlet obj = { id: '1', profile: { name: 'pranshu' } };\npath<typeof obj, string>(['profile', 'name'], obj); //\"pranshu\"\n```\n"
 							}
 						]
 					},
@@ -21973,7 +22013,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/path.ts",
-									"line": 20,
+									"line": 22,
 									"character": 3
 								}
 							],
@@ -22037,7 +22077,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/path_or.ts",
-					"line": 14,
+					"line": 16,
 					"character": 16
 				}
 			],
@@ -22056,7 +22096,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nlet obj = { id: '1', profile: { name: 'pranshu' } };\nF.path_or('mit', ['profile', 'name'], obj); // \"pranshu\"\nF.path_or('mit', ['profile', 'age'], obj); // \"mit\"\n"
+								"text": "\n```typescript\nlet obj = { id: '1', profile: { name: 'pranshu' } };\nF.path_or('mit', ['profile', 'name'], obj); // \"pranshu\"\nF.path_or('mit', ['profile', 'age'], obj); // \"mit\"\n```\n"
 							}
 						]
 					},
@@ -22453,7 +22493,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/path_or.ts",
-									"line": 23,
+									"line": 25,
 									"character": 3
 								}
 							],
@@ -22539,7 +22579,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/path_or.ts",
-									"line": 27,
+									"line": 29,
 									"character": 3
 								}
 							],
@@ -22922,7 +22962,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/pick.ts",
-					"line": 10,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -22941,7 +22981,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.pick([\"name\",\"age\"],{id:1,name:\"pranshu\",age:24}) {name:\"pranshu\",age:24}\n"
+								"text": "\n```typescript\nF.pick([\"name\",\"age\"],{id:1,name:\"pranshu\",age:24}) {name:\"pranshu\",age:24}\n```\n"
 							}
 						]
 					},
@@ -23099,7 +23139,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/pick.ts",
-									"line": 17,
+									"line": 19,
 									"character": 3
 								}
 							],
@@ -23572,7 +23612,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/pipe.ts",
-					"line": 11,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -23591,7 +23631,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\n* function upper(x: string) {\nreturn x.toUpperCase();\n}\nconst greeting = (first: string, last: string) => first + last;\nF.compose(greeting,upper)(\"pranshu\",\"shah\") //PRANSHUSHAH\n"
+								"text": "\n```typescript\n\nfunction upper(x: string) {\nreturn x.toUpperCase();\n}\nconst greeting = (first: string, last: string) => first + last;\nF.compose(greeting,upper)(\"pranshu\",\"shah\") //PRANSHUSHAH\n```\n"
 							}
 						]
 					},
@@ -23940,7 +23980,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/pipe.ts",
-									"line": 18,
+									"line": 21,
 									"character": 3
 								}
 							],
@@ -24067,7 +24107,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/pipe.ts",
-									"line": 21,
+									"line": 24,
 									"character": 3
 								}
 							],
@@ -24245,7 +24285,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/pipe.ts",
-									"line": 25,
+									"line": 28,
 									"character": 3
 								}
 							],
@@ -24475,7 +24515,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/pipe.ts",
-									"line": 30,
+									"line": 33,
 									"character": 3
 								}
 							],
@@ -24757,7 +24797,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/pipe.ts",
-									"line": 36,
+									"line": 39,
 									"character": 3
 								}
 							],
@@ -25091,7 +25131,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/pipe.ts",
-									"line": 43,
+									"line": 46,
 									"character": 3
 								}
 							],
@@ -25515,7 +25555,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/prop.ts",
-					"line": 10,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -25534,7 +25574,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.prop({id:1,name:\"pranshu\"},\"name\") // \"pranshu\"\n"
+								"text": "\n```typescript\nF.prop({id:1,name:\"pranshu\"},\"name\") // \"pranshu\"\n```\n"
 							}
 						]
 					},
@@ -25643,7 +25683,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/prop.ts",
-									"line": 12,
+									"line": 14,
 									"character": 50
 								}
 							],
@@ -25705,7 +25745,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/prop_or.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -25724,7 +25764,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.prop_or('mit', { id: '11', author: 'pranshu' }, 'author'); // \"pranshu\"\nF.prop_or('mit', { id: '11', author: null }, 'author'); // \"mit\"\n"
+								"text": "\n```typescript\nF.prop_or('mit', { id: '11', author: 'pranshu' }, 'author'); // \"pranshu\"\nF.prop_or('mit', { id: '11', author: null }, 'author'); // \"mit\"\n```\n"
 							}
 						]
 					},
@@ -25881,7 +25921,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/prop_or.ts",
-									"line": 20,
+									"line": 22,
 									"character": 3
 								}
 							],
@@ -25982,7 +26022,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/prop_or.ts",
-									"line": 24,
+									"line": 26,
 									"character": 3
 								}
 							],
@@ -26177,7 +26217,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/prop_satisfies.ts",
-					"line": 16,
+					"line": 18,
 					"character": 16
 				}
 			],
@@ -26196,7 +26236,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction longNameChecker(name: string) {\nreturn name.length > 10;\n}\nF.prop_satisfies(longNameChecker, 'name', {\nid: '12',\nname: 'mit',\n}); // false\n"
+								"text": "\n```typescript\nfunction longNameChecker(name: string) {\nreturn name.length > 10;\n}\nF.prop_satisfies(longNameChecker, 'name', {\nid: '12',\nname: 'mit',\n}); // false\n```\n"
 							}
 						]
 					},
@@ -26390,7 +26430,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/prop_satisfies.ts",
-									"line": 25,
+									"line": 27,
 									"character": 3
 								}
 							],
@@ -26486,7 +26526,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/prop_satisfies.ts",
-									"line": 29,
+									"line": 31,
 									"character": 3
 								}
 							],
@@ -26643,7 +26683,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/prop_set.ts",
-					"line": 10,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -26662,7 +26702,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.prop_set({id:1,todo:\"doing stuff\"},\"author\",\"pranshu\") // {id:1,todo:\"doing stuff\",author:\"pranshu\"};\n"
+								"text": "\n```typescript\nF.prop_set({id:1,todo:\"doing stuff\"},\"author\",\"pranshu\") // {id:1,todo:\"doing stuff\",author:\"pranshu\"};\n```\n"
 							}
 						]
 					},
@@ -26814,7 +26854,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/prop_set.ts",
-									"line": 18,
+									"line": 20,
 									"character": 3
 								}
 							],
@@ -27091,7 +27131,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/prop_set.ts",
-									"line": 28,
+									"line": 30,
 									"character": 3
 								}
 							],
@@ -27171,7 +27211,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/props.ts",
-					"line": 9,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -27190,7 +27230,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.props({id:1,todo:\"doing stuff\",author:\"pranshu\"},[\"todo\",\"author\"]) // [\"doing suff\",\"pranshu\"]\n"
+								"text": "\n```typescript\nF.props({id:1,todo:\"doing stuff\",author:\"pranshu\"},[\"todo\",\"author\"]) // [\"doing suff\",\"pranshu\"]\n```\n"
 							}
 						]
 					},
@@ -27325,7 +27365,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/props.ts",
-									"line": 16,
+									"line": 18,
 									"character": 3
 								}
 							],
@@ -29318,7 +29358,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/reverse_arguments.ts",
-					"line": 12,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -29337,7 +29377,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction logName(name: string, age: number) {\nreturn `name is ${name} and age is ${age}`;\n}\nF.reverse_arguments(logName)(24,\"pranshu\") // name is pranshu and age is 24\n"
+								"text": "\n```typescript\nfunction logName(name: string, age: number) {\nreturn `name is ${name} and age is ${age}`;\n}\nF.reverse_arguments(logName)(24,\"pranshu\") // name is pranshu and age is 24\n```\n"
 							}
 						]
 					},
@@ -29424,7 +29464,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/reverse_arguments.ts",
-									"line": 14,
+									"line": 16,
 									"character": 3
 								}
 							],
@@ -31609,7 +31649,7 @@
 			"sources": [
 				{
 					"fileName": "utils/math/subtract.ts",
-					"line": 7,
+					"line": 10,
 					"character": 16
 				}
 			],
@@ -31625,6 +31665,10 @@
 							{
 								"tag": "description",
 								"text": "takes two numbers, y and x. returns x - y.also works in partial form."
+							},
+							{
+								"tag": "example",
+								"text": "\nF.subtract(1,4) // 3;\n\n"
 							}
 						]
 					},
@@ -31652,7 +31696,7 @@
 							"sources": [
 								{
 									"fileName": "utils/math/subtract.ts",
-									"line": 7,
+									"line": 10,
 									"character": 37
 								}
 							],
@@ -31732,7 +31776,7 @@
 			"sources": [
 				{
 					"fileName": "utils/math/sum.ts",
-					"line": 8,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -31748,6 +31792,10 @@
 							{
 								"tag": "description",
 								"text": "takes number of array returns sum of the array."
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescrtipt\nF.sum([1,2,3]) // 6\n```\n"
 							}
 						]
 					},
@@ -33235,7 +33283,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/throttle.ts",
-					"line": 13,
+					"line": 16,
 					"character": 16
 				}
 			],
@@ -33250,7 +33298,7 @@
 						"tags": [
 							{
 								"tag": "example",
-								"text": "\nwindow.addEventListener('scroll',F.throttle(function(e:Event){\n console.log(e)\n},200))\n\n"
+								"text": "\n```typescript\n\nwindow.addEventListener('scroll',F.throttle(function(e:Event){\n console.log(e)\n},200))\n```\n\n"
 							}
 						]
 					},
@@ -33407,7 +33455,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/times.ts",
-					"line": 9,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -33426,7 +33474,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.times(gt(3),5) // [false,false,false,false,true]\n"
+								"text": "\n```typescript\nF.times(gt(3),5) // [false,false,false,false,true]\n\n```\n"
 							}
 						]
 					},
@@ -33577,7 +33625,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/times.ts",
-									"line": 10,
+									"line": 13,
 									"character": 50
 								}
 							],
@@ -33625,7 +33673,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/to_pairs.ts",
-					"line": 9,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -33644,7 +33692,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.to_pair({id:1,name:\"pranshu\"}) // [[\"id\",1],[\"name\",\"pranshu\"]]\n"
+								"text": "\n```typescript\nF.to_pair({id:1,name:\"pranshu\"}) // [[\"id\",1],[\"name\",\"pranshu\"]]\n```\n"
 							}
 						]
 					},
@@ -33715,7 +33763,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/try_catch.ts",
-					"line": 20,
+					"line": 22,
 					"character": 16
 				}
 			],
@@ -33735,7 +33783,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction catcher(x: Error) {\n   return x.message;\n}\nlet gtWithCatch= F.try_catch(gt,catcher)\ngtWithCatch([1,2],[]) // true\nlet errorChecker = F.try_catch(function() {\n throw Error('error');\n},catcher)\nerrorChecker() // 'error'\n"
+								"text": "\n```typescript\nfunction catcher(x: Error) {\n   return x.message;\n}\nlet gtWithCatch= F.try_catch(gt,catcher)\ngtWithCatch([1,2],[]) // true\nlet errorChecker = F.try_catch(function() {\n throw Error('error');\n},catcher)\nerrorChecker() // 'error'\n```\n"
 							}
 						]
 					},
@@ -33885,7 +33933,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/try_catch.ts",
-									"line": 26,
+									"line": 28,
 									"character": 3
 								}
 							],
@@ -34054,7 +34102,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/try_catch.ts",
-									"line": 32,
+									"line": 34,
 									"character": 3
 								}
 							],
@@ -34083,7 +34131,7 @@
 													"sources": [
 														{
 															"fileName": "utils/Function/try_catch.ts",
-															"line": 32,
+															"line": 34,
 															"character": 15
 														}
 													],
@@ -34158,7 +34206,7 @@
 											"sources": [
 												{
 													"fileName": "utils/Function/try_catch.ts",
-													"line": 34,
+													"line": 36,
 													"character": 5
 												}
 											],
@@ -34258,7 +34306,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/unary.ts",
-					"line": 13,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -34277,7 +34325,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nfunction takesTwoArgs(x: number, y: number = 22): [number, number] {\n   return [x, y];\n}\nlet takesOneArgs = F.unary(takesTwoArgs);\ntakesOneArgs(42) // [42,22]\n"
+								"text": "\n```typescript\nfunction takesTwoArgs(x: number, y: number = 22): [number, number] {\n   return [x, y];\n}\nlet takesOneArgs = F.unary(takesTwoArgs);\ntakesOneArgs(42) // [42,22]\n```\n"
 							}
 						]
 					},
@@ -34356,7 +34404,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Function/unary.ts",
-									"line": 15,
+									"line": 17,
 									"character": 3
 								}
 							],
@@ -34421,7 +34469,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Function/uncurry.ts",
-					"line": 11,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -34440,7 +34488,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nconst addFour = a => b => c => d => a + b + c + d;\nconst uncurriedAddFour = F.uncurry(addFour);\nuncurriedAddFour(1, 2, 3, 4); //=> 10\n"
+								"text": "\n```typescript\nconst addFour = a => b => c => d => a + b + c + d;\nconst uncurriedAddFour = F.uncurry(addFour);\nuncurriedAddFour(1, 2, 3, 4); //=> 10\n```\n"
 							}
 						]
 					},
@@ -35456,7 +35504,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/values.ts",
-					"line": 9,
+					"line": 11,
 					"character": 16
 				}
 			],
@@ -35475,7 +35523,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\nF.values({id:\"1\",name:\"pranshu\",age:24}) // [1,\"pranshu\",24]\n"
+								"text": "\n```typescript\nF.values({id:\"1\",name:\"pranshu\",age:24}) // [1,\"pranshu\",24]\n```\n"
 							}
 						]
 					},
@@ -37102,6 +37150,7 @@
 						307,
 						324,
 						328,
+						345,
 						349,
 						352,
 						355,
@@ -37126,12 +37175,6 @@
 						611,
 						644,
 						654
-					]
-				},
-				{
-					"title": "Function\nlet numbers = [1,2,3,4];\nidentity(numbers) // [1,2,3,4]",
-					"children": [
-						345
 					]
 				},
 				{
@@ -37238,7 +37281,6 @@
 					"children": [
 						1,
 						10,
-						13,
 						22,
 						31,
 						34,
@@ -37248,6 +37290,12 @@
 						58,
 						61,
 						70
+					]
+				},
+				{
+					"title": "Math\n```typescript\nF.divide(2,6) // 3;\nlet divideBy3 = F.divide(3);\ndivideBy3(27) // 9\n```",
+					"children": [
+						13
 					]
 				},
 				{
