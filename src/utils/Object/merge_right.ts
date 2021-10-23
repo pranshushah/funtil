@@ -1,3 +1,4 @@
+import produce from 'immer';
 import { Merge } from 'Object/_api';
 import { partial2 } from '../internals/partial2';
 
@@ -27,7 +28,11 @@ export function merge_right<T1 extends object, T2 extends object>(
 ) {
   return partial2(
     function main(o1: T1, o2: T2) {
-      return { ...o1, ...o2 } as Merge<T2, T1>;
+      return produce(o1, (draft: any) => {
+        Object.entries(o2).forEach(([key, val]) => {
+          draft[key] = val;
+        });
+      }) as Merge<T2, T1>;
     },
     o1,
     o2

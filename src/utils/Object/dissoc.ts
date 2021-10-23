@@ -1,4 +1,4 @@
-import { O } from 'ts-toolbelt';
+import produce from 'immer';
 import { partial2 } from '../internals/partial2';
 /**
  * @description returns the object that omits prop property.also works in partial form
@@ -22,10 +22,9 @@ export function dissoc<K extends string | number | symbol>(
 export function dissoc<T extends object, K extends keyof T>(prop: K, obj?: T) {
   return partial2(
     function main(prop: K, obj: T) {
-      let result = { ...obj };
-      delete result[prop];
-      // @ts-ignore
-      return result as O.Omit<T, K>;
+      return produce(obj, (draft: T) => {
+        delete draft[prop];
+      });
     },
     prop,
     obj

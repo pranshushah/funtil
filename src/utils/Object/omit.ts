@@ -1,5 +1,6 @@
 import { for_each } from '../List/for_each';
 import { partial2 } from '../internals/partial2';
+import produce from 'immer';
 
 /**
  * @description deletes given array of keys from object and returns new copy of object; also works with partial form.
@@ -24,13 +25,11 @@ export function omit<O extends object, K extends keyof O>(
 ) {
   return partial2(
     function main(obj: O, delete_keys: K[]) {
-      let result = { ...obj };
-
-      for_each(function(val: K) {
-        delete result[val];
-      }, delete_keys);
-
-      return result as Omit<O, K>;
+      return produce(obj, (draft: O) => {
+        for_each(function(val: K) {
+          delete draft[val];
+        }, delete_keys);
+      });
     },
     obj,
     delete_keys

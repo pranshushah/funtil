@@ -1,3 +1,4 @@
+import produce from 'immer';
 import { partial3 } from '../internals/partial3';
 
 /**
@@ -35,7 +36,9 @@ export function assoc<T, U extends object, K extends string | number>(
 ) {
   return partial3(
     function main(prop: K, val: T, obj: U) {
-      return { ...obj, [prop]: val } as Record<K, T> & U;
+      return produce(obj, (draft: any) => {
+        draft[prop] = val;
+      }) as Record<K, T> & U;
     },
     prop,
     val,
