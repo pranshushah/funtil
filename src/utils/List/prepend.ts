@@ -1,3 +1,4 @@
+import produce from 'immer';
 import { partial2 } from '../internals/partial2';
 
 /**
@@ -14,7 +15,9 @@ export function prepend<T>(el: T): (arr: T[]) => T[];
 export function prepend<T>(el: T, arr?: T[]) {
   return partial2(
     function main(el: T, arr: T[]) {
-      return [el, ...arr];
+      return produce(arr, (draft: T[]) => {
+        draft.splice(0, 0, el);
+      });
     },
     el,
     arr

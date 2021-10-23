@@ -1,3 +1,4 @@
+import produce from 'immer';
 import { partial3 } from '../internals/partial3';
 
 /**
@@ -23,9 +24,9 @@ export function remove<T>(
 export function remove<T>(start: number, delete_count?: number, arr?: T[]) {
   return partial3(
     function main(start: number, delete_count: number, arr: T[]) {
-      let result: T[] = arr.slice(0);
-      result.splice(start, delete_count);
-      return result;
+      return produce(arr, draft => {
+        draft.splice(start, delete_count);
+      });
     },
     start,
     delete_count,

@@ -1,4 +1,5 @@
 import { partial3 } from '../internals/partial3';
+import produce, { castDraft } from 'immer';
 
 /**
  * @description this function takes index,function and array as an argument.then passes the element at given index to the function and return value is set as new value at given index in array.
@@ -40,11 +41,11 @@ export function adjust<T>(
 ) {
   return partial3(
     function main(index: number, fn: (arg: T) => T, arr: readonly T[]) {
-      const ret_array = arr.slice(0, arr.length);
-      const main_index =
-        index >= arr.length || index < 0 ? arr.length - 1 : index;
-      ret_array[main_index] = fn(ret_array[main_index]);
-      return ret_array;
+      return produce(arr, draft => {
+        const main_index =
+          index >= draft.length || index < 0 ? draft.length - 1 : index;
+        draft[main_index] = castDraft(fn(arr[main_index]));
+      });
     },
     index,
     fn,

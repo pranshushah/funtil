@@ -1,3 +1,4 @@
+import produce from 'immer';
 import { partial3 } from '../internals/partial3';
 /**
  * @description insert array of elements at given index of array and returns new copy of array., also works on partial form.
@@ -40,11 +41,9 @@ export function insert_all<T>(
       elements: readonly T[],
       arr: readonly T[]
     ) {
-      return [
-        ...arr.slice(0, insert_index),
-        ...elements,
-        ...arr.slice(insert_index, arr.length),
-      ];
+      return produce(arr, (draft: T[]) => {
+        draft.splice(insert_index, 0, ...elements);
+      });
     },
     insert_index,
     elements,

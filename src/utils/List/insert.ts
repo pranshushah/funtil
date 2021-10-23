@@ -1,3 +1,4 @@
+import produce from 'immer';
 import { partial3 } from '../internals/partial3';
 
 /**
@@ -33,9 +34,9 @@ export function insert<T>(
 ) {
   return partial3(
     function main(insert_index: number, element: T, arr: readonly T[]) {
-      let return_arr = arr.slice(0, arr.length);
-      return_arr.splice(insert_index, 0, element);
-      return return_arr;
+      return produce(arr, (draft: T[]) => {
+        draft.splice(insert_index, 0, element);
+      });
     },
     insert_index,
     element,

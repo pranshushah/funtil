@@ -1,3 +1,4 @@
+import produce from 'immer';
 import { partial3 } from '../internals/partial3';
 
 /**
@@ -23,11 +24,11 @@ export function update(
 export function update<T>(n: number, el?: T, elements?: readonly T[]) {
   return partial3(
     function main(n: number, el: T, elements: readonly T[]) {
-      let result = elements.slice();
-      const index =
-        n < 0 || isNaN(n) || n >= result.length ? result.length - 1 : n;
-      result[index] = el;
-      return result;
+      return produce(elements, (draft: T[]) => {
+        const index =
+          n < 0 || isNaN(n) || n >= draft.length ? draft.length - 1 : n;
+        draft[index] = el;
+      });
     },
     n,
     el,
