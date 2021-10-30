@@ -5,7 +5,7 @@ import { add } from './add';
  * @description takes number of array returns sum of the array.
  * @category Math
  * @example
- * ```typescrtipt
+ * ```typescript
  * F.sum([1,2,3]) // 6
  * ```
  */

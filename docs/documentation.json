@@ -231,7 +231,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/adjust.ts",
-					"line": 19,
+					"line": 20,
 					"character": 16
 				}
 			],
@@ -434,7 +434,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/adjust.ts",
-									"line": 28,
+									"line": 29,
 									"character": 3
 								}
 							],
@@ -509,7 +509,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/adjust.ts",
-									"line": 32,
+									"line": 33,
 									"character": 3
 								}
 							],
@@ -1914,7 +1914,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/assoc.ts",
-					"line": 13,
+					"line": 14,
 					"character": 16
 				}
 			],
@@ -2134,7 +2134,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/assoc.ts",
-									"line": 22,
+									"line": 23,
 									"character": 3
 								}
 							],
@@ -2247,7 +2247,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/assoc.ts",
-									"line": 26,
+									"line": 27,
 									"character": 3
 								}
 							],
@@ -14083,7 +14083,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/insert.ts",
-					"line": 11,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -14216,7 +14216,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/insert.ts",
-									"line": 20,
+									"line": 21,
 									"character": 3
 								}
 							],
@@ -14291,7 +14291,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/insert.ts",
-									"line": 24,
+									"line": 25,
 									"character": 3
 								}
 							],
@@ -14446,7 +14446,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/insert_all.ts",
-					"line": 14,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -14597,7 +14597,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/insert_all.ts",
-									"line": 23,
+									"line": 24,
 									"character": 3
 								}
 							],
@@ -14672,7 +14672,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/insert_all.ts",
-									"line": 27,
+									"line": 28,
 									"character": 3
 								}
 							],
@@ -18386,7 +18386,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/merge_left.ts",
-					"line": 14,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -18520,7 +18520,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/merge_left.ts",
-									"line": 21,
+									"line": 22,
 									"character": 3
 								}
 							],
@@ -18590,7 +18590,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/merge_right.ts",
-					"line": 15,
+					"line": 16,
 					"character": 16
 				}
 			],
@@ -18724,7 +18724,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/merge_right.ts",
-									"line": 22,
+									"line": 23,
 									"character": 3
 								}
 							],
@@ -20232,7 +20232,7 @@
 			"sources": [
 				{
 					"fileName": "utils/Object/omit.ts",
-					"line": 12,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -20408,7 +20408,7 @@
 							"sources": [
 								{
 									"fileName": "utils/Object/omit.ts",
-									"line": 19,
+									"line": 20,
 									"character": 3
 								}
 							],
@@ -25393,7 +25393,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/prepend.ts",
-					"line": 11,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -25503,7 +25503,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/prepend.ts",
-									"line": 12,
+									"line": 13,
 									"character": 35
 								}
 							],
@@ -28774,7 +28774,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/remove.ts",
-					"line": 11,
+					"line": 12,
 					"character": 16
 				}
 			],
@@ -28904,7 +28904,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/remove.ts",
-									"line": 15,
+									"line": 16,
 									"character": 3
 								}
 							],
@@ -28984,7 +28984,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/remove.ts",
-									"line": 18,
+									"line": 19,
 									"character": 3
 								}
 							],
@@ -31795,7 +31795,7 @@
 							},
 							{
 								"tag": "example",
-								"text": "\n```typescrtipt\nF.sum([1,2,3]) // 6\n```\n"
+								"text": "\n```typescript\nF.sum([1,2,3]) // 6\n```\n"
 							}
 						]
 					},
@@ -35138,7 +35138,7 @@
 			"sources": [
 				{
 					"fileName": "utils/List/update.ts",
-					"line": 14,
+					"line": 15,
 					"character": 16
 				}
 			],
@@ -35274,7 +35274,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/update.ts",
-									"line": 15,
+									"line": 16,
 									"character": 45
 								}
 							],
@@ -35349,7 +35349,7 @@
 							"sources": [
 								{
 									"fileName": "utils/List/update.ts",
-									"line": 18,
+									"line": 19,
 									"character": 3
 								}
 							],
