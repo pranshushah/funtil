@@ -2438,6 +2438,896 @@
 			]
 		},
 		{
+			"id": 2526,
+			"name": "async_delay",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "utils/async/async_delay.ts",
+					"line": 11,
+					"character": 16
+				}
+			],
+			"signatures": [
+				{
+					"id": 2527,
+					"name": "async_delay",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"returns": "Promise that resolves in given time.",
+						"tags": [
+							{
+								"tag": "description",
+								"text": "async function that resolves after given milisecond with value we provide."
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescript\nawait F.delay(300,23) // returns 23 after 300 miliseconds.\n```\n"
+							}
+						]
+					},
+					"typeParameter": [
+						{
+							"id": 2528,
+							"name": "T",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {}
+						}
+					],
+					"parameters": [
+						{
+							"id": 2529,
+							"name": "delay",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "time you want wait for your promise to resolve.(in milisecond.)"
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 2530,
+							"name": "x",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "value you want return with resolve function."
+							},
+							"type": {
+								"type": "reference",
+								"id": 2528,
+								"name": "T"
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "union",
+								"types": [
+									{
+										"type": "reference",
+										"id": 2528,
+										"name": "T"
+									},
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									}
+								]
+							}
+						],
+						"name": "Promise"
+					}
+				}
+			]
+		},
+		{
+			"id": 2531,
+			"name": "async_filter",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "utils/async/async_filter.ts",
+					"line": 18,
+					"character": 22
+				}
+			],
+			"signatures": [
+				{
+					"id": 2532,
+					"name": "async_filter",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"tags": [
+							{
+								"tag": "description",
+								"text": "takes an array and predication function(which returns promise) and returns an array for which predication function returns true.all the predication functions are being evaluate in parallel but the final result will be same as original array."
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescript\nasync function isPremiumUser(userName:string):Promise<boolean>{\n  let res = await fetch(`someUrlTocheckPremiumUser?name=${userName}`);\n  let data =  await res.json();\n  return data.isPremiumUser\n}\nlet premiumUsers = await F.async_filter([\"pranshu_44\",\"mit_123\",\"sanket_69\",\"kartik_99\"],isPremiumUser) // [\"pranshu_44\",\"sanket_69\"]\n```\n"
+							}
+						]
+					},
+					"typeParameter": [
+						{
+							"id": 2533,
+							"name": "T",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {}
+						}
+					],
+					"parameters": [
+						{
+							"id": 2534,
+							"name": "arr",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "array you want to filter"
+							},
+							"type": {
+								"type": "typeOperator",
+								"operator": "readonly",
+								"target": {
+									"type": "array",
+									"elementType": {
+										"type": "reference",
+										"id": 2533,
+										"name": "T"
+									}
+								}
+							}
+						},
+						{
+							"id": 2535,
+							"name": "predicate_fn",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "filter function"
+							},
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 2536,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 2537,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 2538,
+													"name": "value",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "reference",
+														"id": 2533,
+														"name": "T"
+													}
+												},
+												{
+													"id": 2539,
+													"name": "index",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "number"
+													}
+												},
+												{
+													"id": 2540,
+													"name": "arr",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "typeOperator",
+														"operator": "readonly",
+														"target": {
+															"type": "array",
+															"elementType": {
+																"type": "reference",
+																"id": 2533,
+																"name": "T"
+															}
+														}
+													}
+												}
+											],
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "boolean"
+													}
+												],
+												"name": "Promise"
+											}
+										}
+									]
+								}
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 2533,
+									"name": "T"
+								}
+							}
+						],
+						"name": "Promise"
+					}
+				}
+			]
+		},
+		{
+			"id": 2541,
+			"name": "async_for_each",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "utils/async/async_for_each.ts",
+					"line": 14,
+					"character": 22
+				}
+			],
+			"signatures": [
+				{
+					"id": 2542,
+					"name": "async_for_each",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"tags": [
+							{
+								"tag": "description",
+								"text": "same as `F.for_each()` but callback functions will be called asynchronously."
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescript\nasync function deleteFile(file:string) {\nawait fs.unlink(file);\n};\nawait F.async_for_each([\"pranshu.txt\",\"mit.txt\",\"kartik.txt\"],deleteFile);\n```\n"
+							}
+						]
+					},
+					"typeParameter": [
+						{
+							"id": 2543,
+							"name": "T",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {}
+						}
+					],
+					"parameters": [
+						{
+							"id": 2544,
+							"name": "xs",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "array you want to loop over."
+							},
+							"type": {
+								"type": "typeOperator",
+								"operator": "readonly",
+								"target": {
+									"type": "array",
+									"elementType": {
+										"type": "reference",
+										"id": 2543,
+										"name": "T"
+									}
+								}
+							}
+						},
+						{
+							"id": 2545,
+							"name": "Fn",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "async function want call on every element."
+							},
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 2546,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 2547,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 2548,
+													"name": "item",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "reference",
+														"id": 2543,
+														"name": "T"
+													}
+												},
+												{
+													"id": 2549,
+													"name": "index",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "number"
+													}
+												},
+												{
+													"id": 2550,
+													"name": "original_list",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "typeOperator",
+														"operator": "readonly",
+														"target": {
+															"type": "array",
+															"elementType": {
+																"type": "reference",
+																"id": 2543,
+																"name": "T"
+															}
+														}
+													}
+												}
+											],
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "any"
+													}
+												],
+												"name": "Promise"
+											}
+										}
+									]
+								}
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "typeOperator",
+								"operator": "readonly",
+								"target": {
+									"type": "array",
+									"elementType": {
+										"type": "reference",
+										"id": 2543,
+										"name": "T"
+									}
+								}
+							}
+						],
+						"name": "Promise"
+					}
+				}
+			]
+		},
+		{
+			"id": 2551,
+			"name": "async_map",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "utils/async/async_map.ts",
+					"line": 17,
+					"character": 22
+				}
+			],
+			"signatures": [
+				{
+					"id": 2552,
+					"name": "async_map",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"tags": [
+							{
+								"tag": "description",
+								"text": "takes an array and mapper function that returns a promise and returns an array with mapped values.all the element in array are passed to the mapper functions in parallel but the final result will be same as original array."
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescript\n async function getTotalPosts(userName:string):Promise<number>{\n let res = await fetch(`someUrlTogetPosts?name=${userName}`);\n  let data =  await res.json();\n  return data.totalPosts;\n}\nlet posts = await F.async_map([\"pranshu_44\",\"mit_123\",\"sanket_69\",\"kartik_99\"],getTotalPosts) // [12,2,3,1];\n```\n"
+							}
+						]
+					},
+					"typeParameter": [
+						{
+							"id": 2553,
+							"name": "T",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {}
+						},
+						{
+							"id": 2554,
+							"name": "V",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {}
+						}
+					],
+					"parameters": [
+						{
+							"id": 2555,
+							"name": "arr",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "array you want to map."
+							},
+							"type": {
+								"type": "typeOperator",
+								"operator": "readonly",
+								"target": {
+									"type": "array",
+									"elementType": {
+										"type": "reference",
+										"id": 2553,
+										"name": "T"
+									}
+								}
+							}
+						},
+						{
+							"id": 2556,
+							"name": "fn",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "function that will map the given element to the new element."
+							},
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 2557,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 2558,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 2559,
+													"name": "value",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "reference",
+														"id": 2553,
+														"name": "T"
+													}
+												},
+												{
+													"id": 2560,
+													"name": "index",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "number"
+													}
+												},
+												{
+													"id": 2561,
+													"name": "arr",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "typeOperator",
+														"operator": "readonly",
+														"target": {
+															"type": "array",
+															"elementType": {
+																"type": "reference",
+																"id": 2553,
+																"name": "T"
+															}
+														}
+													}
+												}
+											],
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "reference",
+														"id": 2554,
+														"name": "V"
+													}
+												],
+												"name": "Promise"
+											}
+										}
+									]
+								}
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 2554,
+									"name": "V"
+								}
+							}
+						],
+						"name": "Promise"
+					}
+				}
+			]
+		},
+		{
+			"id": 2562,
+			"name": "async_retry",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "utils/async/async_retry.ts",
+					"line": 34,
+					"character": 16
+				}
+			],
+			"signatures": [
+				{
+					"id": 2563,
+					"name": "async_retry",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"tags": [
+							{
+								"tag": "description",
+								"text": "takes a function and optinal options object and returns a function, which will try to call our async function maximum attempts times(default **10**).if task is successful it will return that result and of task is not successful after all attempts it will throw error."
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescript\nasync function isPaymentCompleted(id:string){\n let res = await fetch(`paymentCompletedchecker.com?id=${id}`);\n let data = await res.json();\n if(data.isPaymentCompleted){\n    return true;\n }else{\n   throw new Error(\"payment is pending\");\n }\n}\nlet paymentCheckerWatcher = async async_retry(isPaymentCompleted,{delayInMs:100});\nlet result = await paymentCheckerWatcher(\"123\"); // isPaymentCompleted function is called maximum 10 times until it does not throw error and it returns the value. and it wait for 100ms between each call.\n```\n"
+							}
+						]
+					},
+					"typeParameter": [
+						{
+							"id": 2567,
+							"name": "Fn",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {},
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 2564,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 2565,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 2566,
+													"name": "args",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isRest": true
+													},
+													"type": {
+														"type": "array",
+														"elementType": {
+															"type": "intrinsic",
+															"name": "any"
+														}
+													}
+												}
+											],
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "any"
+													}
+												],
+												"name": "Promise"
+											}
+										}
+									]
+								}
+							}
+						}
+					],
+					"parameters": [
+						{
+							"id": 2568,
+							"name": "fn",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "function you want call."
+							},
+							"type": {
+								"type": "reference",
+								"id": 2567,
+								"name": "Fn"
+							}
+						},
+						{
+							"id": 2569,
+							"name": "options",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "optional options object."
+							},
+							"type": {
+								"type": "reference",
+								"name": "retryOptions"
+							}
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 2570,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "utils/async/async_retry.ts",
+									"line": 37,
+									"character": 3
+								}
+							],
+							"signatures": [
+								{
+									"id": 2571,
+									"name": "__type",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {},
+									"parameters": [
+										{
+											"id": 2572,
+											"name": "args",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isRest": true
+											},
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "reference",
+														"id": 2567,
+														"name": "Fn"
+													}
+												],
+												"name": "OvarloadedParameters"
+											}
+										}
+									],
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "reference",
+														"id": 2567,
+														"name": "Fn"
+													}
+												],
+												"name": "OverloadedReturnType"
+											},
+											{
+												"type": "reference",
+												"name": "Error"
+											}
+										]
+									}
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 2573,
+			"name": "async_timeout",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "utils/async/async_timeout.ts",
+					"line": 19,
+					"character": 22
+				}
+			],
+			"signatures": [
+				{
+					"id": 2574,
+					"name": "async_timeout",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"tags": [
+							{
+								"tag": "description",
+								"text": "if given promises does not resolves in given time it throws error."
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescript\ntry{\n\n let res = await F.async_timeout(\nfetch(\"https://jsonplaceholder.typicode.com/todos/1\"),\n10000\n);\nconsole.log(res) // if reques does resolve in 10000 ms it log the response.\n}catch(e){\nconosle.error(e) // if request does not resolve in 10000 ms it will thorw error.\n}\n```\n"
+							}
+						]
+					},
+					"typeParameter": [
+						{
+							"id": 2575,
+							"name": "T",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {}
+						}
+					],
+					"parameters": [
+						{
+							"id": 2576,
+							"name": "x",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "Promise you want timeout."
+							},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 2575,
+										"name": "T"
+									}
+								],
+								"name": "Promise"
+							}
+						},
+						{
+							"id": 2577,
+							"name": "timeout",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"shortText": "value of timeout in milisecond."
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"id": 2575,
+								"name": "T"
+							}
+						],
+						"name": "Promise"
+					}
+				}
+			]
+		},
+		{
 			"id": 84,
 			"name": "binary",
 			"kind": 64,
@@ -6513,7 +7403,7 @@
 			"sources": [
 				{
 					"fileName": "utils/math/divide.ts",
-					"line": 12,
+					"line": 13,
 					"character": 16
 				}
 			],
@@ -6529,6 +7419,10 @@
 							{
 								"tag": "description",
 								"text": "takes two number and divides second number by first number.also works in partial form."
+							},
+							{
+								"tag": "example",
+								"text": "\n```typescript\nF.divide(2,6) // 3;\nlet divideBy3 = F.divide(3);\ndivideBy3(27) // 9\n```\n"
 							}
 						]
 					},
@@ -6591,7 +7485,7 @@
 							"sources": [
 								{
 									"fileName": "utils/math/divide.ts",
-									"line": 13,
+									"line": 14,
 									"character": 35
 								}
 							],
@@ -36984,6 +37878,12 @@
 				730,
 				741,
 				2040,
+				2526,
+				2531,
+				2541,
+				2551,
+				2562,
+				2573,
 				84,
 				2420,
 				99,
@@ -37281,6 +38181,7 @@
 					"children": [
 						1,
 						10,
+						13,
 						22,
 						31,
 						34,
@@ -37290,12 +38191,6 @@
 						58,
 						61,
 						70
-					]
-				},
-				{
-					"title": "Math\n```typescript\nF.divide(2,6) // 3;\nlet divideBy3 = F.divide(3);\ndivideBy3(27) // 9\n```",
-					"children": [
-						13
 					]
 				},
 				{
@@ -37327,6 +38222,12 @@
 				{
 					"title": "Other",
 					"children": [
+						2526,
+						2531,
+						2541,
+						2551,
+						2562,
+						2573,
 						1139
 					]
 				}

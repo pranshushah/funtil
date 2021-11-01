@@ -3,6 +3,13 @@
  * @param xs array you want to loop over.
  * @param Fn async function want call on every element.
  * @returns
+ * @example
+ * ```typescript
+ * async function deleteFile(file:string) {
+    await fs.unlink(file);
+  };
+  await F.async_for_each(["pranshu.txt","mit.txt","kartik.txt"],deleteFile);
+ * ```
  */
 export async function async_for_each<T>(
   xs: readonly T[],

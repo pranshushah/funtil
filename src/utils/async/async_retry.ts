@@ -15,8 +15,21 @@ export interface retryOptions {
 /**
  * @description takes a function and optinal options object and returns a function, which will try to call our async function maximum attempts times(default **10**).if task is successful it will return that result and of task is not successful after all attempts it will throw error.
  * @param fn function you want call.
- * @param options
- * @returns
+ * @param options optional options object.
+ * @example
+ * ```typescript
+ * async function isPaymentCompleted(id:string){
+ *  let res = await fetch(`paymentCompletedchecker.com?id=${id}`);
+ *  let data = await res.json();
+ *  if(data.isPaymentCompleted){
+ *     return true;
+ *  }else{
+ *    throw new Error("payment is pending");
+ *  }
+ * }
+ * let paymentCheckerWatcher = async async_retry(isPaymentCompleted,{delayInMs:100});
+ * let result = await paymentCheckerWatcher("123"); // isPaymentCompleted function is called maximum 10 times until it does not throw error and it returns the value. and it wait for 100ms between each call.
+ * ```
  */
 export function async_retry<Fn extends (...args: any[]) => Promise<any>>(
   fn: Fn,

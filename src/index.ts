@@ -3,6 +3,6 @@ export * from './utils/Function';
 export * from './utils/List';
 export * from './utils/Object';
 export * from './utils/Logic';
-// import F from './utils';
-
-// export default F;
+export * from './utils/async';
+import F from './utils';
+export default F;
