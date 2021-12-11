@@ -1,5 +1,6 @@
 import { equals } from '../math/equals';
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 /**
  * @description it checks whether given element is in array or not. it uses F.equals,also works with partial form.
  * @category List
@@ -10,6 +11,10 @@ import { curried2 } from '../internals/curried2';
  * ```
  */
 export function includes<T = any>(target: T, source: T[]): boolean;
+export function includes<T = any>(
+  x: Placeholder,
+  source: T[]
+): (target: T) => boolean;
 export function includes<T = any>(target: T): (source: T[]) => boolean;
 
 export function includes<T = any>(target: T, source?: T[]) {

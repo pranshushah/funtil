@@ -1,5 +1,6 @@
 import {O,T} from 'ts-toolbelt';
 export type Head<T extends any[]> = T extends ([any,...any[]])?T[0]:never;
+import {__} from './constant/constant';
 
 type Tail<T extends any[]> = T extends ([_:any,...tail:infer A ])?A :[];
 
@@ -44,3 +45,5 @@ export type MergeAll<Os extends readonly object[]> =
       ? T.UnionOf<Os> // so we output the approximate types
       : M             // otherwise, we can get accurate types
     : never;
+
+export type Placeholder = typeof __;

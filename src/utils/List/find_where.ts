@@ -1,6 +1,7 @@
 import { find } from './find';
 import { curried2 } from '../internals/curried2';
 import { is_match } from '../Function/is_match';
+import { Placeholder } from '../types';
 
 /**
  *
@@ -17,7 +18,12 @@ export function find_where<T extends Record<string | number, any>>(
 ): T;
 
 export function find_where<T extends Record<string | number, any>>(
-  matcher: Partial<T>,
+  x: Placeholder,
+  list: T[]
+): (matcher: Partial<T>) => T;
+
+export function find_where<T extends Record<string | number, any>>(
+  matcher: Partial<T> | Placeholder,
   list?: T[]
 ) {
   return curried2(

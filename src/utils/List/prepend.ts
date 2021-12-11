@@ -1,5 +1,6 @@
 import produce from 'immer';
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * @description takes an element and array.adds that element at the start of the array.it returns new copy of array;also works with partial form.
@@ -10,9 +11,10 @@ import { curried2 } from '../internals/curried2';
  * ```
  */
 export function prepend<T>(el: T, arr: T[]): T[];
+export function prepend<T>(x: Placeholder, arr: T[]): (el: T) => T[];
 export function prepend<T>(el: T): (arr: T[]) => T[];
 
-export function prepend<T>(el: T, arr?: T[]) {
+export function prepend<T>(el: T | Placeholder, arr?: T[]) {
   return curried2(
     function main(el: T, arr: T[]) {
       return produce(arr, (draft: T[]) => {

@@ -1,4 +1,5 @@
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * @description returns an array of all elements for which predicate function returns true,also works with partial argument.
@@ -18,11 +19,18 @@ export function filter<T>(
 ): T[];
 
 export function filter<T>(
+  x: Placeholder,
+  arr: readonly T[]
+): (predicate_fn: (arg: T, index: number, arr: readonly T[]) => boolean) => T[];
+
+export function filter<T>(
   predicate_fn: (arg: T, index: number, arr: readonly T[]) => boolean
 ): (arr: readonly T[]) => T[];
 
 export function filter<T>(
-  predicate_fn: (arg: T, index: number, arr: readonly T[]) => boolean,
+  predicate_fn:
+    | ((arg: T, index: number, arr: readonly T[]) => boolean)
+    | Placeholder,
   arr?: readonly T[]
 ) {
   return curried2(

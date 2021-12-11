@@ -1,6 +1,7 @@
 import { take_last } from './take_last';
 import { equals } from '../math/equals';
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * @description checks if given list ends with provided sublist. it uses F.equals
@@ -12,9 +13,17 @@ import { curried2 } from '../internals/curried2';
  * ```
  */
 
+export function ends_with<T extends any[]>(
+  x: Placeholder,
+  xs: T
+): (suffix: T) => boolean;
 export function ends_with<T extends any[]>(suffix: T, xs: T): boolean;
 export function ends_with<T extends any[]>(suffix: T): (xs: T) => boolean;
 
+export function ends_with(
+  x: Placeholder,
+  xs: string
+): (suffix: string) => boolean;
 export function ends_with(suffix: string, xs: string): boolean;
 export function ends_with(suffix: string): (xs: string) => boolean;
 

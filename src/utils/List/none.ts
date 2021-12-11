@@ -1,4 +1,5 @@
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * @description returns true if predication function returns false for all the value of array, otherwise it returns false; also works with partial form.
@@ -24,9 +25,13 @@ import { curried2 } from '../internals/curried2';
  * ```
  */
 export function none<T>(fn: (arg: T) => boolean, arr: T[]): boolean;
+export function none<T>(
+  x: Placeholder,
+  arr: T[]
+): (fn: (arg: T) => boolean) => boolean;
 export function none<T>(fn: (arg: T) => boolean): (arr: T[]) => boolean;
 
-export function none<T>(fn: (arg: T) => boolean, arr?: T[]) {
+export function none<T>(fn: ((arg: T) => boolean) | Placeholder, arr?: T[]) {
   return curried2(
     function main(fn: (arg: T) => boolean, arr: T[]) {
       for (let index = 0; index < arr.length; index++) {

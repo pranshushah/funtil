@@ -1,5 +1,6 @@
 import { for_each } from './for_each';
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 export function index_by<T, K extends string | number = string>(
   fn: (a: T) => K,
@@ -7,11 +8,16 @@ export function index_by<T, K extends string | number = string>(
 ): { [key in K]: T };
 
 export function index_by<T, K extends string | number = string>(
+  x: Placeholder,
+  list: readonly T[]
+): (fn: (a: T) => K) => { [key in K]: T };
+
+export function index_by<T, K extends string | number = string>(
   fn: (a: T) => K
 ): (list: readonly T[]) => { [key in K]: T };
 
 export function index_by<T, K extends string | number = string>(
-  fn: (a: T) => K,
+  fn: ((a: T) => K) | Placeholder,
   list?: readonly T[]
 ) {
   return curried2(

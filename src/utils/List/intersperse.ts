@@ -1,5 +1,6 @@
 import { for_each } from './for_each';
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * @description creates a new array that adds separator between the elements , also works in partial form.
@@ -11,6 +12,7 @@ import { curried2 } from '../internals/curried2';
  * ```
  */
 export function intersperse<T>(x: T, xs: readonly T[]): T[];
+export function intersperse<T>(x: Placeholder, xs: readonly T[]): (x: T) => T[];
 export function intersperse<T>(x: T): (xs: readonly T[]) => T[];
 export function intersperse<T>(x: T, xs?: readonly T[]) {
   return curried2(

@@ -1,4 +1,5 @@
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * @description take two element. that can be either string or array and returns the concated version.it will throw error if we pass one string and one array.it also take partial arguments
@@ -10,13 +11,20 @@ import { curried2 } from '../internals/curried2';
  * F.concat("pranshu ","shah") // "pranshu shah"
  * ```
  */
-export function concat<T extends readonly any[]>(arg1: T, arg2: T): T;
-export function concat<T extends readonly any[]>(arg1: T): (arg2: T) => T;
-export function concat(arg1: string): (arg2: string) => string;
-export function concat(arg1: string, arg2: string): string;
 
 export function concat<T extends readonly any[]>(
-  arg1: T | string,
+  x: Placeholder,
+  arg2: T
+): (arg1: T) => T;
+export function concat<T extends readonly any[]>(arg1: T, arg2: T): T;
+export function concat<T extends readonly any[]>(arg1: T): (arg2: T) => T;
+export function concat<T extends readonly any[]>(x: Placeholder, arg2: T): T;
+export function concat(arg1: string): (arg2: string) => string;
+export function concat(arg1: string, arg2: string): string;
+export function concat(x: Placeholder, arg2: string): (arg1: string) => string;
+
+export function concat<T extends readonly any[]>(
+  arg1: T | string | Placeholder,
   arg2?: T | string
 ) {
   return curried2(

@@ -1,4 +1,5 @@
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * @description wrapper around [Array.prototype.join()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
@@ -11,9 +12,10 @@ import { curried2 } from '../internals/curried2';
  * ```
  */
 export function join(s: string, arr: any[]): string;
+export function join(x: Placeholder, arr: any[]): (s: string) => string;
 export function join(s: string): (arr: any[]) => string;
 
-export function join(s: string, arr?: any[]) {
+export function join(s: string | Placeholder, arr?: any[]) {
   return curried2(
     function main(s: string, arr: any[]) {
       return arr.join(s);

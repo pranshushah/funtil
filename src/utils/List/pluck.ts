@@ -2,7 +2,7 @@ import { map } from './map';
 import { prop } from '../Object/prop';
 import { partial_right } from '../Function/partial_right';
 import { curried2 } from '../internals/curried2';
-import { Any_Obj } from '../types';
+import { Any_Obj, Placeholder } from '../types';
 
 type passing_prop = <T extends object>(
   obj: T,
@@ -25,12 +25,17 @@ export function pluck<T extends Any_Obj>(
   key: keyof T,
   arr: readonly T[]
 ): T[keyof T][];
+
+export function pluck<T extends Any_Obj>(
+  x: Placeholder,
+  arr: readonly T[]
+): (key: keyof T) => T[keyof T][];
 export function pluck(
   key: string | number | symbol
 ): <T>(arr: readonly T[]) => T[keyof T][];
 
 export function pluck<T extends object, K extends keyof T>(
-  key: K,
+  key: K | Placeholder,
   arr?: readonly T[]
 ) {
   return curried2(

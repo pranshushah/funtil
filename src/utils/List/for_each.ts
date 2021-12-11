@@ -1,4 +1,5 @@
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * @description takes a function and an array, and calls that function on every element of array.
@@ -17,11 +18,16 @@ export function for_each<T>(
 ): T[];
 
 export function for_each<T>(
+  x: Placeholder,
+  arr: readonly T[]
+): (fn: (arg: T, index: number, arr: readonly T[]) => void) => T[];
+
+export function for_each<T>(
   fn: (arg: T, index: number, arr: readonly T[]) => void
 ): (arr: readonly T[]) => T[];
 
 export function for_each<T>(
-  fn: (arg: T, index: number, arr: readonly T[]) => void,
+  fn: ((arg: T, index: number, arr: readonly T[]) => void) | Placeholder,
   arr?: readonly T[]
 ) {
   return curried2(

@@ -1,5 +1,6 @@
 import { curried2 } from '../internals/curried2';
 import { L } from 'ts-toolbelt';
+import { Placeholder } from '../types';
 /**
  *@description drops elements from last until predication function returns false and it returns new copy of dropped .works also with partial arguments.
  *@category List
@@ -12,6 +13,10 @@ import { L } from 'ts-toolbelt';
  *F.drop_last_while((s: string) => s !== 'n', 'pranshu'); // 'pran'
  *```
  */
+export function drop_last_while<T extends any[]>(
+  x: Placeholder,
+  xs: T
+): (predicate_fn: (arg: L.UnionOf<T>) => boolean) => T;
 export function drop_last_while<T extends any[]>(
   predicate_fn: (arg: L.UnionOf<T>) => boolean,
   xs: T
@@ -29,7 +34,7 @@ export function drop_last_while(
 ): (xs: string) => string;
 
 export function drop_last_while<T extends any[]>(
-  predicate_fn: (arg: L.UnionOf<T> | string) => boolean,
+  predicate_fn: ((arg: L.UnionOf<T> | string) => boolean) | Placeholder,
   xs?: T | string
 ) {
   return curried2(

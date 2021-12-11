@@ -1,5 +1,6 @@
 import { L } from 'ts-toolbelt';
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * @description drops elements from front until predcation function returns false and returns copy of that array or string.also wokrs in partial form
@@ -14,6 +15,11 @@ import { curried2 } from '../internals/curried2';
  *F.drop_while((s: string) => s !== 'n', 'pranshu'); // 'nshu'
  * ```
  */
+
+export function drop_while<T extends any[]>(
+  x: Placeholder,
+  xs: T
+): (predicate_fn: (arg: L.UnionOf<T>) => boolean) => T;
 
 export function drop_while<T extends any[]>(
   predicate_fn: (arg: L.UnionOf<T>) => boolean,
@@ -33,7 +39,7 @@ export function drop_while(
 ): (xs: string) => string;
 
 export function drop_while<T extends any[]>(
-  predicate_fn: (arg: L.UnionOf<T> | string) => boolean,
+  predicate_fn: ((arg: L.UnionOf<T> | string) => boolean) | Placeholder,
   xs?: T | string
 ) {
   return curried2(

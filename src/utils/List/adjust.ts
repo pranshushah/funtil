@@ -1,4 +1,4 @@
-import { partial3 } from '../internals/curried3';
+import { curried3 } from '../internals/curried3';
 import produce, { castDraft } from 'immer';
 
 /**
@@ -39,7 +39,7 @@ export function adjust<T>(
   fn?: (arg: T) => T,
   arr?: readonly T[]
 ) {
-  return partial3(
+  return curried3(
     function main(index: number, fn: (arg: T) => T, arr: readonly T[]) {
       return produce(arr, draft => {
         const main_index =

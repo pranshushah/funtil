@@ -1,5 +1,6 @@
 import { curried2 } from '../internals/curried2';
 import { equals } from '../math/equals';
+import { Placeholder } from '../types';
 
 /**
  * @description returns last index of given element in array.returns -1 if no element is found.uses ```F.equals``` , also works with partial form.
@@ -12,9 +13,12 @@ import { equals } from '../math/equals';
  * ```
  */
 export function last_index_of<T>(item: T, arr: readonly T[]): number;
+export function last_index_of<T>(
+  x: Placeholder,
+  arr: readonly T[]
+): (item: T) => number;
 export function last_index_of<T>(item: T): (arr: readonly T[]) => number;
-
-export function last_index_of<T>(item: T, arr?: readonly T[]) {
+export function last_index_of<T>(item: T | Placeholder, arr?: readonly T[]) {
   return curried2(
     function main(item: T, arr: readonly T[]) {
       let return_index = -1;

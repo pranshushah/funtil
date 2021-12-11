@@ -1,4 +1,5 @@
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 /**
  * @description drops any number of elements you want from back array or string and returns new copy of or array or string.if you provide number > number of elements in array it does not drop any element and if you provide negative number it will not drop any element.
  * @category List
@@ -8,6 +9,10 @@ import { curried2 } from '../internals/curried2';
  * F.drop_last("pranshu",3) // 'pran'
  * ```
  */
+export function drop_last<T extends any[]>(
+  x: Placeholder,
+  xs: T
+): (number_element_to_drop_from_back: number) => T;
 export function drop_last<T extends any[]>(
   number_element_to_drop_from_back: number,
   xs: T
@@ -25,7 +30,7 @@ export function drop_last(
 ): (xs: string) => string;
 
 export function drop_last<T extends any[]>(
-  number_element_to_drop_from_back: number,
+  number_element_to_drop_from_back: number | Placeholder,
   xs?: T | string
 ) {
   return curried2(

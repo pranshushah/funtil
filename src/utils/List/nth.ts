@@ -1,5 +1,6 @@
 import { L } from 'ts-toolbelt';
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * @description returns value of nth index of array or string.if you pass negative index it will convert to it's absolute value.
@@ -17,13 +18,18 @@ export function nth<T extends any[]>(
   xs: T
 ): L.UnionOf<T> | undefined;
 export function nth<T extends any[]>(
+  x: Placeholder,
+  xs: T
+): (n: number) => L.UnionOf<T> | undefined;
+export function nth<T extends any[]>(
   n: number
 ): (xs: T) => L.UnionOf<T> | undefined;
 
 export function nth(n: number, xs: string): string;
+export function nth(x: Placeholder, xs: string): (n: number) => string;
 export function nth(n: number): (xs: string) => string;
 
-export function nth<T extends any[]>(n: number, xs?: T | string) {
+export function nth<T extends any[]>(n: number | Placeholder, xs?: T | string) {
   return curried2(
     function main(n: number, xs: T | string) {
       const index = Math.abs(n);

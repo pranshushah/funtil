@@ -1,6 +1,7 @@
 import { for_each } from './for_each';
 import { includes } from './includes';
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * @description takes 2 array and returns array that does not contain any value of second array.it uses F.equals for eqality.
@@ -12,10 +13,11 @@ import { curried2 } from '../internals/curried2';
  * F.difference([{id:1,task:"task1"},{id:2,task:"task2"},{id:3,task:"task3"}],[{id:1,task:"task1"},{id:4,task:"task4"}]) // [{id:2,task:"task2"},{id:3,task:"task3"}]
  * ```
  */
+export function difference<T>(x: Placeholder, arr2: T[]): (arr1: T[]) => T[];
 export function difference<T>(arr1: T[], arr2: T[]): T[];
 export function difference<T>(arr1: T[]): (arr2: T[]) => T[];
 
-export function difference<T>(arr1: T[], arr2?: T[]) {
+export function difference<T>(arr1: T[] | Placeholder, arr2?: T[]) {
   return curried2(
     function main(arr1: T[], arr2: T[]) {
       let result: T[] = [];
