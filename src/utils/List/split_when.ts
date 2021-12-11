@@ -1,4 +1,5 @@
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * Takes an array and a predication function and splits the array when predication function reuturns true; also works with partial form.
@@ -14,11 +15,16 @@ export function split_when<T>(
 ): T[][];
 
 export function split_when<T>(
+  x: Placeholder,
+  list: readonly T[]
+): (pred_fn: (arg: T) => boolean) => T[][];
+
+export function split_when<T>(
   pred_fn: (arg: T) => boolean
 ): (list: readonly T[]) => T[][];
 
 export function split_when<T>(
-  pred_fn: (arg: T) => boolean,
+  pred_fn: ((arg: T) => boolean) | Placeholder,
   list?: readonly T[]
 ) {
   return curried2(

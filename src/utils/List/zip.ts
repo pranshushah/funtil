@@ -1,4 +1,5 @@
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * @description Creates a new list out of the two supplied by pairing up equally-positioned items from both lists. The returned list is truncated to the length of the shorter of the two input lists.
@@ -9,10 +10,11 @@ import { partial2 } from '../internals/curried2';
  * ```
  */
 export function zip<T, G>(arr1: T[], arr2: G[]): [T, G][];
+export function zip<G>(x: Placeholder, arr2: G[]): <T>(arr1: T[]) => [T, G][];
 export function zip<T>(arr1: T[]): <G>(arr2: G[]) => [T, G][];
 
-export function zip<T, G>(arr1: T[], arr2?: G[]) {
-  return partial2(
+export function zip<T, G>(arr1: T[] | Placeholder, arr2?: G[]) {
+  return curried2(
     function main(arr1: T[], arr2: G[]) {
       let zipped: [T, G][] = [];
       let copiedArr1 = [...arr1];

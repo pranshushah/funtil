@@ -1,4 +1,4 @@
-import { partial3 } from '../internals/curried3';
+import { curried3 } from '../internals/curried3';
 
 /**
  * @description wrapper around [Array.prototype.slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) . also works with partial form.
@@ -35,7 +35,7 @@ export function slice<T extends readonly any[]>(
   to_index?: number,
   xs?: T | string
 ) {
-  return partial3(
+  return curried3(
     function main(from_index: number, to_index: number, xs: T | string) {
       return xs.slice(from_index, to_index);
     },

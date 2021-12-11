@@ -1,4 +1,5 @@
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 import { slice } from './slice';
 
 /**
@@ -13,10 +14,22 @@ import { slice } from './slice';
 
 export function split_every<T>(n: number, list: readonly T[]): T[][];
 export function split_every<T>(
+  x: Placeholder,
+  list: readonly T[]
+): (n: number) => T[][];
+export function split_every<T>(
   n: number
 ): { (list: readonly T[]): T[][]; (list: string): string[] };
 export function split_every(n: number, list: string): string[];
-export function split_every<T extends string | any[]>(n: number, list?: T) {
+export function split_every(
+  x: Placeholder,
+  list: string
+): (n: number) => string[];
+
+export function split_every<T extends string | any[]>(
+  n: number | Placeholder,
+  list?: T
+) {
   return curried2(
     function main(n: number, list: T) {
       let result: (T[] | string)[] = [];

@@ -1,4 +1,4 @@
-import { partial3 } from '../internals/curried3';
+import { curried3 } from '../internals/curried3';
 /**
  * @description same as ```F.reducer``` but returns acc at every point; also works with partial form.
  * @category List
@@ -33,7 +33,7 @@ export function scan<T, R>(
   initialValue?: R,
   arr?: readonly T[]
 ) {
-  return partial3(
+  return curried3(
     function main(
       reducer_fn: (acc: R, element: T, index?: number, arr?: readonly T[]) => R,
       initialValue: R,

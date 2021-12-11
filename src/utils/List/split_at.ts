@@ -1,4 +1,5 @@
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 import { slice } from './slice';
 
 /**
@@ -11,13 +12,22 @@ import { slice } from './slice';
  * ```
  */
 export function split_at<T extends readonly any[]>(index: number, xs: T): T[];
+export function split_at<T extends readonly any[]>(
+  x: Placeholder,
+  xs: T
+): (index: number) => T[];
+
 export function split_at(
   index: number
 ): { <T extends readonly any[]>(xs: T): T[]; (xs: string): string[] };
 export function split_at(index: number, xs: string): string[];
+export function split_at(
+  x: Placeholder,
+  xs: string
+): (index: number) => string[];
 
 export function split_at<T extends readonly any[]>(
-  index: number,
+  index: number | Placeholder,
   xs?: T | string
 ) {
   return curried2(

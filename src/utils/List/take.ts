@@ -1,4 +1,5 @@
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * @returns first n elements an array of from front.
@@ -14,14 +15,23 @@ export function take<T extends readonly any[]>(
   xs: T
 ): T;
 
+export function take<T extends readonly any[]>(
+  x: Placeholder,
+  xs: T
+): (number_of_elements_you_want: number) => T;
+
 export function take(number_of_elements_you_want: number, xs: string): string;
+export function take(
+  x: Placeholder,
+  xs: string
+): (number_of_elements_you_want: number) => string;
 
 export function take(
   number_of_elements_you_want: number
 ): { <T extends readonly any[]>(xs: T): T; (xs: string): string };
 
 export function take<T extends readonly any[]>(
-  number_of_elements_you_want: number,
+  number_of_elements_you_want: number | Placeholder,
   xs?: T | string
 ) {
   return curried2(

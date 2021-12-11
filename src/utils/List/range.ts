@@ -1,4 +1,5 @@
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * @description returns an array of given range;if given number isNan or Infinity it throws array; also works in partial form.
@@ -13,8 +14,9 @@ import { curried2 } from '../internals/curried2';
  */
 
 export function range(from: number, to: number): number[];
+export function range(x: Placeholder, to: number): (from: number) => number[];
 export function range(from: number): (to: number) => number[];
-export function range(from: number, to?: number) {
+export function range(from: number | Placeholder, to?: number) {
   return curried2(
     function main(from: number, to: number) {
       if (isNaN(from) || isNaN(to)) {

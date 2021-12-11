@@ -1,4 +1,4 @@
-import { partial3 } from '../internals/curried3';
+import { curried3 } from '../internals/curried3';
 
 /**
  * @description same as [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce](Array.prototype.reduce()) but does not skip deleted or unassigned indices (sparse arrays); also works in partial form.
@@ -32,7 +32,7 @@ export function reduce<T, R>(
   initialValue?: R,
   arr?: readonly T[]
 ) {
-  return partial3(
+  return curried3(
     function main(
       reducer_fn: (acc: R, element: T, index?: number, arr?: readonly T[]) => R,
       initialValue: R,

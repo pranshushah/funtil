@@ -1,4 +1,5 @@
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * @description returns a new list with n numbers from behind.
@@ -14,17 +15,27 @@ export function take_last<T extends any[]>(
   xs: T
 ): T;
 
+export function take_last<T extends any[]>(
+  x: Placeholder,
+  xs: T
+): (number_elements_you_want_from_behind: number) => T;
+
 export function take_last<T>(
   number_elements_you_want_from_behind: number,
   xs: string
 ): string;
+
+export function take_last<T>(
+  x: Placeholder,
+  xs: string
+): (number_elements_you_want_from_behind: number) => string;
 
 export function take_last(
   number_elements_you_want_from_behind: number
 ): { <T extends any[]>(xs: T): T; (xs: string): string };
 
 export function take_last<T extends any[]>(
-  number_elements_you_want_from_behind: number,
+  number_elements_you_want_from_behind: number | Placeholder,
   xs?: T | string
 ) {
   return curried2(

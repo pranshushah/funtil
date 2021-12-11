@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { partial3 } from '../internals/curried3';
+import { curried3 } from '../internals/curried3';
 
 /**
  * @description same as [Array.prototype.splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) but does not mutate original array and returns new copy.also works in partial form.
@@ -22,7 +22,7 @@ export function remove<T>(
 };
 
 export function remove<T>(start: number, delete_count?: number, arr?: T[]) {
-  return partial3(
+  return curried3(
     function main(start: number, delete_count: number, arr: T[]) {
       return produce(arr, draft => {
         draft.splice(start, delete_count);

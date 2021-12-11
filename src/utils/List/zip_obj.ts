@@ -1,4 +1,5 @@
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * @description takes an array of keys and values and makes object out of it.
@@ -12,11 +13,19 @@ export function zip_obj<T>(
   keys: (string | number)[],
   values: T[]
 ): Record<string | number, T>;
+
+export function zip_obj<T>(
+  x: Placeholder,
+  values: T[]
+): (keys: (string | number)[]) => Record<string | number, T>;
 export function zip_obj(
   keys: (string | number)[]
 ): <T>(values: T[]) => Record<string | number, T>;
 
-export function zip_obj<T>(keys: (string | number)[], values?: T[]) {
+export function zip_obj<T>(
+  keys: (string | number)[] | Placeholder,
+  values?: T[]
+) {
   return curried2(
     function main(keys: (string | number)[], values: T[]) {
       const length = Math.min(keys.length, values.length);

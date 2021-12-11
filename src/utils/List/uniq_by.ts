@@ -1,6 +1,7 @@
 import { for_each } from './for_each';
 import { includes } from './includes';
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 
 /**
  * @description takes a function and an array. returns an array that contains the return value of the function that takes element of an array as an argument.
@@ -24,8 +25,15 @@ import { curried2 } from '../internals/curried2';
  */
 
 export function uniq_by<T, U>(fn: (arg: T) => U, arr: readonly T[]): T[];
+export function uniq_by<T, U>(
+  x: Placeholder,
+  arr: readonly T[]
+): (fn: (arg: T) => U) => T[];
 export function uniq_by<T, U>(fn: (arg: T) => U): (arr: readonly T[]) => T[];
-export function uniq_by<T, U>(fn: (arg: T) => U, arr?: readonly T[]) {
+export function uniq_by<T, U>(
+  fn: ((arg: T) => U) | Placeholder,
+  arr?: readonly T[]
+) {
   return curried2(
     function main(fn: (arg: T) => U, arr: readonly T[]) {
       let function_result: U[] = [];

@@ -1,6 +1,7 @@
 import { concat } from './concat';
 import { curried2 } from '../internals/curried2';
 import { unique } from './unique';
+import { Placeholder } from '../types';
 
 /**
  * @description it returns unioun of given two arrays.
@@ -13,9 +14,10 @@ import { unique } from './unique';
  * ```
  */
 export function union<T extends any[]>(x1: T, x2: T): T;
+export function union<T extends any[]>(x: Placeholder, x2: T): (x1: T) => T;
 export function union<T extends any[]>(x1: T): (x2: T) => T;
 
-export function union<T extends any[]>(x1: T, x2?: T) {
+export function union<T extends any[]>(x1: T | Placeholder, x2?: T) {
   return curried2(
     function main(x1: T, x2: T) {
       let result = concat(x1, x2);

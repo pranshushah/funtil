@@ -1,4 +1,4 @@
-import { partial3 } from '../internals/curried3';
+import { curried3 } from '../internals/curried3';
 
 /**
  * @description same as F.reduce function but reduces the array right-left; also works in partial form.
@@ -27,7 +27,7 @@ export function reduce_right<T, R>(
   initialValue?: R,
   arr?: readonly T[]
 ) {
-  return partial3(
+  return curried3(
     function main(
       reducer_fn: (acc: R, element: T, index?: number, arr?: readonly T[]) => R,
       initialValue: R,
