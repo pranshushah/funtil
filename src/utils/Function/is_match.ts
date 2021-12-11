@@ -1,5 +1,6 @@
 import { curried2 } from '../internals/curried2';
 import { equals } from '../math/equals';
+import { Placeholder } from '../types';
 
 /**
  * @description Tells you if the keys and values in matcher are present in obj.
@@ -11,11 +12,16 @@ export function is_match<T extends Record<string | number, any>>(
 ): boolean;
 
 export function is_match<T extends Record<string | number, any>>(
+  x: Placeholder,
+  obj: T
+): (matcher: Partial<T>) => boolean;
+
+export function is_match<T extends Record<string | number, any>>(
   matcher: Partial<T>
 ): (obj: T) => boolean;
 
 export function is_match<T extends Record<string | number, any>>(
-  matcher: Partial<T>,
+  matcher: Partial<T> | Placeholder,
   obj?: T
 ) {
   return curried2(

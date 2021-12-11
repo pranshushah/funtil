@@ -1,5 +1,5 @@
 import { curried2 } from '../internals/curried2';
-import { Pred } from '../types';
+import { Placeholder, Pred } from '../types';
 
 /**
  * @description takes two functions and returns a function that will take arguments for both of the function and returns true if any one function returns true otherwise returns false
@@ -14,15 +14,18 @@ import { Pred } from '../types';
  * ```
  */
 export function either<T extends any[]>(
-  fn1: Pred<T>,
+  x: Placeholder,
   fn2: Pred<T>
-): (...args: T) => boolean;
+): (fn1: Pred<T>) => (...args: T) => boolean;
 
 export function either<T extends any[]>(
   fn1: Pred<T>
 ): (fn2: Pred<T>) => (...args: T) => boolean;
 
-export function either<T extends any[]>(fn1: Pred<T>, fn2?: Pred<T>) {
+export function either<T extends any[]>(
+  fn1: Pred<T> | Placeholder,
+  fn2?: Pred<T>
+) {
   return curried2(
     function main(fn1: Pred<T>, fn2: Pred<T>) {
       return function(...args: T) {

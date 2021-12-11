@@ -1,4 +1,5 @@
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 import { is_null } from './is_null';
 import { is_undefined } from './is_undefined';
 
@@ -15,10 +16,17 @@ import { is_undefined } from './is_undefined';
  * ```
  */
 export function default_to<T1, T2>(default_val: T1, check_val: T2): T1 | T2;
+export function default_to<T1, T2>(
+  x: Placeholder,
+  check_val: T2
+): (default_val: T1) => T1 | T2;
 
 export function default_to<T1, T2>(default_val: T1): (check_val: T2) => T1 | T2;
 
-export function default_to<T1, T2>(default_val: T1, check_val?: T2) {
+export function default_to<T1, T2>(
+  default_val: T1 | Placeholder,
+  check_val?: T2
+) {
   return curried2(
     function main(default_val: T1, check_val: T2) {
       // @ts-ignore
