@@ -1,5 +1,5 @@
 import { Tail } from 'List/_api';
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 import { OvarloadedParameters } from '../types';
 
 /**
@@ -41,7 +41,7 @@ export function try_catch<
   F extends (...args: any[]) => any,
   F1 extends (x: unknown, ...args: Parameters<F1>) => any
 >(tryer: F, catcher?: F1) {
-  return partial2(
+  return curried2(
     function main(tryer: F, catcher: F1) {
       return function(args: [Parameters<F>, Parameters<F1>]) {
         try {

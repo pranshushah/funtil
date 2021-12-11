@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { partial3 } from '../internals/curried3';
+import { curried3 } from '../internals/curried3';
 /**
  * @description insert array of elements at given index of array and returns new copy of array., also works on partial form.
  * @returns new copy of array with new elements
@@ -35,7 +35,7 @@ export function insert_all<T>(
   elements?: readonly T[],
   arr?: readonly T[]
 ) {
-  return partial3(
+  return curried3(
     function main(
       insert_index: number,
       elements: readonly T[],

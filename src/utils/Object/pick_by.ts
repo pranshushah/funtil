@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 import { Any_Obj, Pick_by } from '../types';
 /**
  * @description Returns a partial copy of an object containing only the keys that satisfy the supplied predication function;also works with partial form.
@@ -20,7 +20,7 @@ export function pick_by<
   T extends Any_Obj = { [x: string]: any },
   K extends keyof T = string
 >(pred: (key: K, value: T[K]) => boolean, obj?: T) {
-  return partial2(
+  return curried2(
     function main(pred: (key: K, value: T[K]) => boolean, obj: T) {
       let result: Partial<T> = {};
       for (let key in Object.keys(obj)) {

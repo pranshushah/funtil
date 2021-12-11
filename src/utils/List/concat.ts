@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 
 /**
  * @description take two element. that can be either string or array and returns the concated version.it will throw error if we pass one string and one array.it also take partial arguments
@@ -19,7 +19,7 @@ export function concat<T extends readonly any[]>(
   arg1: T | string,
   arg2?: T | string
 ) {
-  return partial2(
+  return curried2(
     function main_concat(arg1: T | string, arg2: T | string) {
       let return_val: T;
       if (Array.isArray(arg1) && Array.isArray(arg2)) {

@@ -1,7 +1,7 @@
 import { map } from './map';
 import { prop } from '../Object/prop';
 import { partial_right } from '../Function/partial_right';
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 import { Any_Obj } from '../types';
 
 type passing_prop = <T extends object>(
@@ -33,7 +33,7 @@ export function pluck<T extends object, K extends keyof T>(
   key: K,
   arr?: readonly T[]
 ) {
-  return partial2(
+  return curried2(
     function main(key: K, arr: readonly T[]) {
       let value_getter = partial_right<
         [string | number | symbol],

@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 
 /**
  * @description returns an array of given range;if given number isNan or Infinity it throws array; also works in partial form.
@@ -15,7 +15,7 @@ import { partial2 } from '../internals/partial2';
 export function range(from: number, to: number): number[];
 export function range(from: number): (to: number) => number[];
 export function range(from: number, to?: number) {
-  return partial2(
+  return curried2(
     function main(from: number, to: number) {
       if (isNaN(from) || isNaN(to)) {
         return [];

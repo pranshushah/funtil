@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 
 /**
  * Takes an array and a predication function and splits the array when predication function reuturns true; also works with partial form.
@@ -21,7 +21,7 @@ export function split_when<T>(
   pred_fn: (arg: T) => boolean,
   list?: readonly T[]
 ) {
-  return partial2(
+  return curried2(
     function main(pred_fn: (arg: T) => boolean, list: readonly T[]) {
       var pre: T[] = [];
       let index = 0;

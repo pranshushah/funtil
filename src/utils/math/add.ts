@@ -1,7 +1,7 @@
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 
 /**
- * @description takes two number and adds them.also works in partial form.
+ * @description takes two number and adds them.also works in curried form.
  * @category Math
  * @example
  * ```typescript
@@ -14,7 +14,7 @@ export function add(x: number): (y: number) => number;
 export function add(x: number, y: number): number;
 
 export function add(x: number, y?: number) {
-  return partial2(
+  return curried2(
     function main(x: number, y: number) {
       return x + y;
     },

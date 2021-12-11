@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 
 /**
  * @description takes an element and array.adds that element at the start of the array.it returns new copy of array;also works with partial form.
@@ -13,7 +13,7 @@ export function prepend<T>(el: T, arr: T[]): T[];
 export function prepend<T>(el: T): (arr: T[]) => T[];
 
 export function prepend<T>(el: T, arr?: T[]) {
-  return partial2(
+  return curried2(
     function main(el: T, arr: T[]) {
       return produce(arr, (draft: T[]) => {
         draft.splice(0, 0, el);

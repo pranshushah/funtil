@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 
 /**
  * @description takes predication function and array and passes all element one by one to predication function if it returns true for all elements function returns true otherwise it returns false. also works in partial form
@@ -21,7 +21,7 @@ export function all<T>(
 ): (arr: readonly T[]) => boolean;
 
 export function all<T>(predicate: (arg: T) => boolean, arr?: readonly T[]) {
-  return partial2(
+  return curried2(
     function main_all(predicate: (arg: T) => boolean, arr: readonly T[]) {
       let ret_bool = true;
       for (let index = 0; index < arr.length; index++) {

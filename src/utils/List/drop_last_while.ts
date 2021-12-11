@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 import { L } from 'ts-toolbelt';
 /**
  *@description drops elements from last until predication function returns false and it returns new copy of dropped .works also with partial arguments.
@@ -32,7 +32,7 @@ export function drop_last_while<T extends any[]>(
   predicate_fn: (arg: L.UnionOf<T> | string) => boolean,
   xs?: T | string
 ) {
-  return partial2(
+  return curried2(
     function main_drop_last_while(
       predicate_fn: (arg: L.UnionOf<T> | string) => boolean,
       xs: T | string

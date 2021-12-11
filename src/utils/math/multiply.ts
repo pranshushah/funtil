@@ -1,7 +1,7 @@
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 
 /**
- * @description mulitplies two number.also works in partial form.
+ * @description mulitplies two number.also works in curried form.
  * @category Math
  * @example
  * ```typescript
@@ -12,7 +12,7 @@ export function multiply(x: number, y: number): number;
 export function multiply(x: number): (y: number) => number;
 
 export function multiply(x: number, y?: number) {
-  return partial2(
+  return curried2(
     function main(x: number, y: number) {
       return x * y;
     },

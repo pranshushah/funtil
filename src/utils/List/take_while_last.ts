@@ -1,5 +1,5 @@
 import { L } from 'ts-toolbelt';
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 
 /**
  * @description takes predication funtion and array and returns new array containg values from behind from given array while predication function returns true.
@@ -27,7 +27,7 @@ export function take_while_last<T extends any[]>(
   predicate_fn: (arg: L.UnionOf<T> | string) => boolean,
   xs?: T | string
 ) {
-  return partial2(
+  return curried2(
     function main(
       predicate_fn: (arg: L.UnionOf<T> | string) => boolean,
       xs: T | string

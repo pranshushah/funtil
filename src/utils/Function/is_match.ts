@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 import { equals } from '../math/equals';
 
 /**
@@ -18,7 +18,7 @@ export function is_match<T extends Record<string | number, any>>(
   matcher: Partial<T>,
   obj?: T
 ) {
-  return partial2(
+  return curried2(
     function main(matcher: Partial<T>, obj: T) {
       if (obj === null || matcher === null) {
         return false;

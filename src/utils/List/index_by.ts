@@ -1,5 +1,5 @@
 import { for_each } from './for_each';
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 
 export function index_by<T, K extends string | number = string>(
   fn: (a: T) => K,
@@ -14,7 +14,7 @@ export function index_by<T, K extends string | number = string>(
   fn: (a: T) => K,
   list?: readonly T[]
 ) {
-  return partial2(
+  return curried2(
     function main(fn: (a: T) => K, list: readonly T[]) {
       let ret_obj = {} as { [key in K]: T };
 

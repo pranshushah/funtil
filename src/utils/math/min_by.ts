@@ -1,6 +1,6 @@
-import { partial3 } from '../internals/curried3';
+import { curried3 } from '../internals/curried3';
 /**
- * @description takes two value and returns a value who returns min value when call with given function.also works with partial form.
+ * @description takes two value and returns a value who returns min value when call with given function.also works with curried form.
  * @category Math
  * @example
  * function todoLength(todo:Todo){
@@ -17,7 +17,7 @@ export function min_by<T>(
   (a: T): (b: T) => T;
 };
 export function min_by<T>(keyFn: (a: T) => number, a?: T, b?: T) {
-  return partial3(
+  return curried3(
     function main(keyFn: (a: T) => number, a: T, b: T) {
       return keyFn(a) > keyFn(b) ? b : a;
     },

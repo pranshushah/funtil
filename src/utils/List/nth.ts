@@ -1,5 +1,5 @@
 import { L } from 'ts-toolbelt';
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 
 /**
  * @description returns value of nth index of array or string.if you pass negative index it will convert to it's absolute value.
@@ -24,7 +24,7 @@ export function nth(n: number, xs: string): string;
 export function nth(n: number): (xs: string) => string;
 
 export function nth<T extends any[]>(n: number, xs?: T | string) {
-  return partial2(
+  return curried2(
     function main(n: number, xs: T | string) {
       const index = Math.abs(n);
       if (Array.isArray(xs)) {

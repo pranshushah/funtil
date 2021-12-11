@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 
 /**
  * @description creates an object of given key val pair; also works with partial form.
@@ -20,7 +20,7 @@ export function object_of<T, K extends string | number>(
 ): (value: T) => Record<K, T>;
 
 export function object_of<T, K extends string | number>(key: K, value?: T) {
-  return partial2(
+  return curried2(
     function main(key: K, value: T) {
       return { [key]: value } as Record<K, T>;
     },

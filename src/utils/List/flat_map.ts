@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 
 /**
  * @description Wrapper around `[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap](array.prototype.flatMap)`.also supports partial form.
@@ -25,7 +25,7 @@ export function flat_map<
   T extends any,
   R extends (val: T, index: number, arr: T[]) => any
 >(mapper: R, arr?: T[]) {
-  return partial2(
+  return curried2(
     function main(mapper: R, arr: T[]) {
       return arr.flatMap(mapper);
     },

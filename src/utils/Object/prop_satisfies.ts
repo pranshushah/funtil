@@ -1,4 +1,4 @@
-import { partial3 } from '../internals/curried3';
+import { curried3 } from '../internals/curried3';
 import { Any_Obj } from '../types';
 
 /**
@@ -38,7 +38,7 @@ export function prop_satisfies<T extends Any_Obj>(
   key?: keyof T,
   obj?: T
 ) {
-  return partial3(
+  return curried3(
     function main(pre: (arg: any) => boolean, key: keyof T, obj: T) {
       return pre(obj[key]);
     },

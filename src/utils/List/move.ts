@@ -1,4 +1,4 @@
-import { partial3 } from '../internals/curried3';
+import { curried3 } from '../internals/curried3';
 
 /**
  * @description Move an item, at index from, to index to, in a list of elements. A new list will be created containing the new elements order.
@@ -22,7 +22,7 @@ export function move(
 };
 
 export function move<T>(from: number, to?: number, list?: T[]) {
-  return partial3(
+  return curried3(
     function main(from: number, to: number, list: T[]) {
       const length = list.length;
       let result = list.slice(0, list.length);

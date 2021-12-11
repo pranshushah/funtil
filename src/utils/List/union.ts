@@ -1,5 +1,5 @@
 import { concat } from './concat';
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 import { unique } from './unique';
 
 /**
@@ -16,7 +16,7 @@ export function union<T extends any[]>(x1: T, x2: T): T;
 export function union<T extends any[]>(x1: T): (x2: T) => T;
 
 export function union<T extends any[]>(x1: T, x2?: T) {
-  return partial2(
+  return curried2(
     function main(x1: T, x2: T) {
       let result = concat(x1, x2);
       return unique(result) as T;

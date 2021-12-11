@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { partial3 } from '../internals/curried3';
+import { curried3 } from '../internals/curried3';
 
 /**
  * @description updates given array at given index with given element and returns new copy of array.
@@ -22,7 +22,7 @@ export function update(
 };
 
 export function update<T>(n: number, el?: T, elements?: readonly T[]) {
-  return partial3(
+  return curried3(
     function main(n: number, el: T, elements: readonly T[]) {
       return produce(elements, (draft: T[]) => {
         const index =

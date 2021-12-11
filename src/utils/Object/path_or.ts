@@ -1,5 +1,5 @@
 import { default_to } from '../Function/default_to';
-import { partial3 } from '../internals/curried3';
+import { curried3 } from '../internals/curried3';
 import { path } from './path';
 import { Any_Obj, DeepKeys } from '../types';
 
@@ -36,7 +36,7 @@ export function path_or<T extends Any_Obj, D>(
   paths_list?: DeepKeys<T>[],
   obj?: T
 ) {
-  return partial3(
+  return curried3(
     function main(defaut_val: D, paths_list: DeepKeys<T>[], obj: T) {
       return default_to(defaut_val, path<typeof obj, D>(paths_list, obj));
     },

@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 import { equals } from '../math/equals';
 
 /**
@@ -15,7 +15,7 @@ export function index_of<T>(item: T, arr: readonly T[]): number;
 export function index_of<T>(item: T): (arr: readonly T[]) => number;
 
 export function index_of<T>(item: T, arr?: readonly T[]) {
-  return partial2(
+  return curried2(
     function main(item: T, arr: readonly T[]) {
       let return_index = -1;
       const compare = equals(item);

@@ -1,4 +1,4 @@
-import { partial3 } from '../internals/curried3';
+import { curried3 } from '../internals/curried3';
 import { is_empty } from '../Function/is_empty';
 import { Any_Obj } from '../types';
 /**
@@ -33,7 +33,7 @@ export function prop_or<O extends Any_Obj, ReturnType>(
   obj?: O,
   prop?: keyof O
 ) {
-  return partial3(
+  return curried3(
     function main(default_val: ReturnType, obj: O, prop: keyof O) {
       return is_empty(obj[prop]) ? default_val : obj[prop];
     },

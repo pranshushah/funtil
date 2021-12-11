@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { partial3 } from '../internals/curried3';
+import { curried3 } from '../internals/curried3';
 
 /**
  * insert element at given index of array and returns new copy of array,also works with partial form.
@@ -32,7 +32,7 @@ export function insert<T>(
   element?: T,
   arr?: readonly T[]
 ) {
-  return partial3(
+  return curried3(
     function main(insert_index: number, element: T, arr: readonly T[]) {
       return produce(arr, (draft: T[]) => {
         draft.splice(insert_index, 0, element);

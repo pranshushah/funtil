@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { partial3 } from '../internals/curried3';
+import { curried3 } from '../internals/curried3';
 
 /**
  * @description takes key,value and object and returns object that includes given key and pair
@@ -34,7 +34,7 @@ export function assoc<T, U extends object, K extends string | number>(
   val?: T,
   obj?: U
 ) {
-  return partial3(
+  return curried3(
     function main(prop: K, val: T, obj: U) {
       return produce(obj, (draft: any) => {
         draft[prop] = val;

@@ -1,5 +1,5 @@
 import { for_each } from '../List/for_each';
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 import produce from 'immer';
 
 /**
@@ -23,7 +23,7 @@ export function omit<O extends object, K extends keyof O>(
   obj: O,
   delete_keys?: K[]
 ) {
-  return partial2(
+  return curried2(
     function main(obj: O, delete_keys: K[]) {
       return produce(obj, (draft: O) => {
         for_each(function(val: K) {

@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 /**
  * @description returns the object that omits prop property.also works in partial form
  * @category Object
@@ -20,7 +20,7 @@ export function dissoc<K extends string | number | symbol>(
 ): <T extends object>(obj: T) => Omit<T, K>;
 
 export function dissoc<T extends object, K extends keyof T>(prop: K, obj?: T) {
-  return partial2(
+  return curried2(
     function main(prop: K, obj: T) {
       return produce(obj, (draft: T) => {
         delete draft[prop];

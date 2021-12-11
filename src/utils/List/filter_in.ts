@@ -1,5 +1,5 @@
 import { filter } from './filter';
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 
 /**
  * @description returns an array of all elements for which predicate function returns true,also works with partial argument.
@@ -26,7 +26,7 @@ export function filter_in<T>(
   predicate_fn: (arg: T, index: number, arr: readonly T[]) => boolean,
   arr?: readonly T[]
 ) {
-  return partial2(
+  return curried2(
     function main_filter_in(
       predicate_fn: (arg: T, index: number, arr: readonly T[]) => boolean,
       arr: readonly T[]

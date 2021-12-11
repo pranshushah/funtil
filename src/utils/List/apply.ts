@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 import { OvarloadedParameters, OverloadedReturnType } from '../types';
 
 /**
@@ -24,7 +24,7 @@ export function apply<
   Function extends (...args: any[]) => any,
   P extends OvarloadedParameters<Function>
 >(fn: Function, arr?: P) {
-  return partial2(
+  return curried2(
     function main(fn, arr) {
       return fn(...arr);
     },

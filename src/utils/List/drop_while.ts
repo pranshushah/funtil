@@ -1,5 +1,5 @@
 import { L } from 'ts-toolbelt';
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 
 /**
  * @description drops elements from front until predcation function returns false and returns copy of that array or string.also wokrs in partial form
@@ -36,7 +36,7 @@ export function drop_while<T extends any[]>(
   predicate_fn: (arg: L.UnionOf<T> | string) => boolean,
   xs?: T | string
 ) {
-  return partial2(
+  return curried2(
     function main_drop_while(
       predicate_fn: (arg: L.UnionOf<T> | string) => boolean,
       xs: T | string

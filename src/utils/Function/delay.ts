@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 import { OvarloadedParameters, OverloadedReturnType } from '../types';
 
 /**
@@ -26,7 +26,7 @@ export function delay<T extends (...args: any[]) => any>(
 ) => (...args: OvarloadedParameters<T>) => OverloadedReturnType<T>;
 
 export function delay<T extends (...args: any[]) => any>(fn: T, time?: number) {
-  return partial2(
+  return curried2(
     function main(fn, time) {
       return function(...args: OvarloadedParameters<T>) {
         setTimeout(() => {

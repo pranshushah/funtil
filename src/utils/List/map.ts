@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 
 /**
  * @description same as es6 [Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map). also works with partial form.
@@ -24,7 +24,7 @@ export function map<T, R>(
   mapper: (val: T, index: number, arr: readonly T[]) => R,
   arr?: readonly T[]
 ) {
-  return partial2(
+  return curried2(
     function main(
       mapper: (val: T, index: number, arr: readonly T[]) => R,
       arr: readonly T[]

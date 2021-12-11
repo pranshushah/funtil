@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 import { slice } from './slice';
 
 /**
@@ -17,7 +17,7 @@ export function split_every<T>(
 ): { (list: readonly T[]): T[][]; (list: string): string[] };
 export function split_every(n: number, list: string): string[];
 export function split_every<T extends string | any[]>(n: number, list?: T) {
-  return partial2(
+  return curried2(
     function main(n: number, list: T) {
       let result: (T[] | string)[] = [];
       let index = 0;

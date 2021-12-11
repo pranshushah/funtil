@@ -1,5 +1,5 @@
 import { always } from '../Function/always';
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 import { times } from '../Function/times';
 
 /**
@@ -14,7 +14,7 @@ export function repeat<T>(value: T, n: number): T[];
 export function repeat<T>(value: T): (n: number) => T[];
 
 export function repeat<T>(value: T, n?: number) {
-  return partial2(
+  return curried2(
     function main(value: T, n: number) {
       return times(always(value), n);
     },

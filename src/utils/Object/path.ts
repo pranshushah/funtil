@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 import { is_null } from '../Function/is_null';
 import { is_undefined } from '../Function/is_undefined';
 import { Any_Obj, DeepKeys } from '../types';
@@ -22,7 +22,7 @@ export function path<T extends Any_Obj>(
 ): <ReturnValueType>(obj: T) => ReturnValueType | undefined;
 
 export function path<T extends Any_Obj>(path_list: DeepKeys<T>[], obj?: T) {
-  return partial2(
+  return curried2(
     function main(path_list: DeepKeys<T>[], obj: T) {
       let val: any = obj;
       for (let index = 0; index < path_list.length; index++) {

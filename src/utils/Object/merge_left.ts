@@ -1,6 +1,6 @@
 import produce from 'immer';
 import { Merge } from 'Object/_api';
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 /**
  * @description merges two object if key exists in both object it takes key-val of first pair.also works in partial form
  * @category Object
@@ -25,7 +25,7 @@ export function merge_left<T1 extends object, T2 extends object>(
   o1: T1,
   o2?: T2
 ) {
-  return partial2(
+  return curried2(
     function main(o1: T1, o2: T2) {
       return produce(o2, (draft: any) => {
         Object.entries(o1).forEach(([key, val]) => {

@@ -1,6 +1,6 @@
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 /**
- * @description returns maximum value of two number.
+ * @description returns maximum value of two number also works in curried form.
  * @category Math
  * @example
  * F.max(22,23) // 23
@@ -10,7 +10,7 @@ export function max(x1: number, x2: number): number;
 export function max(x1: number): (x2: number) => number;
 
 export function max(x1: number, x2?: number) {
-  return partial2(
+  return curried2(
     function main(x1: number, x2: number) {
       return x1 > x2 ? x1 : x2;
     },

@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { curried2 } from '../internals/curried2';
 
 /**
  * @description returns the last element for which predication function returns true. returns undefined if predication function does not return true for any value in array.also works with partial argument.
@@ -26,7 +26,7 @@ export function find_last<T>(
   predicate_fn: (arg: T, index: number, arr: readonly T[]) => boolean,
   arr?: readonly T[]
 ) {
-  return partial2(
+  return curried2(
     function main(
       predicate_fn: (arg: T, index: number, arr: readonly T[]) => boolean,
       arr: readonly T[]

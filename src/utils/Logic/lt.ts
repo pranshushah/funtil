@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 /**
  * @description takes two number  and checks whether second number is less than first number, also works with partial form.
  * @category Logic
@@ -14,7 +14,7 @@ export function lt(x2: number, x1: number): boolean;
 export function lt(x2: number): (x1: number) => boolean;
 
 export function lt(x2: number, x1?: number) {
-  return partial2(
+  return curried2(
     function main(x2: number, x1: number) {
       return x1 < x2;
     },

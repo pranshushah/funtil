@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 
 /**
  * @description returns a new list with n numbers from behind.
@@ -27,7 +27,7 @@ export function take_last<T extends any[]>(
   number_elements_you_want_from_behind: number,
   xs?: T | string
 ) {
-  return partial2(
+  return curried2(
     function main(
       number_elements_you_want_from_behind: number,
       xs: T | string

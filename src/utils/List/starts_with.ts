@@ -1,5 +1,5 @@
 import { equals } from '../math/equals';
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 import { take } from './take';
 
 /**
@@ -27,7 +27,7 @@ export function starts_with<T extends readonly any[]>(
   prefix: T | string,
   xs?: T | string
 ) {
-  return partial2(
+  return curried2(
     function main(prefix: T | string, xs: T | string) {
       if (Array.isArray(xs)) {
         return equals(take(prefix.length, xs), prefix);

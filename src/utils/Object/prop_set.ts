@@ -1,4 +1,4 @@
-import { partial3 } from '../internals/curried3';
+import { curried3 } from '../internals/curried3';
 import { Any_Obj } from '../types';
 
 /**
@@ -34,7 +34,7 @@ export function prop_set<T extends Any_Obj, K extends Any_Obj>(
   key?: keyof K,
   val?: K[keyof K]
 ) {
-  return partial3(
+  return curried3(
     function main(obj: T, key: keyof K, val: K[keyof K]) {
       //@ts-ignore
       let ret: T & K = { ...obj };

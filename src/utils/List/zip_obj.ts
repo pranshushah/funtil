@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 
 /**
  * @description takes an array of keys and values and makes object out of it.
@@ -17,7 +17,7 @@ export function zip_obj(
 ): <T>(values: T[]) => Record<string | number, T>;
 
 export function zip_obj<T>(keys: (string | number)[], values?: T[]) {
-  return partial2(
+  return curried2(
     function main(keys: (string | number)[], values: T[]) {
       const length = Math.min(keys.length, values.length);
       let result: Record<string | number, T> = {};

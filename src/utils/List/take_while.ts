@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 
 /**
  * @description takes a function and an array returns new array containing values from given array from start till predication function returns false.
@@ -24,7 +24,7 @@ export function take_while<T>(
   predicate_fn: (arg: T | string) => boolean,
   xs?: T[] | string
 ) {
-  return partial2(
+  return curried2(
     function main(
       predicate_fn: (arg: T | string) => boolean,
       xs: T[] | string

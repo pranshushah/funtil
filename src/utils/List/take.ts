@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/curried2';
+import { curried2 } from '../internals/curried2';
 
 /**
  * @returns first n elements an array of from front.
@@ -24,7 +24,7 @@ export function take<T extends readonly any[]>(
   number_of_elements_you_want: number,
   xs?: T | string
 ) {
-  return partial2(
+  return curried2(
     function main(number_of_elements_you_want: number, xs: T | string) {
       return xs.slice(
         0,
