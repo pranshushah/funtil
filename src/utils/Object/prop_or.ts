@@ -1,4 +1,4 @@
-import { partial3 } from '../internals/partial3';
+import { partial3 } from '../internals/curried3';
 import { is_empty } from '../Function/is_empty';
 import { Any_Obj } from '../types';
 /**

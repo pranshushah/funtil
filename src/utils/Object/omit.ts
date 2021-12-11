@@ -1,5 +1,5 @@
 import { for_each } from '../List/for_each';
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 import produce from 'immer';
 
 /**

@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 
 /**
  * @description takes a function and its argument. it calls given function and returns the argument.

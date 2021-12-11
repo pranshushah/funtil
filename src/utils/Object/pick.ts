@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 import { Any_Obj } from '../types';
 
 /**

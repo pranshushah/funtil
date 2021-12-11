@@ -1,4 +1,4 @@
-import { partial3 } from '../internals/partial3';
+import { partial3 } from '../internals/curried3';
 import { equals } from '../math/equals';
 /**
  * @description takes predicate function fn and 2 elements.returns true if fn(x1) === fn(x2) otherwise false. it uses F.equals to compare. it also works with partial arguments.

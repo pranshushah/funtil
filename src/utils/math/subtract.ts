@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 
 /**
  * @description takes two numbers, y and x. returns x - y.also works in partial form.

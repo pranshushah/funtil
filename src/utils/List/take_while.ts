@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 
 /**
  * @description takes a function and an array returns new array containing values from given array from start till predication function returns false.

@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 
 /**
  * @description takes two number and divides second number by first number.also works in partial form.

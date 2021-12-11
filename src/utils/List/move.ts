@@ -1,4 +1,4 @@
-import { partial3 } from '../internals/partial3';
+import { partial3 } from '../internals/curried3';
 
 /**
  * @description Move an item, at index from, to index to, in a list of elements. A new list will be created containing the new elements order.

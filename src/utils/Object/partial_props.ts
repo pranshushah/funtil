@@ -1,5 +1,5 @@
 import { O } from 'ts-toolbelt';
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 
 /**
  * @description takes a function and an object that is partial of the object that we passes as function argument.

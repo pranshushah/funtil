@@ -1,4 +1,4 @@
-import { partial3 } from '../internals/partial3';
+import { partial3 } from '../internals/curried3';
 
 /**
  * @description same as F.reduce function but reduces the array right-left; also works in partial form.

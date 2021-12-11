@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 
 /**
  * @description same as F.prop but here it takes array of keys and returns array of values in same order; also works with partial form.

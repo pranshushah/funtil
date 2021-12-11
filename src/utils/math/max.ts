@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 /**
  * @description returns maximum value of two number.
  * @category Math

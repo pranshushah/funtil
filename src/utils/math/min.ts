@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 /**
  * @description returns minimum value of two values. works with string,number,date and boolean.also works with partial form.
  * @category Math

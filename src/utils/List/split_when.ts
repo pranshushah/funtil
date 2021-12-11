@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 
 /**
  * Takes an array and a predication function and splits the array when predication function reuturns true; also works with partial form.

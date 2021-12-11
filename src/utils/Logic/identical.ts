@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 /**
  * @description takes two elements and checks whether both of them are equal or not. it uses **Object.is** to check equality,also works with partial form
  * @category Logic

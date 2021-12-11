@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { partial3 } from '../internals/partial3';
+import { partial3 } from '../internals/curried3';
 /**
  * @description insert array of elements at given index of array and returns new copy of array., also works on partial form.
  * @returns new copy of array with new elements

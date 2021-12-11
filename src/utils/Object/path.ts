@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 import { is_null } from '../Function/is_null';
 import { is_undefined } from '../Function/is_undefined';
 import { Any_Obj, DeepKeys } from '../types';

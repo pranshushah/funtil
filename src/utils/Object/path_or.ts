@@ -1,5 +1,5 @@
 import { default_to } from '../Function/default_to';
-import { partial3 } from '../internals/partial3';
+import { partial3 } from '../internals/curried3';
 import { path } from './path';
 import { Any_Obj, DeepKeys } from '../types';
 

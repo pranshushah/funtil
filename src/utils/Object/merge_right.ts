@@ -1,6 +1,6 @@
 import produce from 'immer';
 import { Merge } from 'Object/_api';
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 
 /**
  * @description merges two object if key exist in both object it take key-val from 2nd object. also works in partial form.

@@ -1,4 +1,4 @@
-import { partial3 } from '../internals/partial3';
+import { partial3 } from '../internals/curried3';
 /**
  * @description same as ```F.reducer``` but returns acc at every point; also works with partial form.
  * @category List

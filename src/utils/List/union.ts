@@ -1,5 +1,5 @@
 import { concat } from './concat';
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 import { unique } from './unique';
 
 /**

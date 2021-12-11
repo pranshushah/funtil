@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { partial3 } from '../internals/partial3';
+import { partial3 } from '../internals/curried3';
 
 /**
  * @description same as [Array.prototype.splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) but does not mutate original array and returns new copy.also works in partial form.

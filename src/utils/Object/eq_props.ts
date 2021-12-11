@@ -1,4 +1,4 @@
-import { partial3 } from '../internals/partial3';
+import { partial3 } from '../internals/curried3';
 import { equals } from '../math/equals';
 import { Any_Obj } from '../types';
 

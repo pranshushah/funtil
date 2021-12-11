@@ -1,5 +1,5 @@
 import { L } from 'ts-toolbelt';
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 
 /**
  * @description takes predication funtion and array and returns new array containg values from behind from given array while predication function returns true.

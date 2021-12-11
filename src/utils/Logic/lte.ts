@@ -1,4 +1,4 @@
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 /**
  * @description takes two number  and checks whether second number is less than first number, also works with partial form.
  * @category Logic

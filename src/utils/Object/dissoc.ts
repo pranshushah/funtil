@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 /**
  * @description returns the object that omits prop property.also works in partial form
  * @category Object

@@ -1,6 +1,6 @@
 import { for_each } from './for_each';
 import { includes } from './includes';
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 
 /**
  * @description takes removal_list and list and removes every elements that is in removal_list.

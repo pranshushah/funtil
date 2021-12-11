@@ -1,6 +1,6 @@
 import { for_each } from './for_each';
 import { includes } from './includes';
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 
 /**
  * @description takes a function and an array. returns an array that contains the return value of the function that takes element of an array as an argument.

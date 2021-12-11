@@ -1,5 +1,5 @@
 import equal from 'fast-deep-equal';
-import { partial2 } from '../internals/partial2';
+import { partial2 } from '../internals/curried2';
 
 /**
  * @description compares two element. it uses deep equality to check two elements.also works in partial form.
