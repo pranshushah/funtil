@@ -1,4 +1,5 @@
 import { curried2 } from '../internals/curried2';
+import { Placeholder } from '../types';
 /**
  * @description takes two number  and checks whether second number is less than first number, also works with partial form.
  * @category Logic
@@ -11,10 +12,10 @@ import { curried2 } from '../internals/curried2';
  * lessThanOrEqual20(20) // true
  * ```
  */
-export function lte(x2: number, x1: number): boolean;
+export function lte(x: Placeholder, x1: number): (x2: number) => boolean;
 export function lte(x2: number): (x1: number) => boolean;
 
-export function lte(x2: number, x1?: number) {
+export function lte(x2: number | Placeholder, x1?: number) {
   return curried2(
     function main(x2: number, x1: number) {
       return x1 <= x2;
